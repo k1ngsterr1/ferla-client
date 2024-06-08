@@ -1,0 +1,23 @@
+@import "breakpoint-slicer";
+@import '../src/shared/styles/mixins';
+@import '../src/shared/styles/variables';
+
+
+@include respond-to('md') {
+    .mob {
+        display: none;
+        overflow-x: hidden;
+    }
+}
+
+
+.pc {
+    @include respond-to('xxs') {
+        display: none;
+    }
+
+    @include respond-to('md') {
+        display: block;
+    }
+}    
+

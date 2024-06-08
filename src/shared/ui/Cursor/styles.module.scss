@@ -1,0 +1,96 @@
+@import "breakpoint-slicer";
+@import "../../../shared/styles/mixins";
+@import "../../../shared/styles/variables";
+
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: clamp(32px, 64 / 1200 * 100vw, 128px);
+  height: clamp(32px, 64 / 1200 * 100vw, 128px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  @apply rounded-full;
+  @apply text-dark;
+
+  @include respond-to("lg") {
+    width: clamp(12px, 24 / 1200 * 100vw, 48px);
+    height: clamp(12px, 24 / 1200 * 100vw, 48px);
+  }
+
+  @include respond-to("xl") {
+    width: clamp(32px, 64 / 1360 * 100vw, 128px);
+    height: clamp(32px, 64 / 1360 * 100vw, 128px);
+  }
+
+  @include respond-to("2xl") {
+    width: clamp(12px, 24 / 1520 * 100vw, 48px);
+    height: clamp(12px, 24 / 1520 * 100vw, 48px);
+  }
+
+  @include respond-to("3xl") {
+    width: clamp(32px, 64 / 1680 * 100vw, 128px);
+    height: clamp(32px, 64 / 1680 * 100vw, 128px);
+  }
+
+  @include respond-to("4xl") {
+    width: clamp(12px, 24 / 1920 * 100vw, 48px);
+    height: clamp(12px, 24 / 1920 * 100vw, 48px);
+  }
+
+  @include respond-to("5xl") {
+    width: clamp(32px, 64 / 2560 * 100vw, 128px);
+    height: clamp(32px, 64 / 2560 * 100vw, 128px);
+  }
+
+  &__wheel {
+    width: clamp(24px, 48 / 1200 * 100vw, 96px);
+    height: clamp(24px, 48 / 1200 * 100vw, 96px);
+
+    @include respond-to("lg") {
+      width: clamp(16px, 32 / 1200 * 100vw, 64px);
+      height: clamp(16px, 32 / 1200 * 100vw, 64px);
+    }
+
+    @include respond-to("xl") {
+      width: clamp(16px, 32 / 1360 * 100vw, 64px);
+      height: clamp(16px, 32 / 1360 * 100vw, 64px);
+    }
+
+    @include respond-to("2xl") {
+      width: clamp(24px, 48 / 1520 * 100vw, 96px);
+      height: clamp(24px, 48 / 1520 * 100vw, 96px);
+    }
+
+    @include respond-to("3xl") {
+      width: clamp(24px, 48 / 1680 * 100vw, 96px);
+      height: clamp(24px, 48 / 1680 * 100vw, 96px);
+    }
+
+    @include respond-to("4xl") {
+      width: clamp(12px, 24 / 1920 * 100vw, 48px);
+      height: clamp(12px, 24 / 1920 * 100vw, 48px);
+    }
+
+    @include respond-to("5xl") {
+      width: clamp(16px, 32 / 2560 * 100vw, 64px);
+      height: clamp(16px, 32 / 2560 * 100vw, 64px);
+    }
+  }
+}
+
+@media screen and (min-width: 380px) {
+  .cursor {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .cursor {
+    display: flex !important;
+  }
+}

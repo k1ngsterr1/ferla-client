@@ -1,0 +1,112 @@
+@import "breakpoint-slicer";
+@import "../../shared/styles/mixins";
+@import "../../shared/styles/variables";
+
+.email_form {
+  width: 100%;
+  height: clamp(165px, 330 / 360 * 100vw, 660px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../../assets/webp/pc/ferla.webp");
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  @apply p-4;
+  @apply mt-32;
+  @apply rounded-xl;
+  @apply bg-red;
+
+  @include respond-to("xl") {
+    @apply mt-0;
+  }
+
+  @include respond-to("5xl") {
+    @apply mt-32;
+  }
+
+  &__heading {
+    font-size: clamp(12px, 24 / 360 * 100vw, 48px);
+    @apply text-white;
+
+    @include respond-to("xs") {
+      font-size: clamp(12px, 24 / 480 * 100vw, 48px);
+    }
+
+    @include respond-to("sm") {
+      font-size: clamp(12px, 24 / 768 * 100vw, 48px);
+    }
+
+    @include respond-to("md") {
+      font-size: clamp(12px, 24 / 992 * 100vw, 48px);
+    }
+
+    @include respond-to("lg") {
+      font-size: clamp(24px, 48 / 1200 * 100vw, 96px);
+    }
+
+    @include respond-to("xl") {
+      font-size: clamp(24px, 48 / 1360 * 100vw, 96px);
+    }
+
+    @include respond-to("2xl") {
+      font-size: clamp(24px, 48 / 1520 * 100vw, 96px);
+    }
+
+    @include respond-to("3xl") {
+      font-size: clamp(24px, 48 / 1680 * 100vw, 96px);
+    }
+
+    @include respond-to("4xl") {
+      font-size: clamp(24px, 48 / 1920 * 100vw, 96px);
+    }
+
+    @include respond-to("5xl") {
+      font-size: clamp(24px, 48 / 2560 * 100vw, 96px);
+    }
+  }
+
+  &__paragraph {
+    width: 30%;
+    text-align: center;
+    @apply text-white;
+    @apply mt-4;
+  }
+
+  @include respond-to("xs") {
+    height: clamp(165px, 330 / 480 * 100vw, 660px);
+  }
+
+  @include respond-to("sm") {
+    height: clamp(165px, 330 / 720 * 100vw, 660px);
+  }
+
+  @include respond-to("md") {
+    height: clamp(165px, 330 / 992 * 100vw, 660px);
+  }
+
+  @include respond-to("lg") {
+    height: clamp(160px, 320 / 1200 * 100vw, 640px);
+  }
+
+  @include respond-to("xl") {
+    height: clamp(160px, 320 / 1360 * 100vw, 640px);
+  }
+
+  @include respond-to("2xl") {
+    height: clamp(160px, 320 / 1520 * 100vw, 640px);
+  }
+
+  @include respond-to("3xl") {
+    height: clamp(160px, 320 / 1680 * 100vw, 640px);
+  }
+
+  @include respond-to("4xl") {
+    height: clamp(160px, 320 / 1920 * 100vw, 640px);
+  }
+
+  @include respond-to("5xl") {
+    height: clamp(200px, 400 / 2560 * 100vw, 800px);
+  }
+}

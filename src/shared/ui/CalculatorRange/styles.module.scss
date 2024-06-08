@@ -1,0 +1,39 @@
+@import "breakpoint-slicer";
+@import "../../../shared/styles/mixins";
+@import "../../../shared/styles/variables";
+
+.calculator_range {
+  width: clamp(100px, 200 / 1200 * 100vw, 400px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid;
+  @apply rounded-md;
+  @apply p-2;
+  @apply bg-white;
+
+  &__icon {
+    @apply text-lg;
+    @apply text-red;
+  }
+
+  @include respond-to("xl") {
+    width: clamp(100px, 200 / 1360 * 100vw, 400px);
+  }
+
+  @include respond-to("2xl") {
+    width: clamp(100px, 200 / 1520 * 100vw, 400px);
+  }
+
+  @include respond-to("3xl") {
+    width: clamp(100px, 200 / 1680 * 100vw, 400px);
+  }
+
+  @include respond-to("4xl") {
+    width: clamp(100px, 200 / 1920 * 100vw, 400px);
+  }
+
+  @include respond-to("5xl") {
+    width: clamp(100px, 200 / 2560 * 100vw, 400px);
+  }
+}

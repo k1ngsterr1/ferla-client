@@ -1,0 +1,24 @@
+.header_mob {
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 96%;
+    @apply mt-12 mb-8;
+
+    &__logo {
+        width: clamp(60px,33.333vw,240px);
+        flex-shrink: 0;
+    }
+
+    &__link {
+        @apply text-red;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 150%; 
+        letter-spacing: 0.8px;
+        font-size: clamp(8px,4.444vw,32px) ;
+        text-transform: capitalize; 
+        text-decoration: none;
+    }
+}

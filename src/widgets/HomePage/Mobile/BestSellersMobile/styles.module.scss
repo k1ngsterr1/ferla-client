@@ -1,0 +1,50 @@
+@import "breakpoint-slicer";
+@import "../../../../shared/styles/mixins";
+@import "../../../../shared/styles/variables";
+
+.best_sellers_mob {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow-x: hidden;
+  @apply mt-16;
+
+  &__content {
+    width: 90%;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+
+    &__text {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      &__paragraph {
+        width: 75%;
+        text-align: center;
+        font-style: normal;
+        line-height: 138.6%;
+        @apply mt-8;
+      }
+    }
+
+    &__swiper {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @apply mt-8;
+    }
+  }
+
+  &__image {
+    width: clamp(152.5px, 84.722vw, 610px);
+    height: clamp(166.5px, 92.5vwv, 666px);
+    @apply mt-8;
+  }
+}

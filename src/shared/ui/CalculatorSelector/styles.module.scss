@@ -1,0 +1,120 @@
+@import "breakpoint-slicer";
+@import "../../../shared/styles/mixins";
+@import "../../../shared/styles/variables";
+
+.selector {
+  position: relative;
+  width: clamp(125px, 250 / 1200 * 100vw, 500px);
+  height: clamp(32.5px, 65 / 1200 * 100vw, 130px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid;
+  z-index: 100;
+  @apply border-gray-200;
+  @apply rounded-md;
+  @apply bg-white;
+  @apply text-dark;
+
+  @include respond-to("xl") {
+    width: clamp(125px, 250 / 1360 * 100vw, 500px);
+    height: clamp(32.5px, 65 / 1360 * 100vw, 130px);
+  }
+
+  @include respond-to("2xl") {
+    width: clamp(125px, 250 / 1520 * 100vw, 500px);
+    height: clamp(32.5px, 65 / 1520 * 100vw, 130px);
+  }
+
+  @include respond-to("3xl") {
+    width: clamp(125px, 250 / 1680 * 100vw, 500px);
+    height: clamp(32.5px, 65 /1520 * 100vw, 130px);
+  }
+
+  @include respond-to("4xl") {
+    width: clamp(125px, 250 / 1920 * 100vw, 500px);
+    height: clamp(32.5px, 65 / 1920 * 100vw, 130px);
+  }
+
+  @include respond-to("5xl") {
+    width: clamp(125px, 250 / 2560 * 100vw, 500px);
+    height: clamp(32.5px, 65 / 2560 * 100vw, 130px);
+  }
+}
+
+.list {
+  position: absolute;
+  min-height: clamp(30px, 60 / 1200 * 100vw, 120px);
+  max-height: clamp(100px, 100 / 1200 * 100vw, 200px);
+  overflow-y: auto;
+  overflow-y: scroll;
+  width: clamp(125px, 250 / 1200 * 100vw, 500px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  z-index: 100 !important;
+  @apply top-16;
+  @apply rounded-md;
+  @apply bg-white;
+
+  @include respond-to("xl") {
+    width: clamp(125px, 250 / 1360 * 100vw, 500px);
+    min-height: clamp(30px, 60 / 1360 * 100vw, 120px);
+    max-height: clamp(100px, 200 / 1360 * 100vw, 200px);
+    // height: clamp(25px, 50 / 1360 * 100vw, 100px);
+  }
+
+  @include respond-to("2xl") {
+    width: clamp(125px, 250 / 1520 * 100vw, 500px);
+    min-height: clamp(30px, 60 / 1520 * 100vw, 120px);
+    max-height: clamp(100px, 200 / 1520 * 100vw, 200px);
+    // height: clamp(25px, 50 / 1520 * 100vw, 100px);
+  }
+
+  @include respond-to("3xl") {
+    width: clamp(125px, 250 / 1680 * 100vw, 500px);
+    min-height: clamp(30px, 60 / 1680 * 100vw, 120px);
+    max-height: clamp(100px, 200 / 1680 * 100vw, 200px);
+    // height: clamp(25px, 50 / 1680 * 100vw, 100px);
+  }
+
+  @include respond-to("4xl") {
+    width: clamp(125px, 250 / 1920 * 100vw, 500px);
+    min-height: clamp(30px, 60 / 1920 * 100vw, 120px);
+    max-height: clamp(100px, 200 / 1920 * 100vw, 200px);
+    // height: clamp(25px, 50 / 1920 * 100vw, 100px);
+  }
+
+  @include respond-to("5xl") {
+    width: clamp(125px, 250 / 2560 * 100vw, 500px);
+    min-height: clamp(30px, 60 / 2560 * 100vw, 120px);
+    max-height: clamp(50px, 100 / 2560 * 100vw, 200px);
+    // height: clamp(25px, 50 / 2560 * 100vw, 100px);
+  }
+}
+
+.selectorChevron {
+  @apply text-base;
+  @apply text-red;
+}
+
+.selectorPlaceholder {
+  display: flex;
+  align-items: center;
+  @apply gap-4;
+}
+
+.listItem {
+  width: 100%;
+  height: clamp(27.5px, 55 / 1200 * 100vw, 110px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  transition: 0.3s all;
+  @apply p-2;
+  &:hover {
+    @apply bg-gray-200;
+  }
+}

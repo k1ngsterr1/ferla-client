@@ -1,0 +1,145 @@
+@import "breakpoint-slicer";
+@import "../../../../shared/styles/animations";
+@import "../../../../shared/styles/mixins";
+@import "../../../../shared/styles/variables";
+
+.business_block {
+  display: flex;
+  flex-direction: column;
+  @apply mt-80;
+
+  @include respond-to("5xl") {
+    margin-top: clamp(256px, 20vw, 1024px);
+  }
+
+  &__upper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__heading {
+      animation: reveal 2s linear both;
+      transition: 0.3s all;
+      animation-timeline: view(40%);
+    }
+  }
+
+  &__perfect {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    @apply gap-12;
+    @apply mt-4;
+
+    &__content {
+      width: 80%;
+    }
+
+    &__arrow {
+      width: clamp(33px, 66 / 1200 * 100vw, 132px);
+      height: clamp(31px, 62 / 1200 * 100vw, 124px);
+
+      @include respond-to("xl") {
+        width: clamp(33px, 66 / 1360 * 100vw, 132px);
+        height: clamp(31px, 62 / 1360 * 100vw, 124px);
+      }
+
+      @include respond-to("2xl") {
+        width: clamp(33px, 66 / 1520 * 100vw, 132px);
+        height: clamp(31px, 62 / 1520 * 100vw, 124px);
+      }
+
+      @include respond-to("3xl") {
+        width: clamp(33px, 66 / 1680 * 100vw, 132px);
+        height: clamp(31px, 62 / 1680 * 100vw, 124px);
+      }
+
+      @include respond-to("4xl") {
+        width: clamp(33px, 66 / 1920 * 100vw, 132px);
+        height: clamp(31px, 62 / 1920 * 100vw, 124px);
+      }
+
+      @include respond-to("5xl") {
+        width: clamp(33px, 66 / 2560 * 100vw, 132px);
+        height: clamp(31px, 62 / 2560 * 100vw, 124px);
+      }
+    }
+
+    &__paragraph {
+      width: 40%;
+      font-size: clamp(8px, 16 / 360 * 100vw, 32px);
+      text-align: left;
+      animation: reveal 2s linear both;
+      transition: 0.3s all;
+      animation-timeline: view(40%);
+
+      @include respond-to("xs") {
+        font-size: clamp(8px, 16 / 480 * 100vw, 32px);
+      }
+
+      @include respond-to("sm") {
+        font-size: clamp(8px, 16 / 768 * 100vw, 32px);
+      }
+
+      @include respond-to("md") {
+        font-size: clamp(8px, 16 / 992 * 100vw, 32px);
+      }
+
+      @include respond-to("lg") {
+        width: 80%;
+        font-size: clamp(8px, 16 / 1200 * 100vw, 32px);
+      }
+
+      @include respond-to("xl") {
+        width: 60%;
+        font-size: clamp(8px, 16 / 1360 * 100vw, 32px);
+      }
+
+      @include respond-to("2xl") {
+        font-size: clamp(8px, 16 / 1520 * 100vw, 32px);
+      }
+
+      @include respond-to("3xl") {
+        font-size: clamp(8px, 16 / 1680 * 100vw, 32px);
+      }
+
+      @include respond-to("4xl") {
+        font-size: clamp(8px, 16 / 1920 * 100vw, 32px);
+      }
+
+      @include respond-to("5xl") {
+        font-size: clamp(8px, 16 / 2560 * 100vw, 32px);
+      }
+    }
+
+    &__upper_tab {
+      @include respond-to("lg") {
+        width: 100%;
+      }
+
+      @include respond-to("5xl") {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+      }
+    }
+
+    &__lower_tab {
+      @include respond-to("5xl") {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+      }
+    }
+
+    @include respond-to("lg") {
+      @apply mt-10;
+    }
+
+    @include respond-to("xl") {
+      @apply mt-8;
+    }
+  }
+}

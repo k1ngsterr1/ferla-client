@@ -1,0 +1,79 @@
+@import "breakpoint-slicer";
+@import "../../../../shared/styles/mixins";
+@import "../../../../shared/styles/variables";
+@import "../../../../shared/styles/animations";
+
+.manage_block {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  @apply mt-32;
+
+  &__heading {
+    width: 40%;
+    text-align: left;
+    animation: reveal 2s linear both;
+    transition: 0.3s all;
+    animation-timeline: view(40%);
+    @apply mt-2;
+
+    @include respond-to("lg") {
+      width: 70%;
+    }
+
+    @include respond-to("xl") {
+      font-size: clamp(19px, 38 / 1360 * 100vw, 76px);
+      width: 60%;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    @apply gap-4;
+    @apply mt-8;
+
+    @include respond-to("xl") {
+      width: 80%;
+    }
+
+    &__separator {
+      width: 32%;
+      height: 1px;
+      @apply bg-gray-500;
+
+      @include respond-to("xs") {
+        width: 40%;
+      }
+
+      @include respond-to("sm") {
+        width: 40%;
+      }
+
+      @include respond-to("md") {
+        width: 40%;
+      }
+
+      @include respond-to("lg") {
+        width: 40%;
+      }
+
+      @include respond-to("xl") {
+        width: 40%;
+      }
+
+      @include respond-to("2xl") {
+        width: 40%;
+      }
+
+      @include respond-to("3xl") {
+        width: 40%;
+      }
+
+      @include respond-to("4xl") {
+        width: 50%;
+      }
+    }
+  }
+}

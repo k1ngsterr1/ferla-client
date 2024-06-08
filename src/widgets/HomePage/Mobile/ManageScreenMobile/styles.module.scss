@@ -1,0 +1,18 @@
+.manage_screen_mob {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    @apply mt-20;
+
+    &__heading {
+        @apply mt-4;
+    }
+
+    &__separator {
+        width: 90%;
+        @apply mt-4;
+    }
+}

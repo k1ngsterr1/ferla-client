@@ -1,0 +1,17 @@
+@import "breakpoint-slicer";
+@import "../../../shared/styles/mixins";
+@import "../../../shared/styles/variables";
+
+.reviews {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  @apply mt-32;
+
+  &__paragraph {
+    width: 30%;
+    @apply text-dark;
+    @apply mt-4;
+  }
+}

@@ -1,0 +1,15 @@
+.reviews_mob {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    @apply mt-16;
+
+    &__paragraph {
+        width: 75%;
+        text-align: center;
+        @apply mt-4;
+    }
+}

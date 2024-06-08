@@ -1,0 +1,234 @@
+@import "breakpoint-slicer";
+@import "tailwindcss/utilities";
+@import "./animations";
+@import "./mixins";
+@import "./variables";
+
+// Poppins
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+// Rubik
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Rubik" !important;
+  overflow-x: hidden;
+  background-color: #fbfbfb;
+  scroll-behavior: smooth;
+  cursor: none;
+}
+
+h1 {
+  font-size: clamp(25px, 50 / 360 * 100vw, 100px);
+  text-transform: capitalize;
+
+  @include respond-to("xxs") {
+    font-size: clamp(22.75px, 12.639vw, 91px);
+  }
+
+  @include respond-to("xs") {
+    font-size: clamp(25px, 50 / 480 * 100vw, 100px);
+  }
+
+  @include respond-to("sm") {
+    font-size: clamp(25px, 50 / 720 * 100vw, 100px);
+  }
+
+  @include respond-to("md") {
+    font-size: clamp(25px, 50 / 992 * 100vw, 100px);
+  }
+
+  @include respond-to("lg") {
+    width: 50%;
+    font-size: clamp(27.5px, 55 / 1200 * 100vw, 110px);
+  }
+
+  @include respond-to("xl") {
+    width: 50%;
+    font-size: clamp(30px, 60 / 1360 * 100vw, 120px);
+  }
+
+  @include respond-to("2xl") {
+    font-size: clamp(35px, 70 / 1520 * 100vw, 140px);
+  }
+
+  @include respond-to("3xl") {
+    width: 40%;
+    font-size: clamp(40px, 80 / 1680 * 100vw, 160px);
+  }
+
+  @include respond-to("4xl") {
+    width: 50%;
+    font-size: clamp(45px, 90 / 1920 * 100vw, 180px);
+  }
+
+  @include respond-to("5xl") {
+    width: 50%;
+    font-size: clamp(55px, 4.297vw, 220px);
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins";
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: clamp(24px, 48 / 360 * 100vw, 96px);
+
+  @include respond-to("xxs") {
+    text-align: center;
+    font-size: clamp(16px, 8.889vw, 64px);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: 1.6px;
+    text-transform: capitalize;
+  }
+
+  @include respond-to("xs") {
+    font-size: clamp(24px, 48 / 480 * 100vw, 96px);
+  }
+
+  @include respond-to("sm") {
+    font-size: clamp(24px, 48 / 768 * 100vw, 96px);
+  }
+
+  @include respond-to("md") {
+    font-size: clamp(24px, 48 / 992 * 100vw, 96px);
+  }
+
+  @include respond-to("lg") {
+    font-size: clamp(20px, 40 / 1200 * 100vw, 80px);
+  }
+
+  @include respond-to("xl") {
+    font-size: clamp(22px, 44 / 1360 * 100vw, 88px);
+  }
+
+  @include respond-to("2xl") {
+    font-size: clamp(24px, 48 / 1520 * 100vw, 96px);
+  }
+
+  @include respond-to("3xl") {
+    font-size: clamp(24px, 48 / 1680 * 100vw, 96px);
+  }
+
+  @include respond-to("4xl") {
+    text-align: left;
+    font-size: clamp(24px, 48 / 1920 * 100vw, 96px);
+  }
+
+  @include respond-to("5xl") {
+    text-align: left;
+    // font-size: clamp(24px, 48 / 2560 * 100vw, 96px);
+  }
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #e33a3a;
+  border-radius: clamp(9px, 0.93744vw, 36px);
+  border: clamp(9px, 0.93744vw, 36px) solid #e33a3a;
+}
+
+p {
+  font-family: "Rubik";
+  font-size: clamp(8px, 16 / 360 * 100vw, 32px);
+  line-height: 138.6%;
+  text-wrap: balance;
+  @apply text-dark;
+
+  @include respond-to("xxs") {
+    font-size: clamp(8px, 4.444vw, 32px);
+  }
+
+  @include respond-to("xs") {
+    font-size: clamp(8px, 16 / 480 * 100vw, 32px);
+  }
+
+  @include respond-to("sm") {
+    font-size: clamp(8px, 16 / 768 * 100vw, 32px);
+  }
+
+  @include respond-to("md") {
+    font-size: clamp(8px, 16 / 992 * 100vw, 32px);
+  }
+
+  @include respond-to("lg") {
+    font-size: clamp(8px, 16 / 1200 * 100vw, 32px);
+  }
+
+  @include respond-to("xl") {
+    font-size: clamp(8px, 16 / 1360 * 100vw, 32px);
+  }
+
+  @include respond-to("2xl") {
+    font-size: clamp(10px, 20 / 1520 * 100vw, 40px);
+  }
+
+  @include respond-to("3xl") {
+    font-size: clamp(10px, 20 / 1680 * 100vw, 40px);
+  }
+
+  @include respond-to("4xl") {
+    font-size: clamp(10px, 20 / 1920 * 100vw, 40px);
+  }
+
+  @include respond-to("5xl") {
+    font-size: clamp(10px, 20 / 2560 * 100vw, 40px);
+  }
+}
+
+button,
+a {
+  outline: none;
+  font-family: "Poppins";
+  cursor: тщту;
+}
+
+.container {
+  @include respond-to("lg") {
+    width: 86.6%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+
+  // @include respond-to('xxs') {
+  //   width: 90%;
+  //   display: flex;
+  //   flex-direction: column;
+  //   margin: auto;
+  // }
+}
+
+.fade-reveal-left {
+  animation: fadeRevealLeft 0.9s ease-out forwards;
+}

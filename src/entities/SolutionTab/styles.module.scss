@@ -1,0 +1,292 @@
+@import "breakpoint-slicer";
+@import "../../shared/styles/animations";
+@import "../../shared/styles/variables";
+@import "../../shared/styles/mixins";
+
+.solution_tab {
+  width: 100%;
+  height: clamp(75px, 150 / 360 * 100vw, 300px);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 2px solid;
+  background: transparent;
+  transition: 0.3s all;
+  animation: reveal 2s linear both;
+  transition: 0.3s all;
+  animation-timeline: view(40%);
+  @apply rounded-2xl;
+  @apply border-dark;
+  @apply p-4;
+
+  &:hover {
+    @apply border-red;
+  }
+
+  &:hover &__name {
+    @apply text-red;
+  }
+
+  @include respond-to("xxs") {
+    height: clamp(75px, 41.667vw, 300px);
+  }
+
+  @include respond-to("xs") {
+    height: clamp(75px, 150 / 480 * 100vw, 300px);
+  }
+
+  @include respond-to("sm") {
+    height: clamp(75px, 150 / 720 * 100vw, 300px);
+  }
+
+  @include respond-to("md") {
+    height: clamp(75px, 150 / 992 * 100vw, 300px);
+  }
+
+  @include respond-to("lg") {
+    height: clamp(75px, 150 / 1200 * 100vw, 300px);
+  }
+
+  @include respond-to("xl") {
+    width: 100%;
+    height: clamp(75px, 150 / 1360 * 100vw, 300px);
+  }
+
+  @include respond-to("2xl") {
+    height: clamp(80px, 160 / 1520 * 100vw, 320px);
+  }
+
+  @include respond-to("3xl") {
+    height: clamp(75px, 150 / 1680 * 100vw, 300px);
+  }
+
+  @include respond-to("4xl") {
+    width: clamp(227.5px, 23.698vw, 910px);
+    height: clamp(75px, 150 / 1920 * 100vw, 300px);
+  }
+
+  @include respond-to("5xl") {
+    width: 40%;
+    height: clamp(75px, 150 / 2560 * 100vw, 300px);
+  }
+
+  &__text {
+    @include respond-to("xxs") {
+      @apply mt-16;
+    }
+
+    @include respond-to("md") {
+      @apply mt-12;
+    }
+  }
+
+  &__star {
+    width: clamp(16px, 32 / 360 * 100vw, 64px);
+    height: clamp(16px, 32 / 360 * 100vw, 64px);
+    position: absolute;
+    @apply top-4;
+    @apply right-4;
+    @apply text-red;
+
+    @include respond-to("xs") {
+      width: clamp(16px, 32 / 480 * 100vw, 64px);
+      height: clamp(16px, 32 / 480 * 100vw, 64px);
+    }
+
+    @include respond-to("sm") {
+      width: clamp(16px, 32 / 768 * 100vw, 64px);
+      height: clamp(16px, 32 / 768 * 100vw, 64px);
+    }
+
+    @include respond-to("md") {
+      width: clamp(16px, 32 / 992 * 100vw, 64px);
+      height: clamp(16px, 32 / 992 * 100vw, 64px);
+    }
+
+    @include respond-to("lg") {
+      width: clamp(16px, 32 / 1200 * 100vw, 64px);
+      height: clamp(16px, 32 / 1200 * 100vw, 64px);
+    }
+
+    @include respond-to("xl") {
+      width: clamp(16px, 32 / 1360 * 100vw, 64px);
+      height: clamp(16px, 32 / 1360 * 100vw, 64px);
+    }
+
+    @include respond-to("2xl") {
+      width: clamp(16px, 32 / 1520 * 100vw, 64px);
+      height: clamp(16px, 32 / 1520 * 100vw, 64px);
+    }
+
+    @include respond-to("3xl") {
+      width: clamp(16px, 32 / 1680 * 100vw, 64px);
+      height: clamp(16px, 32 / 1680 * 100vw, 64px);
+    }
+
+    @include respond-to("4xl") {
+      width: clamp(16px, 32 / 1920 * 100vw, 64px);
+      height: clamp(16px, 32 / 1920 * 100vw, 64px);
+    }
+
+    @include respond-to("5xl") {
+      width: clamp(16px, 32 / 2560 * 100vw, 64px);
+      height: clamp(16px, 32 / 2560 * 100vw, 64px);
+    }
+  }
+
+  &__name {
+    font-size: clamp(12px, 24 / 360 * 100vw, 48px);
+    font-family: "Poppins";
+    font-weight: 600;
+    transition: 0.3s all;
+    @apply text-dark;
+    letter-spacing: 1.1px;
+    text-transform: capitaliz;
+
+    @include respond-to("xxs") {
+      font-size: clamp(9px, 5vw, 36px);
+    }
+
+    @include respond-to("xs") {
+      font-size: clamp(12px, 24 / 480 * 100vw, 48px);
+    }
+
+    @include respond-to("sm") {
+      font-size: clamp(12px, 24 / 768 * 100vw, 48px);
+    }
+
+    @include respond-to("md") {
+      font-size: clamp(8px, 16 / 992 * 100vw, 32px);
+    }
+
+    @include respond-to("lg") {
+      width: 100%;
+      font-size: clamp(8.5px, 17 / 1200 * 100vw, 34px);
+    }
+
+    @include respond-to("xl") {
+      font-size: clamp(10px, 20 / 1360 * 100vw, 40px);
+    }
+
+    @include respond-to("2xl") {
+      font-size: clamp(11px, 22 / 1520 * 100vw, 44px);
+    }
+
+    @include respond-to("3xl") {
+      font-size: clamp(12px, 24 / 1680 * 100vw, 48px);
+    }
+
+    @include respond-to("4xl") {
+      font-size: clamp(12px, 24 / 1920 * 100vw, 48px);
+    }
+
+    @include respond-to("5xl") {
+      font-size: clamp(12px, 24 / 2560 * 100vw, 48px);
+    }
+  }
+
+  &__link {
+    font-size: clamp(8px, 16 / 360 * 100vw, 32px);
+    text-decoration: none;
+    transition: 0.3s all;
+    @apply text-dark;
+
+    &:hover {
+      @apply text-red;
+    }
+
+    @include respond-to("xs") {
+      font-size: clamp(8px, 16 / 480 * 100vw, 32px);
+    }
+
+    @include respond-to("sm") {
+      font-size: clamp(8px, 16 / 992 * 100vw, 32px);
+    }
+
+    @include respond-to("md") {
+      font-size: clamp(8px, 16 / 992 * 100vw, 32px);
+    }
+
+    @include respond-to("lg") {
+      font-size: clamp(7px, 14 / 1200 * 100vw, 28px);
+      @apply mt-2;
+    }
+
+    @include respond-to("xl") {
+      font-size: clamp(7px, 14 / 1360 * 100vw, 28px);
+      @apply mt-3;
+    }
+
+    @include respond-to("2xl") {
+      font-size: clamp(8px, 16 / 1520 * 100vw, 32px);
+    }
+
+    @include respond-to("3xl") {
+      font-size: clamp(8px, 16 / 1680 * 100vw, 32px);
+    }
+
+    @include respond-to("4xl") {
+      font-size: clamp(8px, 16 / 1920 * 100vw, 32px);
+    }
+
+    @include respond-to("5xl") {
+      font-size: clamp(8px, 16 / 2560 * 100vw, 32px);
+      @apply mt-1;
+    }
+  }
+
+  &__icon {
+    width: clamp(6px, 12 / 360 * 100vw, 24px);
+    height: clamp(6px, 12 / 360 * 100vw, 24px);
+    @apply text-red;
+
+    @include respond-to("xs") {
+      width: clamp(6px, 12 / 480 * 100vw, 48px);
+      height: clamp(6px, 12 / 480 * 100vw, 48px);
+    }
+
+    @include respond-to("sm") {
+      width: clamp(6px, 12 / 720 * 100vw, 48px);
+      height: clamp(6px, 12 / 720 * 100vw, 48px);
+    }
+
+    @include respond-to("md") {
+      width: clamp(6px, 12 / 992 * 100vw, 48px);
+      height: clamp(6px, 12 / 992 * 100vw, 48px);
+    }
+
+    @include respond-to("lg") {
+      width: clamp(6px, 12 / 1200 * 100vw, 48px);
+      height: clamp(6px, 12 / 1200 * 100vw, 48px);
+      @apply mt-2;
+    }
+
+    @include respond-to("xl") {
+      width: clamp(6px, 12 / 1360 * 100vw, 48px);
+      height: clamp(6px, 12 / 1360 * 100vw, 48px);
+      @apply mt-3;
+    }
+
+    @include respond-to("2xl") {
+      width: clamp(6px, 12 / 1520 * 100vw, 48px);
+      height: clamp(6px, 12 / 1520 * 100vw, 48px);
+    }
+
+    @include respond-to("3xl") {
+      width: clamp(6px, 12 / 1680 * 100vw, 48px);
+      height: clamp(6px, 12 / 1680 * 100vw, 48px);
+    }
+
+    @include respond-to("4xl") {
+      width: clamp(6px, 12 / 1920 * 100vw, 48px);
+      height: clamp(6px, 12 / 1920 * 100vw, 48px);
+    }
+
+    @include respond-to("5xl") {
+      width: clamp(6px, 12 / 2560 * 100vw, 48px);
+      height: clamp(6px, 12 / 2560 * 100vw, 48px);
+      @apply mt-1;
+    }
+  }
+}

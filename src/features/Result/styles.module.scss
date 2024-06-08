@@ -1,0 +1,30 @@
+.result {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @apply rounded-xl;
+  @apply p-8;
+  @apply bg-red;
+  @apply mb-8;
+
+  &__heading {
+    font-family: "Poppins";
+    @apply text-4xl;
+    @apply text-white;
+  }
+
+  &__money_back {
+    @apply text-xl;
+    @apply text-white;
+    @apply mt-4;
+  }
+
+  &__money_back_amount {
+    @apply mt-2;
+    @apply text-4xl;
+    @apply text-white;
+  }
+}

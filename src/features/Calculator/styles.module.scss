@@ -1,0 +1,55 @@
+@import "breakpoint-slicer";
+@import "../../shared/styles/mixins";
+@import "../../shared/styles/variables";
+
+.calculator {
+  width: 100%;
+  min-height: clamp(175px, 350 / 1200 * 100vw, 700px);
+  display: flex;
+  flex-direction: column;
+  background-image: url("../../assets/webp/pc/ferla.webp");
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  align-items: center;
+  @apply mt-8;
+  @apply mb-4;
+  @apply bg-red;
+  @apply p-8;
+  @apply rounded-xl;
+
+  &__counter_text {
+    text-align: center;
+    @apply text-xl;
+    @apply text-white;
+  }
+
+  @include respond-to("xl") {
+    min-height: clamp(175px, 350 / 1360 * 100vw, 700px);
+  }
+
+  @include respond-to("2xl") {
+    min-height: clamp(175px, 350 / 1520 * 100vw, 700px);
+  }
+
+  @include respond-to("3xl") {
+    min-height: clamp(175px, 350 / 1680 * 100vw, 700px);
+  }
+
+  @include respond-to("4xl") {
+    min-height: clamp(175px, 350 / 1920 * 100vw, 700px);
+  }
+
+  @include respond-to("5xl") {
+    min-height: clamp(175px, 350 / 2560 * 100vw, 700px);
+  }
+}
+
+.separator {
+  width: 50%;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.25);
+  @apply mt-4;
+  @apply rounded-full;
+  @apply mb-4;
+}

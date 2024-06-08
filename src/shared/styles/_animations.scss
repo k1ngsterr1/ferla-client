@@ -1,0 +1,38 @@
+// Scroll Timeline Animation
+@scroll-timeline scrollTimeline {
+  source: viewport;
+  orientation: block; /* 'block' refers to vertical scrolling */
+  start: auto;
+  end: auto;
+}
+
+@keyframes fadeRevealLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-2000px); // Adds a slight slide from bottom effect
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeRevealRight {
+  from {
+    opacity: 0;
+    transform: translateX(2000px); // Adds a slight slide from bottom effect
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,44 @@
+.bikes_everywhere_mob {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    @apply mt-16;
+
+    &__text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        &__heading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        &__paragraph {
+            width: 75%;
+            text-align: center;
+            @apply mt-4;
+        }
+    }
+
+    &__gallery {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        @apply gap-4;
+        @apply mt-8;
+
+        &_image {
+            width: clamp(155px,86.111vw,620px);
+            height: clamp(165px,86.111vw,660px);
+            flex-shrink: 0;
+        }
+    }
+}

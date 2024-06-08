@@ -1,0 +1,44 @@
+@import "breakpoint-slicer";
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.stars {
+  display: flex;
+  align-items: center;
+  @apply gap-2;
+  @apply mt-4;
+  @apply mb-4;
+}
+
+.star_icon {
+  font-size: clamp(8px, 16 / 360 * 100vw, 32px);
+  @apply text-red;
+
+  @include respond-to('xxs') {
+    font-size: clamp(12px,5.60736vw,48px);
+  }
+
+  @include respond-to("xs") {
+    font-size: clamp(8px, 16 / 480 * 100vw, 32px);
+  }
+
+  @include respond-to("sm") {
+    font-size: clamp(8px, 16 / 768 * 100vw, 32px);
+  }
+
+  @include respond-to("md") {
+    font-size: clamp(8px, 16 / 992 * 100vw, 32px);
+  }
+
+  @include respond-to("lg") {
+    font-size: clamp(8px, 16 / 1200 * 100vw, 32px);
+  }
+
+  @include respond-to("xl") {
+    font-size: clamp(8px, 16 / 1360 * 100vw, 32px);
+  }
+
+  @include respond-to("2xl") {
+    font-size: clamp(8px, 16 / 1520 * 100vw, 32px);
+  }
+}

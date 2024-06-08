@@ -1,0 +1,189 @@
+@import "breakpoint-slicer";
+
+@import "../../shared/styles/variables";
+@import "../../shared/styles/mixins";
+
+.cart_card {
+  width: 100%;
+  height: clamp(114.5px, 229 / 360 * 100vw, 458px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s all;
+  @apply rounded-lg;
+  @apply bg-gray-100;
+
+  &:hover {
+    @apply bg-red;
+    @apply shadow-2xl;
+  }
+
+  @include respond-to("xxs") {
+    width: 90%;
+    height: clamp(125px, 69.444vw, 500px);
+  }
+
+  @include respond-to("xs") {
+    width: 100%;
+    height: clamp(114.5px, 229 / 480 * 100vw, 458px);
+  }
+
+  @include respond-to("sm") {
+    width: 100%;
+    height: clamp(114.5px, 229 / 768 * 100vw, 458px);
+  }
+
+  @include respond-to("md") {
+    width: 100%;
+    height: clamp(114.5px, 229 / 992 * 100vw, 458px);
+  }
+
+  @include respond-to("lg") {
+    width: clamp(120px, 240 / 1200 * 100vw, 480px);
+    height: clamp(135px, 270 / 1200 * 100vw, 540px);
+  }
+
+  @include respond-to("xl") {
+    width: clamp(135px, 270 / 1360 * 100vw, 540px);
+    height: clamp(135px, 270 / 1360 * 100vw, 540px);
+  }
+
+  @include respond-to("2xl") {
+    width: clamp(120px, 240 / 1520 * 100vw, 480px);
+    height: clamp(125px, 250 / 1520 * 100vw, 500px);
+  }
+
+  @include respond-to("3xl") {
+    width: clamp(165px, 330 / 1680 * 100vw, 660px);
+    height: clamp(150px, 300 / 1680 * 100vw, 600px);
+  }
+
+  @include respond-to("4xl") {
+    width: clamp(185px, 370 / 1920 * 100vw, 640px);
+    height: clamp(175px, 350 / 1920 * 100vw, 700px);
+  }
+
+  @include respond-to("5xl") {
+    width: clamp(185px, 370 / 2560 * 100vw, 640px);
+    height: clamp(175px, 350 / 2560 * 100vw, 700px);
+  }
+
+  &__image {
+    width: 90%;
+    height: clamp(125px, 250 / 360 * 100vw, 500px);
+
+    @include respond-to("xxs") {
+      width: 70%;
+      height: 85%;
+    }
+
+    @include respond-to("xs") {
+      height: clamp(125px, 250 / 480 * 100vw, 500px);
+    }
+
+    @include respond-to("sm") {
+      height: clamp(125px, 250 / 720 * 100vw, 500px);
+    }
+
+    @include respond-to("md") {
+      height: clamp(125px, 250 / 992 * 100vw, 500px);
+    }
+
+    @include respond-to("lg") {
+      width: 70%;
+      height: 60%;
+    }
+
+    @include respond-to("xl") {
+      width: 70%;
+      height: 70%;
+    }
+
+    @include respond-to("2xl") {
+      width: 80% !important;
+      height: 80% !important;
+    }
+
+    @include respond-to("3xl") {
+      width: 70%;
+      height: 75%;
+    }
+
+    @include respond-to("4xl") {
+      width: 80%;
+      height: 80%;
+    }
+
+    @include respond-to("5xl") {
+      height: clamp(125px, 250 / 1920 * 100vw, 500px);
+    }
+  }
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: Rubik;
+  font-size: clamp(9px, 18 / 360 * 100vw, 36px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  text-decoration: none;
+  transition: 0.3s all;
+  @apply text-red;
+  @apply gap-2;
+
+  &:hover {
+    @apply text-red;
+
+    &::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+  }
+
+  &__icon {
+    width: 12px;
+    height: 12px;
+    @apply text-red;
+  }
+
+  @include respond-to("xs") {
+    font-size: clamp(9px, 18 / 480 * 100vw, 36px);
+  }
+
+  @include respond-to("sm") {
+    font-size: clamp(9px, 18 / 768 * 100vw, 36px);
+  }
+
+  @include respond-to("md") {
+    font-size: clamp(9px, 18 / 992 * 100vw, 36px);
+  }
+
+  @include respond-to("lg") {
+    font-size: clamp(9px, 18 / 1200 * 100vw, 36px);
+  }
+
+  @include respond-to("xl") {
+    font-size: clamp(9px, 18 / 1360 * 100vw, 36px);
+  }
+
+  @include respond-to("2xl") {
+    font-size: clamp(9px, 18 / 1520 * 100vw, 36px);
+  }
+
+  @include respond-to("3xl") {
+    font-size: clamp(9px, 18 / 1680 * 100vw, 36px);
+  }
+
+  @include respond-to("4xl") {
+    font-size: clamp(9px, 18 / 1920 * 100vw, 36px);
+  }
+
+  @include respond-to("5xl") {
+    font-size: clamp(9px, 18 / 2560 * 100vw, 36px);
+  }
+}

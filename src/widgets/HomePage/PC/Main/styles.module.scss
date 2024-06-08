@@ -1,0 +1,149 @@
+@import "breakpoint-slicer";
+@import "../../../../shared/styles/animations";
+@import "../../../../shared/styles/mixins";
+@import "../../../../shared/styles/variables";
+
+.main_screen {
+  display: flex;
+  flex-direction: column;
+  @apply mt-16;
+
+  @include respond-to("5xl") {
+    @apply mt-32;
+  }
+
+  &__heading {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    @apply text-dark;
+    animation: fadeRevealLeft 0.5s ease-out forwards;
+
+    @include respond-to("3xl") {
+      width: 50%;
+    }
+  }
+
+  &__paragraph {
+    width: 20%;
+    @apply mt-8;
+    animation: fadeRevealLeft 0.7s ease-out forwards;
+
+    @include respond-to("lg") {
+      width: 35%;
+    }
+
+    @include respond-to("xl") {
+      width: 40%;
+    }
+
+    @include respond-to("2xl") {
+      width: 40%;
+    }
+
+    @include respond-to("4xl") {
+      width: 30%;
+    }
+
+    @include respond-to("5xl") {
+      width: 30%;
+    }
+  }
+
+  &__link {
+    width: clamp(125px, 250 / 360 * 100vw, 500px);
+    display: flex;
+    font-size: clamp(8px, 16 / 360 * 100vw, 32px);
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.3s all;
+    position: relative;
+    text-decoration: none;
+    @apply text-dark;
+    @apply font-medium;
+    @apply mt-4;
+    animation: fadeRevealLeft 1.1s ease-out forwards;
+
+    &:hover {
+      @apply text-red;
+
+      &::after {
+        transform: scaleX(1);
+        transform-origin: left;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 100%;
+      width: 70%;
+      height: 1px;
+      @apply bg-red;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 250ms;
+    }
+
+    @include respond-to("lg") {
+      width: clamp(102.5px, 205 / 1200 * 100vw, 410px);
+      font-size: clamp(7px, 14 / 1200 * 100vw, 28px);
+    }
+
+    @include respond-to("xl") {
+      width: clamp(110px, 220 / 1360 * 100vw, 440px);
+      font-size: clamp(7px, 14 / 1360 * 100vw, 28px);
+    }
+
+    @include respond-to("2xl") {
+      width: clamp(125px, 250 / 1520 * 100vw, 500px);
+      font-size: clamp(8px, 16 / 1520 * 100vw, 32px);
+    }
+
+    @include respond-to("3xl") {
+      width: clamp(125px, 250 / 1680 * 100vw, 500px);
+      font-size: clamp(8px, 16 / 1680 * 100vw, 32px);
+    }
+
+    @include respond-to("4xl") {
+      width: clamp(125px, 250 / 1920 * 100vw, 500px);
+      font-size: clamp(9px, 18 / 1920 * 100vw, 36px);
+    }
+
+    @include respond-to("5xl") {
+      width: clamp(125px, 250 / 2560 * 100vw, 500px);
+      font-size: clamp(9px, 18 / 2560 * 100vw, 36px);
+    }
+  }
+
+  &__image {
+    width: 50%;
+    height: clamp(500px, 39.063vw, 2000px);
+    position: absolute;
+    right: 0;
+    animation: fadeRevealRight 0.7s ease-out forwards;
+
+    @include respond-to("3xl") {
+      height: clamp(375px, 750 / 1680 * 100vw, 1500px);
+    }
+  }
+}
+
+@keyframes a-ltr-after {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  } // Move right to reveal text
+}
+
+@keyframes a-ltr-before {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  } // Move left to reveal text
+}

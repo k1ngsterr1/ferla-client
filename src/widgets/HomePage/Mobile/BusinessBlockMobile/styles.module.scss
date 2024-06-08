@@ -1,0 +1,43 @@
+.business_block_mob {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow-x: hidden;
+
+    &__image {
+        width: clamp(215px,119.444vw,860px);
+        height: clamp(207px,115vw,828px);
+    }
+        &__content {
+            width: 90%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            &__text {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                @apply mt-16;
+
+                &__paragraph {
+                    width: 75%;
+                    flex-shrink: 0; 
+                    text-align: center;
+                    line-height: 138.6%;
+                    @apply mt-4;
+                }
+            }
+
+        &__tabs {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            @apply mt-8;
+            @apply gap-4;
+        }
+    }
+}

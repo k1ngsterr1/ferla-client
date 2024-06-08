@@ -1,0 +1,82 @@
+@import "breakpoint-slicer";
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.swiperButton {
+  width: clamp(24px, 13.333vw, 96px);
+  height: clamp(24px, 13.333vw, 96px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  font-size: clamp(8px, 16 / 360 * 100vw, 32px);
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  transition: 0.3s all;
+  border-radius: 250px;
+  @apply shadow-lg;
+  @apply text-white;
+  @apply bg-red;
+  @apply p-4;
+
+  &:hover {
+    @apply bg-hover_red;
+  }
+
+  @include respond-to("xs") {
+    width: clamp(24px, 13.333vw, 96px);
+    height: clamp(24px, 13.333vw, 96px);
+    font-size: clamp(8px, 16 / 480 * 100vw, 32px);
+  }
+
+  @include respond-to("sm") {
+    width: clamp(24px, 10vw, 96px);
+    height: clamp(24px, 10vw, 96px);
+    font-size: clamp(8px, 16 / 768 * 100vw, 32px);
+  }
+
+  @include respond-to("md") {
+    width: clamp(24px, 6.667vw, 96px);
+    height: clamp(24px, 6.667vw, 96px);
+    font-size: clamp(8px, 16 / 992 * 100vw, 32px);
+  }
+
+  @include respond-to("lg") {
+    width: clamp(24px, 4.839vw, 96px);
+    height: clamp(24px, 4.839vw, 96px);
+    font-size: clamp(8px, 16 / 1200 * 100vw, 32px);
+  }
+
+  @include respond-to("xl") {
+    width: clamp(24px, 3.529vw, 96px);
+    height: clamp(24px, 3.529vw, 96px);
+    font-size: clamp(8px, 16 / 1360 * 100vw, 32px);
+  }
+
+  @include respond-to("2xl") {
+    width: clamp(24px, 3.158vw, 96px);
+    height: clamp(24px, 3.158vw, 96px);
+    font-size: clamp(8px, 16 / 1520 * 100vw, 32px);
+  }
+
+  @include respond-to("3xl") {
+    width: clamp(24px, 2.857vw, 96px);
+    height: clamp(24px, 2.857vw, 96px);
+    font-size: clamp(8px, 16 / 1680 * 100vw, 32px);
+  }
+
+  @include respond-to("4xl") {
+    width: clamp(24px, 2.5vw, 96px);
+    height: clamp(24px, 2.5vw, 96px);
+    font-size: clamp(8px, 16 / 1920 * 100vw, 32px);
+  }
+
+  @include respond-to("5xl") {
+    width: clamp(24px, 1.875vw, 96px);
+    height: clamp(24px, 1.875vw, 96px);
+    font-size: clamp(8px, 16 / 2560 * 100vw, 32px);
+  }
+}

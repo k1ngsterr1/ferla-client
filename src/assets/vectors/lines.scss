@@ -1,0 +1,4 @@
+.arrow {
+  stroke-dasharray: 400; /* This length should be around or more than the total length of the path */
+  stroke-dashoffset: 400; /* Initially offset to hide the stroke */
+}
