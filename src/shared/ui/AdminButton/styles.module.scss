@@ -1,0 +1,12 @@
+.button {
+  width: clamp(175px, 18.228vw, 700px);
+  border-radius: clamp(3px, 0.31248vw, 12px);
+  color: #fff3ef;
+  padding: clamp(6px, 0.62496vw, 24px);
+  font-size: clamp(7px, 0.72912vw, 28px);
+  transition: 0.3s ease-in-out;
+  text-align: center;
+  border: none;
+  @apply bg-orange;
+  @apply p-3;
+}

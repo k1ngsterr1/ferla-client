@@ -1,0 +1,15 @@
+.admin_text_area {
+  width: clamp(175px, 18.228vw, 700px);
+  min-height: auto;
+  border: 2px rgba(255, 147, 114, 0.5) solid;
+  font-size: clamp(8px, 16 / 1920 * 100vw, 32px);
+  transition: 0.3s all;
+  @apply mt-4;
+  @apply p-4;
+  @apply rounded-lg;
+
+  &:hover {
+    @apply outline-orange;
+    @apply border-orange;
+  }
+}

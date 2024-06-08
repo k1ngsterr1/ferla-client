@@ -1,0 +1,25 @@
+.screen {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: auto;
+
+  &__heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(32px, 64 / 1920 * 100vw, 128px);
+    margin: auto;
+    @apply mt-8;
+    @apply mb-8;
+    @apply text-red;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

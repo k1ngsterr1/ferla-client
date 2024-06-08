@@ -1,0 +1,12 @@
+.file_input {
+  width: clamp(175px, 18.228vw, 700px);
+  height: 250px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid;
+  border: 2px rgba(255, 147, 114, 0.5) solid;
+  @apply text-gray-500;
+  @apply rounded-xl;
+}
