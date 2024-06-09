@@ -1,0 +1,39 @@
+import axios from "axios";
+
+interface IData {
+  email: string;
+  password: string;
+}
+
+export async function useLogin(data: IData): Promise<string | void> {
+  try {
+    const response = await axios.post(
+      "https://spark-admin-production.up.railway.app/api/auth/login",
+      data
+    );
+    const isVerified = response.data.user.isVerified;
+
+    if (isVerified === true) {
+      window.location.href = "/ferla";
+    } else {
+      window.location.href = "/forbidden";
+    }
+
+    const userData = {
+      id: response.data.user.id,
+      username: response.data.user.username,
+      email: response.data.user.email,
+      refreshToken: response.data.refreshToken,
+      accessToken: response.data.accessToken,
+    };
+
+    localStorage.setItem("userData", JSON.stringify(userData));
+  } catch (error: unknown | any) {
+    console.error("Failed to create data:", error);
+    if (error.response) {
+      return error.response.data.message;
+    } else {
+      return "An unexpected error occurred";
+    }
+  }
+}

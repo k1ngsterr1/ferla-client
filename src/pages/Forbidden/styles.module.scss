@@ -1,0 +1,53 @@
+@import "breakpoint-slicer";
+@import "../src/shared/styles/mixins";
+@import "../src/shared/styles/variables";
+
+.heading {
+  font-size: clamp(32px, 64 / 1200 * 100vw, 128px);
+  @apply text-orange;
+
+  @include respond-to("xl") {
+    font-size: clamp(32px, 64 / 1360 * 100vw, 128px);
+  }
+
+  @include respond-to("2xl") {
+    font-size: clamp(32px, 64 / 1520 * 100vw, 128px);
+  }
+
+  @include respond-to("3xl") {
+    font-size: clamp(32px, 64 / 1680 * 100vw, 128px);
+  }
+
+  @include respond-to("4xl") {
+    font-size: clamp(32px, 64 / 1920 * 100vw, 128px);
+  }
+
+  @include respond-to("5xl") {
+    font-size: clamp(32px, 64 / 2560 * 100vw, 128px);
+  }
+}
+
+.paragraph {
+  font-size: clamp(8px, 16 / 1200 * 100vw, 32px);
+  @apply text-dark;
+
+  @include respond-to("xl") {
+    font-size: clamp(8px, 16 / 1360 * 100vw, 32px);
+  }
+
+  @include respond-to("2xl") {
+    font-size: clamp(8px, 16 / 1520 * 100vw, 32px);
+  }
+
+  @include respond-to("3xl") {
+    font-size: clamp(8px, 16 / 1680 * 100vw, 32px);
+  }
+
+  @include respond-to("4xl") {
+    font-size: clamp(8px, 16 / 1920 * 100vw, 32px);
+  }
+
+  @include respond-to("5xl") {
+    font-size: clamp(8px, 16 / 2560 * 100vw, 32px);
+  }
+}

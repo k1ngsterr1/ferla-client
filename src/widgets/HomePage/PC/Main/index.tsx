@@ -25,14 +25,14 @@ export const MainScreen = () => {
       <main className={styles.main_screen} id="home">
         <h1
           className={`${styles.main_screen__heading} animate__fadeInLeft`}
-          id="ferla-edit-1"
+          id="ferla_editable_1_89d6700c-288d-46c6-b463-60aae8b1b830"
         >
           Let us introduce <strong className="text-red">ferla bikes</strong>
         </h1>
         <p className={styles.main_screen__paragraph} id="ferla-edit-2">
           From Coffee Bikes and Ice Cream Bikes to Marketing & Promo Bikes,
           Hospitality Bikes, Vending Carts and more, we provide the perfect
-          solution for your mobile retail pop-up.
+          solution for your mobile retail pop-u
         </p>
         <Button
           text="Get A Free Consultation"
