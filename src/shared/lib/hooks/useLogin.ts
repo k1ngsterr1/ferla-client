@@ -13,21 +13,24 @@ export async function useLogin(data: IData): Promise<string | void> {
     );
     const isVerified = response.data.user.isVerified;
 
-    if (isVerified === true) {
-      window.location.href = "/ferla";
+    if (isVerified) {
+      // Set isAuthenticated to true in localStorage
+      localStorage.setItem("isAuthenticated", "true");
+
+      // Setting user data in localStorage
+      const userData = {
+        id: response.data.user.id,
+        username: response.data.user.username,
+        email: response.data.user.email,
+        refreshToken: response.data.refreshToken,
+        accessToken: response.data.accessToken,
+      };
+      localStorage.setItem("userData", JSON.stringify(userData));
     } else {
+      // Redirect to forbidden page if not verified
       window.location.href = "/forbidden";
+      return; // Stop further execution
     }
-
-    const userData = {
-      id: response.data.user.id,
-      username: response.data.user.username,
-      email: response.data.user.email,
-      refreshToken: response.data.refreshToken,
-      accessToken: response.data.accessToken,
-    };
-
-    localStorage.setItem("userData", JSON.stringify(userData));
   } catch (error: unknown | any) {
     console.error("Failed to create data:", error);
     if (error.response) {

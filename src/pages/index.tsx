@@ -4,18 +4,37 @@ import { HomePage } from "./Page";
 import { AddCart } from "./AddCart";
 import { CalculatorPage } from "./CalculatorPage";
 import { Login } from "./Login";
+import ProtectedRoute from "@widgets/ProtectedRoute";
 
 export const MyRoutes = () => {
   return (
     <Router>
       <Routes>
         <Route path={ROUTE_CONSTANTS.LOGIN} element={<Login />} />
-        <Route path={ROUTE_CONSTANTS.FERLA} element={<HomePage />} />
+        <Route
+          path={ROUTE_CONSTANTS.FERLA}
+          element={
+            <ProtectedRoute>
+              <HomePage />
+            </ProtectedRoute>
+          }
+        />
         <Route
           path={ROUTE_CONSTANTS.CALCULATOR_CART}
-          element={<CalculatorPage />}
+          element={
+            <ProtectedRoute>
+              <CalculatorPage />
+            </ProtectedRoute>
+          }
         />
-        <Route path={ROUTE_CONSTANTS.ADD_CART} element={<AddCart />} />
+        <Route
+          path={ROUTE_CONSTANTS.ADD_CART}
+          element={
+            <ProtectedRoute>
+              <AddCart />
+            </ProtectedRoute>
+          }
+        />
       </Routes>
     </Router>
   );

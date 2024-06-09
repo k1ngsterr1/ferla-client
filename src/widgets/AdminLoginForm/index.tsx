@@ -27,7 +27,9 @@ export const AdminLoginForm = () => {
           src={logo}
           alt="Spark Logo"
         />
-        <h1 className={styles.admin_login_form__heading}>Login in Spark CMS</h1>
+        <h1 className={styles.admin_login_form__heading}>
+          Login in Spark Admin
+        </h1>
         <p className={styles.admin_login_form__paragraph}>
           Please login to our CMS System in order to have access to your website
         </p>
