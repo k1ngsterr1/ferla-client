@@ -29,6 +29,10 @@ body {
   cursor: none;
 }
 
+input {
+  font-family: "Rubik";
+}
+
 h1 {
   font-size: clamp(25px, 50 / 360 * 100vw, 100px);
   text-transform: capitalize;
@@ -238,7 +242,7 @@ button,
 a {
   outline: none;
   font-family: "Poppins";
-  cursor: тщту;
+  cursor: none;
 }
 
 .container {

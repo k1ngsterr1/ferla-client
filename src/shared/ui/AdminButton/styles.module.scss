@@ -1,3 +1,7 @@
+@import "breakpoint-slicer";
+@import "../../../shared/styles/mixins";
+@import "../../../shared/styles/variables";
+
 .button {
   width: clamp(175px, 18.228vw, 700px);
   border-radius: clamp(3px, 0.31248vw, 12px);
@@ -9,4 +13,29 @@
   border: none;
   @apply bg-orange;
   @apply p-3;
+
+  @include respond-to("xl") {
+    width: clamp(175px, 350 / 1360 * 100vw, 700px);
+    font-size: clamp(7px, 14 / 1360 * 100vw, 28px);
+  }
+
+  @include respond-to("2xl") {
+    width: clamp(175px, 350 / 1520 * 100vw, 700px);
+    font-size: clamp(7px, 14 / 1520 * 100vw, 28px);
+  }
+
+  @include respond-to("3xl") {
+    width: clamp(175px, 350 / 1680 * 100vw, 700px);
+    font-size: clamp(7px, 14 / 1680 * 100vw, 28px);
+  }
+
+  @include respond-to("4xl") {
+    width: clamp(175px, 350 / 1920 * 100vw, 700px);
+    font-size: clamp(7px, 14 / 1920 * 100vw, 28px);
+  }
+
+  @include respond-to("5xl") {
+    width: clamp(175px, 350 / 2560 * 100vw, 700px);
+    font-size: clamp(7px, 14 / 2560 * 100vw, 28px);
+  }
 }

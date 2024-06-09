@@ -32,7 +32,7 @@ export const AddCartScreen = () => {
           placeholder="Write cart description"
           margin="mt-8"
         />
-        <AdminButton text="Send" buttonType="filled" margin="mt-8" />
+        <AdminButton text="Add Cart" buttonType="filled" margin="mt-8" />
       </form>
     </main>
   );

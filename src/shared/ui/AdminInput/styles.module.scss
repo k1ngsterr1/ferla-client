@@ -1,3 +1,7 @@
+@import "breakpoint-slicer";
+@import "../../../shared/styles/mixins";
+@import "../../../shared/styles/variables";
+
 .input {
   @apply mt-3;
   position: relative;
