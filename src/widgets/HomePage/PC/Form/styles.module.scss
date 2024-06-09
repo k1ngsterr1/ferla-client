@@ -65,6 +65,29 @@
     align-items: flex-start;
     @apply mt-8;
 
+    @include respond-to("xxs") {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @include respond-to("md") {
+      display: flex;
+      flex-direction: column;
+      @apply mt-8;
+    }
+
+    @include respond-to("tablet_sm") {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    @include respond-to("lg") {
+      align-items: flex-start;
+    }
+
     @include respond-to("xl") {
       @apply mt-0;
     }
@@ -74,6 +97,16 @@
     position: absolute;
     top: 0;
     right: clamp(-256px, -26.66496vw, -1024px);
+
+    @include respond-to("tablet_sm") {
+      width: 80%;
+      height: 100%;
+    }
+
+    @include respond-to("tablet") {
+      width: 80%;
+      height: 100%;
+    }
 
     @include respond-to("lg") {
       width: 70%;

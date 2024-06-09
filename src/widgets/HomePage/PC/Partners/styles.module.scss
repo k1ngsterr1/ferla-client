@@ -34,6 +34,16 @@
         width: 50%;
       }
 
+      @include respond-to("tablet_sm") {
+        width: 100%;
+        font-size: clamp(21px, 42 / 1024 * 100vw, 84px);
+      }
+
+      @include respond-to("tablet") {
+        font-size: clamp(21px, 42 / 1100 * 100vw, 84px);
+        width: 100%;
+      }
+
       @include respond-to("lg") {
         width: 80%;
       }
@@ -80,6 +90,16 @@
     @apply mt-20;
 
     &__image {
+      @include respond-to("tablet_sm") {
+        width: clamp(70px, 140 / 1024 * 100vw, 280px);
+        height: clamp(42.5px, 85 / 1024 * 100vw, 170px);
+      }
+
+      @include respond-to("tablet") {
+        width: clamp(70px, 140 / 1100 * 100vw, 280px);
+        height: clamp(42.5px, 85 / 1100 * 100vw, 170px);
+      }
+
       @include respond-to("lg") {
         width: clamp(70px, 140 / 1200 * 100vw, 280px);
         height: clamp(42.5px, 85 / 1200 * 100vw, 170px);

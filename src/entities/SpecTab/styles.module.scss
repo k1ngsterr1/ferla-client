@@ -1,0 +1,16 @@
+.spec_tab {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  &__name {
+    @apply text-base;
+    @apply font-medium;
+    @apply text-red;
+  }
+
+  &__feature {
+    @apply text-base;
+    @apply mt-2;
+  }
+}

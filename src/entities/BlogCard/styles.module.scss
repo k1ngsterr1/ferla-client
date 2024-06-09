@@ -10,8 +10,43 @@
   align-items: flex-start;
   background-color: #fbfbfb;
   transition: 0.3s all;
+  @apply p-2;
+
+  &:hover {
+    @apply rounded-md;
+    @apply bg-gray-100;
+  }
+
+  @include respond-to("xxs") {
+    align-items: center;
+  }
+
+  @include respond-to("xs") {
+    @apply mb-12;
+  }
+
+  @include respond-to("sm") {
+    @apply mb-44;
+  }
+
+  @include respond-to("md") {
+    @apply mb-80;
+  }
+
+  @include respond-to("tablet_sm") {
+    @apply mb-2;
+  }
+
+  @include respond-to("tablet") {
+    @apply mb-16;
+  }
+
+  @include respond-to("lg") {
+    align-items: flex-start;
+  }
 
   &:hover &__title {
+    @apply font-bold;
     @apply text-red;
   }
 
@@ -24,19 +59,36 @@
     @apply text-dark;
     @apply mt-4;
 
+    @include respond-to("xxs") {
+      width: 80%;
+      @apply mt-4;
+    }
+
     @include respond-to("xs") {
-      font-size: clamp(9px, 18 / 480 * 100vw, 36px);
+      font-size: clamp(10px, 4.167vw, 40px);
     }
 
     @include respond-to("sm") {
-      font-size: clamp(9px, 18 / 768 * 100vw, 36px);
+      width: 55%;
+      font-size: clamp(12px, 3.333vw, 48px);
     }
 
     @include respond-to("md") {
-      font-size: clamp(9px, 18 / 992 * 100vw, 36px);
+      font-size: clamp(14px, 28 / 992 * 100vw, 56px);
+    }
+
+    @include respond-to("tablet_sm") {
+      width: 100%;
+      font-size: clamp(11px, 22 / 1024 * 100vw, 44px);
+    }
+
+    @include respond-to("tablet") {
+      width: 100%;
+      font-size: clamp(12px, 24 / 1100 * 100vw, 48px);
     }
 
     @include respond-to("lg") {
+      width: 100%;
       text-align: left;
       font-size: clamp(9px, 18 / 1200 * 100vw, 36px);
     }
@@ -69,16 +121,28 @@
     height: clamp(122.5px, 245 / 360 * 100vw, 490px);
     @apply rounded-lg;
 
+    @include respond-to("xxs") {
+      height: 65%;
+    }
+
     @include respond-to("xs") {
       height: clamp(122.5px, 245 / 480 * 100vw, 490px);
     }
 
-    @include respond-to("sm") {
-      height: clamp(122.5px, 245 / 720 * 100vw, 490px);
-    }
+    // @include respond-to("sm") {
+    //   // height: clamp(200px, 55.556vw, 800px);
+    // }
 
     @include respond-to("md") {
-      height: clamp(122.5px, 245 / 992 * 100vw, 490px);
+      height: clamp(250px, 500 / 992 * 100vw, 1000px);
+    }
+
+    @include respond-to("tablet_sm") {
+      height: clamp(85px, 170 / 1024 * 100vw, 340px);
+    }
+
+    @include respond-to("tablet") {
+      height: clamp(105px, 210 / 1024 * 100vw, 410px);
     }
 
     @include respond-to("lg") {
@@ -86,7 +150,7 @@
     }
 
     @include respond-to("xl") {
-      height: clamp(100px, 200 / 1360 * 100vw, 400px);
+      height: clamp(80px, 160 / 1360 * 100vw, 320px);
     }
 
     @include respond-to("2xl") {
@@ -113,16 +177,32 @@
     @apply text-red;
     @apply mt-2;
 
+    &:hover {
+      text-decoration: underline;
+    }
+
+    @include respond-to("xxs") {
+      @apply mt-2;
+    }
+
     @include respond-to("xs") {
-      font-size: clamp(8.5px, 17 / 480 * 100vw, 34px);
+      font-size: clamp(8.5px, 3.9718799999999996vw, 34px);
     }
 
     @include respond-to("sm") {
-      font-size: clamp(8.5px, 17 / 720 * 100vw, 34px);
+      font-size: clamp(10px, 2.778vw, 40px);
     }
 
     @include respond-to("md") {
-      font-size: clamp(8.5px, 17 / 992 * 100vw, 34px);
+      font-size: clamp(12px, 24 / 992 * 100vw, 48px);
+    }
+
+    @include respond-to("tablet_sm") {
+      font-size: clamp(8px, 16 / 1024 * 100vw, 32px);
+    }
+
+    @include respond-to("tablet") {
+      font-size: clamp(8px, 16 / 1100 * 100vw, 32px);
     }
 
     @include respond-to("lg") {
@@ -172,7 +252,8 @@
 
   @include respond-to("xl") {
     width: clamp(125px, 250 / 1360 * 100vw, 500px);
-    height: clamp(205px, 410 / 1360 * 100vw, 820px);
+    height: clamp(170px, 340 / 1360 * 100vw, 680px);
+    @apply mb-12;
   }
 
   @include respond-to("2xl") {
@@ -191,6 +272,8 @@
 
   @include respond-to("5xl") {
     width: clamp(255px, 510 / 2560 * 100vw, 1020px);
-    height: clamp(205px, 410 / 2560 * 100vw, 820px);
+    height: auto;
+    @apply p-4;
+    @apply rounded-3xl;
   }
 }

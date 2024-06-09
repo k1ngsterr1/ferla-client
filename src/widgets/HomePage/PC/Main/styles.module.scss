@@ -8,6 +8,34 @@
   flex-direction: column;
   @apply mt-16;
 
+  @include respond-to("tablet_sm") {
+    @apply mt-32;
+  }
+
+  @include respond-to("tablet") {
+    @apply mt-32;
+  }
+
+  @include respond-to("lg") {
+    @apply mt-32;
+  }
+
+  @include respond-to("xl") {
+    @apply mt-32;
+  }
+
+  @include respond-to("2xl") {
+    @apply mt-32;
+  }
+
+  @include respond-to("3xl") {
+    @apply mt-32;
+  }
+
+  @include respond-to("4xl") {
+    @apply mt-32;
+  }
+
   @include respond-to("5xl") {
     @apply mt-32;
   }
@@ -28,6 +56,14 @@
     width: 20%;
     @apply mt-8;
     animation: fadeRevealLeft 0.7s ease-out forwards;
+
+    @include respond-to("tablet_sm") {
+      width: 30%;
+    }
+
+    @include respond-to("tablet") {
+      width: 33%;
+    }
 
     @include respond-to("lg") {
       width: 35%;
@@ -86,6 +122,16 @@
       transition: transform 250ms;
     }
 
+    @include respond-to("tablet_sm") {
+      width: clamp(102.5px, 205 / 1024 * 100vw, 410px);
+      font-size: clamp(7px, 14 / 1024 * 100vw, 28px);
+    }
+
+    @include respond-to("tablet") {
+      width: clamp(102.5px, 205 / 1100 * 100vw, 410px);
+      font-size: clamp(7px, 14 / 1100 * 100vw, 28px);
+    }
+
     @include respond-to("lg") {
       width: clamp(102.5px, 205 / 1200 * 100vw, 410px);
       font-size: clamp(7px, 14 / 1200 * 100vw, 28px);
@@ -125,7 +171,13 @@
     animation: fadeRevealRight 0.7s ease-out forwards;
 
     @include respond-to("3xl") {
-      height: clamp(375px, 750 / 1680 * 100vw, 1500px);
+      width: clamp(440px, 880 / 1680 * 100vw, 1760px);
+      height: clamp(350px, 700 / 1680 * 100vw, 1400px);
+    }
+
+    @include respond-to("4xl") {
+      width: clamp(500px, 1000 / 1920 * 100vw, 2000px);
+      height: clamp(375px, 750 / 1920 * 100vw, 1500px);
     }
   }
 }

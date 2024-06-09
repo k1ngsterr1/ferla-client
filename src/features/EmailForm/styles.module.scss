@@ -3,20 +3,48 @@
 @import "../../shared/styles/variables";
 
 .email_form {
-  width: 100%;
-  height: clamp(165px, 330 / 360 * 100vw, 660px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-image: url("../../assets/webp/pc/ferla.webp");
-  background-size: auto;
-  background-position: center;
-  background-repeat: no-repeat;
-  @apply p-4;
-  @apply mt-32;
-  @apply rounded-xl;
-  @apply bg-red;
+  @include respond-to("xxs") {
+    width: 90%;
+    margin: auto;
+    height: clamp(140px, 65.41919999999999vw, 560px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../../assets/webp/pc/ferla.webp");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    @apply p-4;
+    @apply mt-32;
+    @apply rounded-xl;
+    @apply bg-red;
+  }
+
+  @include respond-to("md") {
+    width: 100%;
+    height: clamp(165px, 330 / 360 * 100vw, 660px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../../assets/webp/pc/ferla.webp");
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    @apply p-4;
+    @apply mt-32;
+    @apply rounded-xl;
+    @apply bg-red;
+  }
+
+  @include respond-to("tablet_sm") {
+    margin-top: 0;
+  }
+
+  @include respond-to("tablet") {
+    margin-top: 0;
+  }
 
   @include respond-to("xl") {
     @apply mt-0;
@@ -72,6 +100,14 @@
     text-align: center;
     @apply text-white;
     @apply mt-4;
+
+    @include respond-to("xxs") {
+      width: 80%;
+    }
+
+    @include respond-to("md") {
+      width: 30%;
+    }
   }
 
   @include respond-to("xs") {

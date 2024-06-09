@@ -1,0 +1,39 @@
+@import "breakpoint-slicer";
+@import "../../shared/styles/mixins";
+@import "../../shared/styles/variables";
+
+.footer {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @apply mb-8;
+
+  &__logo {
+    width: clamp(98.5px, 54.722vw, 394px);
+    @apply mt-16;
+
+    @include respond-to("xs") {
+      height: clamp(30px, 12.5vw, 120px);
+    }
+
+    @include respond-to("sm") {
+      height: clamp(45px, 12.5vw, 180px);
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    @apply gap-4;
+    @apply mt-8;
+
+    @include respond-to("fsf") {
+      @apply gap-6;
+    }
+  }
+}

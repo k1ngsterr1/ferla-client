@@ -1,23 +1,38 @@
 @import "breakpoint-slicer";
-@import '../src/shared/styles/mixins';
-@import '../src/shared/styles/variables';
+@import "../src/shared/styles/mixins";
+@import "../src/shared/styles/variables";
 
-
-@include respond-to('md') {
-    .mob {
-        display: none;
-        overflow-x: hidden;
-    }
+@include respond-to("lg") {
+  .mob {
+    display: none;
+    overflow-x: hidden;
+  }
 }
 
+.mob {
+  @include respond-to("tablet") {
+    display: none;
+  }
+
+  @include respond-to("tablet_sm") {
+    display: none;
+  }
+}
 
 .pc {
-    @include respond-to('xxs') {
-        display: none;
-    }
+  @include respond-to("xxs") {
+    display: none;
+  }
 
-    @include respond-to('md') {
-        display: block;
-    }
-}    
+  @include respond-to("tablet_sm") {
+    display: block;
+  }
 
+  @include respond-to("tablet") {
+    display: block;
+  }
+
+  @include respond-to("lg") {
+    display: block;
+  }
+}

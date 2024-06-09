@@ -1,24 +1,42 @@
+@import "../../shared/styles/mixins";
+@import "../../shared/styles/variables";
+
 .header_mob {
-    position: sticky;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+
+  .header_mob__container {
+    width: 90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 96%;
-    @apply mt-12 mb-8;
+    @apply mt-4 mb-4;
 
     &__logo {
-        width: clamp(60px,33.333vw,240px);
-        flex-shrink: 0;
+      width: clamp(60px, 33.333vw, 240px);
+      flex-shrink: 0;
+
+      @include respond-to("fsf") {
+        width: clamp(90px, 31.304vw, 360px);
+        height: clamp(27.5px, 9.565vw, 110px);
+      }
+
+      @include respond-to("sm") {
+        width: clamp(125px, 34.722vw, 500px);
+        height: clamp(37.5px, 10.417vw, 150px);
+      }
     }
 
     &__link {
-        @apply text-red;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 150%; 
-        letter-spacing: 0.8px;
-        font-size: clamp(8px,4.444vw,32px) ;
-        text-transform: capitalize; 
-        text-decoration: none;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 150%;
+      letter-spacing: 0.8px;
+      font-size: clamp(8px, 4.444vw, 32px);
+      text-transform: capitalize;
+      text-decoration: none;
+      @apply text-red;
     }
+  }
 }

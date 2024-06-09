@@ -8,16 +8,31 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
 
-    &__heading {
+    &__link {
+      text-decoration: none;
+      transition: 0.3s all;
+      @apply text-red;
+      @apply text-lg;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 
   &__cards {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     @apply mt-8;
+
+    > * {
+      flex: 1 1 22%;
+      max-width: 22%;
+      @apply mt-8;
+    }
   }
 }

@@ -1,7 +1,5 @@
-"use client";
 import React from "react";
 import dark_logo from "@assets/vectors/logo_dark.svg";
-import Image from "next/image";
 import LinkButton from "@shared/ui/LinkButton";
 import { navLinks } from "@shared/lib/content/navLinks";
 import { NavLink } from "@shared/ui/NavLink";
@@ -14,10 +12,11 @@ import styles from "./styles.module.scss";
 export const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <div className="flex items-center justify-between w-full">
+      <div
+        className={`flex items-center justify-between w-full ${styles.footer__container}`}
+      >
         <a href="#home">
           <img
-            id="ferla-edit-48"
             className={styles.footer__logo}
             src={dark_logo}
             alt="Ferlabikes Logo"
@@ -40,12 +39,10 @@ export const Footer = () => {
           />
         ))}
       </div>
-      <div className="flex flex-col items-center mt-12">
-        <SparkLogo />
-        <a href="https://sparkstudio.kz/home" className="text-white">
-          sparkstudio.kz
-        </a>
-      </div>
+      <SparkLogo />
+      <a href="https://sparkstudio.kz/home" className="text-white">
+        sparkstudio.kz
+      </a>
     </footer>
   );
 };

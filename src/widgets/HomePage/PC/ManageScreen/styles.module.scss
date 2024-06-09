@@ -18,6 +18,14 @@
     animation-timeline: view(40%);
     @apply mt-2;
 
+    @include respond-to("tablet_sm") {
+      width: 70%;
+    }
+
+    @include respond-to("tablet") {
+      width: 90%;
+    }
+
     @include respond-to("lg") {
       width: 70%;
     }
@@ -33,6 +41,10 @@
     flex-direction: column;
     @apply gap-4;
     @apply mt-8;
+
+    @include respond-to("tablet") {
+      @apply mt-8;
+    }
 
     @include respond-to("xl") {
       width: 80%;

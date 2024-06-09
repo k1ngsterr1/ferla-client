@@ -8,15 +8,35 @@
   align-items: center;
   justify-content: space-between;
   margin: auto;
-  // position: sticky;
-  top: 0;
-  z-index: 10000;
-  // @apply bg-white;
-  @apply mt-16;
+  position: fixed;
+  top: 0px;
+  left: 0;
+  z-index: 1000000000;
+  @apply pt-4;
+  @apply pb-4;
+  // @apply mt-16;
+
+  &__container {
+    width: 86.6%;
+    z-index: 1000000000;
+
+    @include respond-to("tablet_sm") {
+      width: 95%;
+    }
+
+    @include respond-to("tablet") {
+      width: 95%;
+    }
+
+    @include respond-to("4xl") {
+      width: 86.6%;
+    }
+  }
 
   &__logo {
     width: clamp(95px, 190 / 360 * 100vw, 380px);
     height: clamp(35px, 70 / 360 * 100vw, 140px);
+    z-index: 1000000000;
 
     @include respond-to("xs") {
       width: clamp(95px, 190 / 480 * 100vw, 380px);
@@ -31,6 +51,16 @@
     @include respond-to("md") {
       width: clamp(95px, 190 / 992 * 100vw, 380px);
       height: clamp(35px, 70 / 992 * 100vw, 140px);
+    }
+
+    @include respond-to("tablet_sm") {
+      width: clamp(70px, 140 / 1024 * 100vw, 280px);
+      height: clamp(35px, 70 / 1024 * 100vw, 140px);
+    }
+
+    @include respond-to("tablet") {
+      width: clamp(95px, 140 / 1100 * 100vw, 380px);
+      height: clamp(35px, 70 / 1100 * 100vw, 140px);
     }
 
     @include respond-to("lg") {
@@ -67,6 +97,7 @@
   &__nav {
     display: flex;
     align-items: center;
+    z-index: 1000000000;
     @apply gap-8;
   }
 }

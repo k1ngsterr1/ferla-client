@@ -29,15 +29,23 @@
     @apply mt-4;
 
     @include respond-to("xs") {
-      font-size: clamp(9px, 18 / 480 * 100vw, 36px);
+      font-size: clamp(10px, 4.6728vw, 40px);
     }
 
     @include respond-to("sm") {
-      font-size: clamp(8px, 16 / 768 * 100vw, 32px);
+      font-size: clamp(12px, 3.333vw, 48px);
     }
 
     @include respond-to("md") {
-      font-size: clamp(8px, 16 / 992 * 100vw, 32px);
+      font-size: clamp(14px, 28 / 992 * 100vw, 56px);
+    }
+
+    @include respond-to("tablet_sm") {
+      font-size: clamp(8px, 16 / 1024 * 100vw, 32px);
+    }
+
+    @include respond-to("tablet") {
+      font-size: clamp(8px, 16 / 1100 * 100vw, 32px);
     }
 
     @include respond-to("lg") {
@@ -72,15 +80,23 @@
     @apply mt-2;
 
     @include respond-to("xs") {
-      font-size: clamp(8px, 16 / 1360 * 100vw, 32px);
+      font-size: clamp(8px, 3.333vw, 32px);
     }
 
     @include respond-to("sm") {
-      font-size: clamp(8px, 16 / 768 * 100vw, 32px);
+      font-size: clamp(9px, 2.5vw, 36px);
     }
 
     @include respond-to("md") {
-      font-size: clamp(8px, 16 / 992 * 100vw, 32px);
+      font-size: clamp(11px, 22 / 992 * 100vw, 44px);
+    }
+
+    @include respond-to("tablet_sm") {
+      font-size: clamp(7px, 14 / 1024 * 100vw, 28px);
+    }
+
+    @include respond-to("tablet") {
+      font-size: clamp(8px, 16 / 1100 * 100vw, 32px);
     }
 
     @include respond-to("lg") {
@@ -114,13 +130,23 @@
   }
 
   @include respond-to("sm") {
-    width: clamp(115px, 230 / 720 * 100vw, 460px);
-    height: clamp(115px, 230 / 720 * 100vw, 460px);
+    width: clamp(150px, 41.667vw, 600px);
+    height: clamp(150px, 41.667vw, 600px);
   }
 
   @include respond-to("md") {
-    width: clamp(115px, 230 / 992 * 100vw, 460px);
-    height: clamp(115px, 230 / 992 * 100vw, 460px);
+    width: clamp(170px, 340 / 992 * 100vw, 680px);
+    height: clamp(170px, 340 / 992 * 100vw, 680px);
+  }
+
+  @include respond-to("tablet_sm") {
+    width: clamp(100px, 200 / 1024 * 100vw, 400px);
+    height: clamp(100px, 200 / 1024 * 100vw, 400px);
+  }
+
+  @include respond-to("tablet") {
+    width: clamp(100px, 200 / 1100 * 100vw, 400px);
+    height: clamp(100px, 200 / 1100 * 100vw, 400px);
   }
 
   @include respond-to("lg") {

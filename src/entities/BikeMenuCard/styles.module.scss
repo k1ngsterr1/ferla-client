@@ -1,0 +1,52 @@
+@import "breakpoint-slicer";
+@import "../../shared/styles/mixins";
+@import "../../shared/styles/variables";
+
+.bike_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s all;
+  @apply p-2;
+  @apply rounded-xl;
+
+  &:hover {
+    @apply bg-gray-100;
+  }
+
+  &:hover &__name {
+    @apply text-red;
+  }
+
+  &:hover &__link {
+    @apply text-red;
+  }
+
+  &__image {
+    width: 55%;
+    height: 50%;
+  }
+
+  &__name {
+    transition: 0.3s all;
+    @apply text-dark;
+    @apply font-semibold;
+    @apply text-2xl;
+
+    &:hover {
+      @apply text-red;
+    }
+  }
+
+  &__link {
+    transition: 0.3s all;
+    @apply text-gray-500;
+    @apply text-base;
+    @apply mt-2;
+
+    &:hover {
+      @apply text-red;
+    }
+  }
+}

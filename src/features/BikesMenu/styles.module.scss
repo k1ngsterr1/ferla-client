@@ -1,0 +1,100 @@
+@import "breakpoint-slicer";
+@import "../../shared/styles/mixins";
+@import "../../shared/styles/variables";
+
+.bikes_menu {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  background: #fbfbfb;
+  left: 0;
+  top: -20000px;
+  opacity: 0;
+  z-index: -10000;
+  @apply p-8;
+  @apply shadow-lg;
+  @apply rounded-lg;
+
+  @include respond-to("xl") {
+    height: auto;
+  }
+
+  @include respond-to("2xl") {
+    height: auto;
+  }
+
+  @include respond-to("3xl") {
+    height: auto;
+  }
+
+  @include respond-to("4xl") {
+    height: auto;
+  }
+
+  @include respond-to("5xl") {
+    height: auto;
+  }
+
+  &__content {
+    width: 90%;
+    height: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    @apply gap-8;
+    @apply mt-20;
+
+    &__cards {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      border-right: 1px solid;
+      @apply border-gray-300;
+      @apply gap-8;
+      @apply mt-20;
+
+      > * {
+        flex: 1 1 22%;
+        max-width: 22%;
+      }
+    }
+
+    &__button {
+      width: clamp(60px, 120 / 1200 * 100vw, 240px);
+      border: none;
+      outline: none;
+      transition: 0.3s all;
+      background: transparent;
+      @apply text-lg;
+
+      @include respond-to("xl") {
+        width: clamp(60px, 120 / 1360 * 100vw, 240px);
+      }
+
+      @include respond-to("2xl") {
+        width: clamp(60px, 120 / 1520 * 100vw, 240px);
+      }
+
+      @include respond-to("3xl") {
+        width: clamp(60px, 120 / 1680 * 100vw, 240px);
+      }
+
+      @include respond-to("4xl") {
+        width: clamp(60px, 120 / 1920 * 100vw, 240px);
+      }
+
+      @include respond-to("5xl") {
+        width: clamp(60px, 120 / 2560 * 100vw, 240px);
+      }
+
+      &:hover {
+        @apply text-red;
+      }
+    }
+  }
+}

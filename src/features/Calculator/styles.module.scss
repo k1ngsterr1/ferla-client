@@ -4,13 +4,9 @@
 
 .calculator {
   width: 100%;
-  min-height: clamp(175px, 350 / 1200 * 100vw, 700px);
   display: flex;
   flex-direction: column;
   background-image: url("../../assets/webp/pc/ferla.webp");
-  background-size: auto;
-  background-position: center;
-  background-repeat: no-repeat;
   align-items: center;
   @apply mt-8;
   @apply mb-4;
@@ -18,10 +14,90 @@
   @apply p-8;
   @apply rounded-xl;
 
+  @include respond-to("xxs") {
+    background-size: contain;
+  }
+
+  @include respond-to("lg") {
+    min-height: clamp(175px, 350 / 1200 * 100vw, 700px);
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__container {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+
+    @include respond-to("xxs") {
+      width: 50%;
+      flex-direction: column;
+    }
+
+    @include respond-to("md") {
+      width: 40%;
+    }
+
+    @include respond-to("tablet_sm") {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @apply mt-8;
+    }
+
+    @include respond-to("lg") {
+      display: flex;
+      flex-direction: row;
+      align-items: start;
+      width: 45%;
+    }
+
+    @include respond-to("xl") {
+      display: flex;
+      flex-direction: row;
+      align-items: start;
+      width: 38%;
+    }
+
+    @include respond-to("3xl") {
+      display: flex;
+      flex-direction: row;
+      align-items: start;
+      width: 32%;
+    }
+
+    @include respond-to("4xl") {
+      display: flex;
+      flex-direction: row;
+      align-items: start;
+      width: 27%;
+    }
+
+    @include respond-to("5xl") {
+      width: 20%;
+    }
+  }
+
   &__counter_text {
     text-align: center;
-    @apply text-xl;
     @apply text-white;
+
+    @include respond-to("xxs") {
+      @apply text-lg;
+    }
+
+    @include respond-to("md") {
+      @apply text-xl;
+    }
+
+    @include respond-to("tablet") {
+      @apply text-base;
+    }
+
+    @include respond-to("lg") {
+      @apply text-base;
+    }
   }
 
   @include respond-to("xl") {
@@ -46,10 +122,17 @@
 }
 
 .separator {
-  width: 50%;
   height: 2px;
   background: rgba(255, 255, 255, 0.25);
   @apply mt-4;
   @apply rounded-full;
   @apply mb-4;
+
+  @include respond-to("xxs") {
+    width: 100%;
+  }
+
+  @include respond-to("md") {
+    width: 50%;
+  }
 }

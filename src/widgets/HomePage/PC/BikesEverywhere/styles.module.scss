@@ -41,6 +41,10 @@
         font-size: clamp(8px, 16 / 992 * 100vw, 32px);
       }
 
+      @include respond-to("tablet_sm") {
+        width: 32%;
+      }
+
       @include respond-to("lg") {
         font-size: clamp(8px, 16 / 1200 * 100vw, 32px);
       }

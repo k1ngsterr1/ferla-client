@@ -42,11 +42,21 @@ h1 {
   }
 
   @include respond-to("sm") {
-    font-size: clamp(25px, 50 / 720 * 100vw, 100px);
+    font-size: clamp(27.5px, 7.639vw, 110px);
   }
 
   @include respond-to("md") {
-    font-size: clamp(25px, 50 / 992 * 100vw, 100px);
+    font-size: clamp(35px, 7.056vw, 140px);
+  }
+
+  @include respond-to("tablet_sm") {
+    width: 50%;
+    font-size: clamp(25px, 50 / 1024 * 100vw, 100px);
+  }
+
+  @include respond-to("tablet") {
+    width: 50%;
+    font-size: clamp(30px, 60 / 1100 * 100vw, 120px);
   }
 
   @include respond-to("lg") {
@@ -114,7 +124,17 @@ h6 {
   }
 
   @include respond-to("md") {
-    font-size: clamp(24px, 48 / 992 * 100vw, 96px);
+    font-size: clamp(32px, 64 / 992 * 100vw, 128px);
+  }
+
+  @include respond-to("tablet_sm") {
+    font-size: clamp(18px, 36 / 1024 * 100vw, 72px);
+    text-align: left;
+  }
+
+  @include respond-to("tablet") {
+    font-size: clamp(25px, 50 / 1100 * 100vw, 100px);
+    text-align: left;
   }
 
   @include respond-to("lg") {
@@ -170,15 +190,23 @@ p {
   }
 
   @include respond-to("xs") {
-    font-size: clamp(8px, 16 / 480 * 100vw, 32px);
+    font-size: clamp(9px, 3.75vw, 36px);
   }
 
   @include respond-to("sm") {
-    font-size: clamp(8px, 16 / 768 * 100vw, 32px);
+    font-size: clamp(10px, 2.778vw, 40px);
   }
 
   @include respond-to("md") {
-    font-size: clamp(8px, 16 / 992 * 100vw, 32px);
+    font-size: clamp(12px, 2.419vw, 48px);
+  }
+
+  @include respond-to("tablet_sm") {
+    font-size: clamp(8px, 16 / 1024 * 100vw, 32px);
+  }
+
+  @include respond-to("tablet") {
+    font-size: clamp(8px, 16 / 1100 * 100vw, 32px);
   }
 
   @include respond-to("lg") {
@@ -214,6 +242,20 @@ a {
 }
 
 .container {
+  @include respond-to("tablet_sm") {
+    width: 96%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+
+  @include respond-to("tablet") {
+    width: 96%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+
   @include respond-to("lg") {
     width: 86.6%;
     display: flex;

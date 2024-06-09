@@ -6,15 +6,32 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  @apply mt-16;
+
+  @include respond-to("xxs") {
+    width: 90%;
+    margin: auto;
+    @apply mt-16;
+  }
+
+  @include respond-to("md") {
+    width: 100%;
+    @apply mt-16;
+  }
 
   @include respond-to("5xl") {
     @apply mt-32;
   }
 
   &__paragraph {
-    width: 40%;
     text-align: center;
     @apply mt-2;
+
+    @include respond-to("xxs") {
+      width: 75%;
+    }
+
+    @include respond-to("md") {
+      width: 40%;
+    }
   }
 }

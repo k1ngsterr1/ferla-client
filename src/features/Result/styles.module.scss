@@ -1,3 +1,6 @@
+@import "../../shared/styles/mixins";
+@import "../../shared/styles/variables";
+
 .result {
   width: 100%;
   height: auto;
@@ -7,7 +10,7 @@
   justify-content: center;
   @apply rounded-xl;
   @apply p-8;
-  @apply bg-red;
+
   @apply mb-8;
 
   &__heading {
@@ -17,14 +20,30 @@
   }
 
   &__money_back {
-    @apply text-xl;
+    text-align: center;
+    @apply text-lg;
     @apply text-white;
     @apply mt-4;
+
+    @include respond-to("xs") {
+      @apply text-xl;
+    }
   }
 
   &__money_back_amount {
     @apply mt-2;
-    @apply text-4xl;
     @apply text-white;
+
+    @include respond-to("xxs") {
+      @apply text-2xl;
+    }
+
+    @include respond-to("xs") {
+      @apply text-3xl;
+    }
+
+    @include respond-to("lg") {
+      @apply text-4xl;
+    }
   }
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import CountUp from "react-countup";
 import styles from "./styles.module.scss";
 
 interface IResultProps {
@@ -12,7 +13,6 @@ export const Result: React.FC<IResultProps> = ({
 }) => {
   return (
     <div className={styles.result}>
-      <span className={styles.result__heading}>Result:</span>
       <div className="flex flex-col items-center">
         <span className={styles.result__money_back}>Make money back:</span>
         <span className={styles.result__money_back_amount}>{moneyBack}</span>
@@ -22,7 +22,7 @@ export const Result: React.FC<IResultProps> = ({
           In 3 months estimated earnings:
         </span>
         <span className={styles.result__money_back_amount}>
-          {estimatedEarnings}$
+          <CountUp end={estimatedEarnings} prefix="$" duration={2} />
         </span>
       </div>
     </div>
