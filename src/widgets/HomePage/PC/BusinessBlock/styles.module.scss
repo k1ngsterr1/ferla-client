@@ -60,22 +60,22 @@
 
       @include respond-to("xl") {
         width: clamp(33px, 66 / 1360 * 100vw, 132px);
-        height: clampI(31px, 62 / 1360 * 100vw, 124px);
+        height: clamp(31px, 62 / 1360 * 100vw, 124px);
       }
 
       @include respond-to("2xl") {
         width: clamp(33px, 66 / 1520 * 100vw, 132px);
-        height: clampI(31px, 62 / 1520 * 100vw, 124px);
+        height: clamp(31px, 62 / 1520 * 100vw, 124px);
       }
 
       @include respond-to("3xl") {
         width: clamp(33px, 66 / 1680 * 100vw, 132px);
-        height: clampI(31px, 62 / 1680 * 100vw, 124px);
+        height: clamp(31px, 62 / 1680 * 100vw, 124px);
       }
 
       @include respond-to("4xl") {
         width: clamp(33px, 66 / 1920 * 100vw, 132px);
-        height: clampI(31px, 62 / 1920 * 100vw, 124px);
+        height: clamp(31px, 62 / 1920 * 100vw, 124px);
       }
 
       @include respond-to("5xl") {
