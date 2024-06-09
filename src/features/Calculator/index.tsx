@@ -5,10 +5,10 @@ import { CalculatorInput } from "@shared/ui/CalculatorInput";
 import { options } from "@shared/lib/content/options";
 import { CalculatorRange } from "@shared/ui/CalculatorRange";
 import { DayCounter } from "@shared/ui/DayCounter";
+import { Result } from "@features/Result";
 import Selector from "@shared/ui/CalculatorSelector";
 
 import styles from "./styles.module.scss";
-import { Result } from "@features/Result";
 
 export const Calculator = () => {
   const [averageOrderPrice, setAverageOrderPrice] = useState<number>(0);
@@ -32,15 +32,16 @@ export const Calculator = () => {
   };
 
   const handleDecrementAverageOrderPrice = () => {
-    setAverageOrderPrice(averageOrderPrice - 1);
+    setAverageOrderPrice(Math.max(0, averageOrderPrice - 1));
   };
 
   const handleIncrementDaysPerWeek = () => {
-    setDaysPerWeek(daysPerWeek + 1);
+    // Ensures that daysPerWeek does not go above 7
+    setDaysPerWeek((prevDays) => Math.min(7, prevDays + 1));
   };
 
   const handleDecrementDaysPerWeek = () => {
-    setDaysPerWeek(daysPerWeek - 1);
+    setDaysPerWeek(Math.max(0, daysPerWeek - 1));
   };
 
   const handleDecrementOrders = () => {
@@ -48,7 +49,7 @@ export const Calculator = () => {
   };
 
   const handleIncrementOrders = () => {
-    setOrdersPerDay((currentOrders) => Number(currentOrders) + 1);
+    setOrdersPerDay((currentOrders) => Math.max(0, currentOrders + 1));
   };
 
   useEffect(() => {
@@ -72,7 +73,7 @@ export const Calculator = () => {
   return (
     <>
       <div className={styles.calculator}>
-        <div className="flex items-start justify-between">
+        <div className={styles.calculator__container}>
           <div className="flex flex-col items-center">
             <div className="flex flex-col items-center">
               <span className={styles.calculator__counter_text}>
@@ -127,8 +128,11 @@ export const Calculator = () => {
             onChange={handleSelectorChange}
           />
         </div>
+        <Result
+          moneyBack={makeMoneyBack}
+          estimatedEarnings={estimatedEarnings}
+        />
       </div>
-      <Result moneyBack={makeMoneyBack} estimatedEarnings={estimatedEarnings} />
     </>
   );
 };
