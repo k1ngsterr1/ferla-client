@@ -1,0 +1,6 @@
+.error {
+  font-size: clamp(9px, 0.93744vw, 36px);
+  animation: fadeIn 0.5s ease-out;
+  @apply text-red;
+  @apply mt-4;
+}
