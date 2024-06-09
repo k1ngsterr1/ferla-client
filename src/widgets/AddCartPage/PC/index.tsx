@@ -1,4 +1,3 @@
-import { Cursor } from "@shared/ui/Cursor";
 import { AdminTextArea } from "@shared/ui/AdminTextArea";
 import { AdminFileInput } from "@shared/ui/AdminFileInput";
 import AdminButton from "@shared/ui/AdminButton";
@@ -9,7 +8,6 @@ import styles from "../../../pages/AddCart/styles.module.scss";
 export const AddCartScreen = () => {
   return (
     <main className={styles.screen}>
-      <Cursor />
       <h1 className={styles.screen__heading}>Add Cart Form</h1>
       <form className={styles.screen__form}>
         <AdminFileInput
