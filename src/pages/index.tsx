@@ -5,12 +5,14 @@ import { AddCart } from "./AddCart";
 import { CalculatorPage } from "./CalculatorPage";
 import { Login } from "./Login";
 import ProtectedRoute from "@widgets/ProtectedRoute";
+import { ForbiddenPage } from "./Forbidden";
 
 export const MyRoutes = () => {
   return (
     <Router>
       <Routes>
         <Route path={ROUTE_CONSTANTS.LOGIN} element={<Login />} />
+        <Route path={ROUTE_CONSTANTS.FORBIDDEN} element={<ForbiddenPage />} />
         <Route
           path={ROUTE_CONSTANTS.FERLA}
           element={

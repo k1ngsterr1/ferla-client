@@ -11,6 +11,7 @@ export async function useLogin(data: IData): Promise<string | void> {
       "https://spark-admin-production.up.railway.app/api/auth/login",
       data
     );
+
     const isVerified = response.data.user.isVerified;
 
     if (isVerified) {
@@ -26,9 +27,10 @@ export async function useLogin(data: IData): Promise<string | void> {
         accessToken: response.data.accessToken,
       };
       localStorage.setItem("userData", JSON.stringify(userData));
+      window.location.href = "/ferla";
     } else {
       // Redirect to forbidden page if not verified
-      window.location.href = "/forbidden";
+      window.location.href = "/ferla/forbidden";
       return; // Stop further execution
     }
   } catch (error: unknown | any) {
