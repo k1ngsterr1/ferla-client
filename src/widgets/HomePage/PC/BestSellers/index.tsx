@@ -30,18 +30,18 @@ export const BestSellers = () => {
         <div className="flex flex-col items-start">
           <MiniText
             text="Best Sellers"
-            id="ferla_editable_89d6700c-288d-46c6-b463-60aae8b1b830_13"
+            id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_13"
           />
           <h3
             className={styles.best_sellers__heading}
-            id="ferla_editable_89d6700c-288d-46c6-b463-60aae8b1b830_14"
+            id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_14"
           >
             Your Bike, Your Way
           </h3>
           <div className="flex items-center gap-10 mt-4">
             <p
               className={styles.best_sellers__paragraph}
-              id="ferla_editable_89d6700c-288d-46c6-b463-60aae8b1b830_15"
+              id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_15"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.. Lorem
               ipsum dolor sit amet, consectetur adipiscing elit.
@@ -58,13 +58,13 @@ export const BestSellers = () => {
           <div className="flex flex-col gap-4 mt-8">
             <div className="flex items-center gap-4">
               <AboutCard
-                id="ferla_editable_89d6700c-288d-46c6-b463-60aae8b1b830_16"
+                id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_16"
                 icon={faMoneyBill}
                 name="Coffee Bikes"
                 text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
               />
               <AboutCard
-                id="ferla_editable_89d6700c-288d-46c6-b463-60aae8b1b830_17"
+                id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_17"
                 icon={faMoneyBill}
                 name="Ice Cream Bikes"
                 text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
@@ -72,13 +72,13 @@ export const BestSellers = () => {
             </div>
             <div className="flex items-center gap-4 ">
               <AboutCard
-                id="ferla_editable_89d6700c-288d-46c6-b463-60aae8b1b830_18"
+                id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_18"
                 icon={faMoneyBill}
                 name="Modern Bikes"
                 text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
               />
               <AboutCard
-                id="ferla_editable_89d6700c-288d-46c6-b463-60aae8b1b830_19"
+                id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_19"
                 icon={faMoneyBill}
                 name="Hot Dog Bikes"
                 text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
@@ -88,7 +88,7 @@ export const BestSellers = () => {
         </div>
         <img
           src={best_sellers_pc}
-          id="ferla_editable_89d6700c-288d-46c6-b463-60aae8b1b830_20"
+          id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_20"
           alt="Best Sellers"
           onClick={handleImageFormVisible}
           className={styles.best_sellers__image}

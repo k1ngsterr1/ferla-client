@@ -25,19 +25,19 @@ export const MainScreen = () => {
       <main className={styles.main_screen} id="home">
         <h1
           className={`${styles.main_screen__heading} animate__fadeInLeft`}
-          id="ferla_editable_89d6700c-288d-46c6-b463-60aae8b1b830_1"
+          id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_1"
         >
           Let us introduce{" "}
           <strong
             className="text-red"
-            id="ferla_editable_89d6700c-288d-46c6-b463-60aae8b1b830_2"
+            id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_2"
           >
             ferla bikes
           </strong>
         </h1>
         <p
           className={styles.main_screen__paragraph}
-          id="ferla_editable_89d6700c-288d-46c6-b463-60aae8b1b830_3"
+          id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_3"
         >
           From Coffee Bikes and Ice Cream Bikes to Marketing & Promo Bikes,
           Hospitality Bikes, Vending Carts and more, we provide the perfect
@@ -53,13 +53,13 @@ export const MainScreen = () => {
         <a
           className={`${styles.main_screen__link} hoverable`}
           href="#video"
-          id="ferla_editable_89d6700c-288d-46c6-b463-60aae8b1b830_4"
+          id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_4"
         >
           Watch the true story
         </a>
         <img
           src={main_pc}
-          id="ferla-edit-4"
+          id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_5"
           onClick={handleImageFormVisible}
           alt="Ferla Bikes Main Image"
           className={styles.main_screen__image}

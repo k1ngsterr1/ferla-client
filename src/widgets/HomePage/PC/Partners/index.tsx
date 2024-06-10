@@ -23,19 +23,19 @@ export const PartnersScreen = () => {
       <section className={styles.partners} id="partners">
         <div className={styles.partners__upper}>
           <img
-            id="ferla_editable_89d6700c-288d-46c6-b463-60aae8b1b830_28"
+            id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_28"
             src={illustration}
             className={styles.partners__upper__image}
             alt="Illustration"
           />
           <h5
             className={styles.partners__upper__heading}
-            id="ferla_editable_89d6700c-288d-46c6-b463-60aae8b1b830_29"
+            id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_29"
           >
             Partnering with Industry Giants <br />
             <strong
               className="text-red"
-              id="ferla_editable_89d6700c-288d-46c6-b463-60aae8b1b830_30"
+              id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_30"
             >
               Ferla’s {""}
             </strong>
@@ -45,7 +45,7 @@ export const PartnersScreen = () => {
         <div className={styles.partners__images}>
           {clientContent.map((image, index) => (
             <img
-              id={`ferla_editable_89d6700c-288d-46c6-b463-60aae8b1b830_${
+              id={`editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_${
                 31 + index
               }`}
               onClick={handleImageFormVisible}
