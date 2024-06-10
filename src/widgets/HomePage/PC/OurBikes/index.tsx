@@ -8,8 +8,17 @@ export const OurBikes = () => {
   return (
     <section className={styles.bikes} id="bikes">
       <div className={styles.bikes__upper}>
-        <h6 className={styles.bikes__upper__heading} id="ferla-edit-39">
-          Our <strong className="text-red">Bikes</strong>
+        <h6
+          className={styles.bikes__upper__heading}
+          id="ferla_editable_89d6700c-288d-46c6-b463-60aae8b1b830_45"
+        >
+          Our{" "}
+          <strong
+            className="text-red"
+            id="ferla_editable_89d6700c-288d-46c6-b463-60aae8b1b830_46"
+          >
+            Bikes
+          </strong>
         </h6>
       </div>
       <div className={styles.bikes__cards}>

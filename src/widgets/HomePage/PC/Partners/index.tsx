@@ -23,14 +23,20 @@ export const PartnersScreen = () => {
       <section className={styles.partners} id="partners">
         <div className={styles.partners__upper}>
           <img
-            id="ferla-edit-24"
+            id="ferla_editable_89d6700c-288d-46c6-b463-60aae8b1b830_28"
             src={illustration}
             className={styles.partners__upper__image}
             alt="Illustration"
           />
-          <h5 className={styles.partners__upper__heading} id="ferla-edit-25">
+          <h5
+            className={styles.partners__upper__heading}
+            id="ferla_editable_89d6700c-288d-46c6-b463-60aae8b1b830_29"
+          >
             Partnering with Industry Giants <br />
-            <strong className="text-red" id="ferla-edit-26">
+            <strong
+              className="text-red"
+              id="ferla_editable_89d6700c-288d-46c6-b463-60aae8b1b830_30"
+            >
               Ferla’s {""}
             </strong>
             Trusted Collaborators
@@ -39,7 +45,9 @@ export const PartnersScreen = () => {
         <div className={styles.partners__images}>
           {clientContent.map((image, index) => (
             <img
-              id={`ferla-edit-${27 + index}`}
+              id={`ferla_editable_89d6700c-288d-46c6-b463-60aae8b1b830_${
+                31 + index
+              }`}
               onClick={handleImageFormVisible}
               src={image.image}
               alt={image.alt}

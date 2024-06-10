@@ -15,11 +15,20 @@ export const BusinessBlock = () => {
         <div className={styles.business_block__upper}>
           <h2
             className={styles.business_block__upper__heading}
-            id="ferla-edit-5"
+            id="ferla_editable_89d6700c-288d-46c6-b463-60aae8b1b830_5"
           >
-            Perfect <strong className="text-red">for Any Business</strong>
+            Perfect{" "}
+            <strong
+              className="text-red"
+              id="ferla_editable_89d6700c-288d-46c6-b463-60aae8b1b830_6"
+            >
+              for Any Business
+            </strong>
           </h2>
-          <MiniText text="Aesthetic Vending Solutions" />
+          <MiniText
+            text="Aesthetic Vending Solutions"
+            id="ferla_editable_89d6700c-288d-46c6-b463-60aae8b1b830_7"
+          />
         </div>
         <div className={styles.business_block__perfect}>
           <div
@@ -30,7 +39,7 @@ export const BusinessBlock = () => {
               <div className="flex flex-col items-start">
                 <p
                   className={styles.business_block__perfect__paragraph}
-                  id="ferla-edit-6"
+                  id="ferla_editable_89d6700c-288d-46c6-b463-60aae8b1b830_8"
                 >
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit..
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -49,11 +58,15 @@ export const BusinessBlock = () => {
             <div
               className={`flex justify-center items-center gap-4 ${styles.business_block__perfect__upper_tab}`}
             >
-              <SolutionTab name="Cafe-On-Wheels" href="AAA" id="ferla-edit-7" />
+              <SolutionTab
+                name="Cafe-On-Wheels"
+                href="AAA"
+                id="ferla_editable_89d6700c-288d-46c6-b463-60aae8b1b830_9"
+              />
               <SolutionTab
                 name="Stand-Out Trade Shows"
                 href="AAA"
-                id="ferla-edit-8"
+                id="ferla_editable_89d6700c-288d-46c6-b463-60aae8b1b830_10"
               />
             </div>
             <div
@@ -62,12 +75,12 @@ export const BusinessBlock = () => {
               <SolutionTab
                 name="Stand-Out Trade Shows"
                 href="AAA"
-                id="ferla-edit-9"
+                id="ferla_editable_89d6700c-288d-46c6-b463-60aae8b1b830_11"
               />
               <SolutionTab
                 name="Promo Activation Cart "
                 href="AAA"
-                id="ferla-edit-10"
+                id="ferla_editable_89d6700c-288d-46c6-b463-60aae8b1b830_12"
               />
             </div>
           </div>

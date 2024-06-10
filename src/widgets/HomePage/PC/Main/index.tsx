@@ -25,11 +25,20 @@ export const MainScreen = () => {
       <main className={styles.main_screen} id="home">
         <h1
           className={`${styles.main_screen__heading} animate__fadeInLeft`}
-          id="ferla_editable_1_89d6700c-288d-46c6-b463-60aae8b1b830"
+          id="ferla_editable_89d6700c-288d-46c6-b463-60aae8b1b830_1"
         >
-          Let us introduce <strong className="text-red">ferla bikes</strong>
+          Let us introduce{" "}
+          <strong
+            className="text-red"
+            id="ferla_editable_89d6700c-288d-46c6-b463-60aae8b1b830_2"
+          >
+            ferla bikes
+          </strong>
         </h1>
-        <p className={styles.main_screen__paragraph} id="ferla-edit-2">
+        <p
+          className={styles.main_screen__paragraph}
+          id="ferla_editable_89d6700c-288d-46c6-b463-60aae8b1b830_3"
+        >
           From Coffee Bikes and Ice Cream Bikes to Marketing & Promo Bikes,
           Hospitality Bikes, Vending Carts and more, we provide the perfect
           solution for your mobile retail pop-u
@@ -44,7 +53,7 @@ export const MainScreen = () => {
         <a
           className={`${styles.main_screen__link} hoverable`}
           href="#video"
-          id="ferla-edit-3"
+          id="ferla_editable_89d6700c-288d-46c6-b463-60aae8b1b830_4"
         >
           Watch the true story
         </a>
