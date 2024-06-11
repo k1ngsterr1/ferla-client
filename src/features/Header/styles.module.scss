@@ -29,6 +29,10 @@
       width: 95%;
     }
 
+    @include respond-to("lg") {
+      width: 86.6% !important;
+    }
+
     @include respond-to("4xl") {
       width: 86.6% !important;
     }

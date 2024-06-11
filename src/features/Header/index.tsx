@@ -34,7 +34,7 @@ export const Header = () => {
         className={`${styles.header__container}  m-auto w-full  !flex !flex-row items-center justify-between`}
       >
         <BikesMenu onMouseLeave={closeMenu} setMenuRef={setRef} />
-        <a href="/">
+        <a href="/ferla">
           <img
             src={logo}
             alt="Ferla Bikes Logo"
