@@ -1,6 +1,8 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ImageForm } from "@entities/ClientComponents/ImageForm";
+import { useDispatch, useSelector } from "react-redux";
+import { setComponentId } from "../../../../redux/idSlice";
 import Button from "@shared/ui/Button";
 
 import main_pc from "@assets/webp/pc/mainImage_pc.png";
@@ -8,19 +10,22 @@ import main_pc from "@assets/webp/pc/mainImage_pc.png";
 import styles from "./styles.module.scss";
 
 export const MainScreen = () => {
+  const dispatch = useDispatch();
+  const componentId = useSelector((state: any) => state.id.componentId);
   const [imageFormVisible, setImageFormVisible] = useState<boolean>(false);
 
-  const handleImageFormVisible = (e: React.SyntheticEvent) => {
+  const handleImageFormVisible = (e: Reacat.MouseEvent<HTMLImageElement>) => {
     e.stopPropagation();
+    const id = e.currentTarget.id;
+    const componentId = id.split("_")[3];
+    dispatch(setComponentId(componentId));
     setImageFormVisible(!imageFormVisible);
   };
 
   return (
     <>
       {imageFormVisible && (
-        <ImageForm
-          onClick={(e: React.SyntheticEvent) => handleImageFormVisible(e)}
-        />
+        <ImageForm onClick={handleImageFormVisible} componentId={componentId} />
       )}
       <main className={styles.main_screen} id="home">
         <h1

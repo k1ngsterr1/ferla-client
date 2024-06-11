@@ -3,17 +3,22 @@ import React, { ChangeEvent, FormEvent, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faImage } from "@fortawesome/free-solid-svg-icons";
 import { useChangePhoto } from "@shared/lib/hooks/useChangePhoto";
+import { useUserData } from "@shared/lib/hooks/useUserData";
 
 import styles from "./styles.module.scss";
+import Button from "@shared/ui/Button";
 
 interface IImageForm {
   onClick: (e: React.SyntheticEvent) => void;
+  componentId: string; // Add this line
 }
 
-export const ImageForm: React.FC<IImageForm> = ({ onClick }) => {
+export const ImageForm: React.FC<IImageForm> = ({ onClick, componentId }) => {
   const [fileName, setFileName] = useState("");
-  const [componentId, setComponentId] = useState<string>("");
+  const { userData } = useUserData();
   const { postImage } = useChangePhoto();
+
+  console.log(componentId);
 
   const handleDragOver = (e: React.DragEvent) => {
     e.preventDefault();
@@ -30,15 +35,18 @@ export const ImageForm: React.FC<IImageForm> = ({ onClick }) => {
     }
   };
 
-  const handleFileChange = (
-    e: ChangeEvent<HTMLInputElement>,
-    componentId: string
-  ) => {
+  const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
     e.stopPropagation();
-    if (e.target.files && e.target.files.length > 0) {
-      const file = e.target.files[0];
+    const file = e.target.files?.[0];
+    if (file) {
       setFileName(file.name);
-      postImage(file, componentId);
+      // postImage({
+      //   file,
+      //   userId: userData!.userId,
+      //   websiteId: "89d6700c-288d-46c6-b463-60aae8b1b830_5",
+      //   url: "ferla-backend-production.up.railway.app/api/components/upload-image",
+      //   componentId,
+      // });
     }
   };
 
@@ -50,7 +58,15 @@ export const ImageForm: React.FC<IImageForm> = ({ onClick }) => {
     if (fileInput && fileInput.files) {
       const file = fileInput.files[0];
       if (file) {
-        postImage(file, componentId);
+        const data = {
+          editable_image: file,
+          userId: userData!.id,
+          websiteId: "89d6700c-288d-46c6-b463-60aae8b1b830_5",
+          url: "https://localhost:4001/api/components/upload-image", // Assuming this URL is a placeholder
+          componentId: componentId,
+        };
+        console.log(userData);
+        postImage(data);
       }
     }
   };
@@ -75,6 +91,7 @@ export const ImageForm: React.FC<IImageForm> = ({ onClick }) => {
         >
           <input
             type="file"
+            onChange={handleFileChange} // Add the onChange event listener
             className="w-full h-full absolute "
             style={{ opacity: 0, position: "absolute", zIndex: 1000 }}
           />
@@ -83,7 +100,7 @@ export const ImageForm: React.FC<IImageForm> = ({ onClick }) => {
             className={styles.image_container__field__icon}
           />
           {fileName ? (
-            <div className={styles.imaeg_container__field__text}>
+            <div className={styles.image_container__field__text}>
               {fileName}
             </div>
           ) : (
@@ -91,6 +108,12 @@ export const ImageForm: React.FC<IImageForm> = ({ onClick }) => {
               Upload your image here
             </span>
           )}
+          <Button
+            text="Save"
+            type="submit"
+            buttonType="filled"
+            margin="mt-8 !z-[99999999]"
+          />
         </form>
       </div>
     </div>
