@@ -21,9 +21,11 @@ export const Block: React.FC<IBlock> = ({
   id,
 }) => {
   return (
-    <div className={`${styles.block} ${margin} ${border}`} id={id}>
+    <div className={`${styles.block} ${margin} ${border}`}>
       <IconDot icon={icon} />
-      <p className={styles.block__paragraph}>{paragraph}</p>
+      <p className={styles.block__paragraph} id={id}>
+        {paragraph}
+      </p>
     </div>
   );
 };

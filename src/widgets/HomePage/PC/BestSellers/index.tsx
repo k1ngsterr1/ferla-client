@@ -67,12 +67,14 @@ export const BestSellers = () => {
             <div className="flex items-center gap-4">
               <AboutCard
                 id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_16"
+                secondId="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_17"
                 icon={faMoneyBill}
                 name="Coffee Bikes"
                 text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
               />
               <AboutCard
-                id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_17"
+                id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_18"
+                secondId="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_19"
                 icon={faMoneyBill}
                 name="Ice Cream Bikes"
                 text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
@@ -80,13 +82,15 @@ export const BestSellers = () => {
             </div>
             <div className="flex items-center gap-4 ">
               <AboutCard
-                id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_18"
+                id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_20"
+                secondId="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_21"
                 icon={faMoneyBill}
                 name="Modern Bikes"
                 text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
               />
               <AboutCard
-                id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_19"
+                id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_22"
+                secondId="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_23"
                 icon={faMoneyBill}
                 name="Hot Dog Bikes"
                 text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
