@@ -10,15 +10,13 @@ import Button from "@shared/ui/Button";
 
 interface IImageForm {
   onClick: (e: React.SyntheticEvent) => void;
-  componentId: string; // Add this line
+  componentId: string;
 }
 
 export const ImageForm: React.FC<IImageForm> = ({ onClick, componentId }) => {
   const [fileName, setFileName] = useState("");
   const { userData } = useUserData();
   const { postImage } = useChangePhoto();
-
-  console.log(componentId);
 
   const handleDragOver = (e: React.DragEvent) => {
     e.preventDefault();

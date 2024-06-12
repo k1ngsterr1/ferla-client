@@ -19,7 +19,7 @@ export function useChangePhoto() {
       const formData = new FormData();
 
       formData.append("editable-image", data.editable_image);
-      formData.append("userId", "1");
+      formData.append("userId", data!.userId);
       formData.append("websiteId", data.websiteId.toString());
       formData.append("url", data.url.toString());
       formData.append("componentId", data.componentId.toString());
