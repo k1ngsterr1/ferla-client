@@ -10,12 +10,12 @@ export const OurBikes = () => {
       <div className={styles.bikes__upper}>
         <h6
           className={styles.bikes__upper__heading}
-          id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_45"
+          id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_46"
         >
           Our{" "}
           <strong
             className="text-red"
-            id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_46"
+            // id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_46"
           >
             Bikes
           </strong>

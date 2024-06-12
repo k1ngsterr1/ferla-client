@@ -20,11 +20,12 @@ export const Video: React.FC<IVideoProps> = ({
   data,
 }) => {
   return (
-    <div className={styles.video} id={id}>
+    <div className={styles.video}>
       <VideoButton
         onClick={() => window.open(video_link, "_blank", "noopener,noreferrer")}
       />
       <img
+        id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_45"
         src={data}
         onClick={onClick}
         className={styles.video__market}

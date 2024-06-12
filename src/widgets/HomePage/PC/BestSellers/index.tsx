@@ -3,21 +3,25 @@ import React, { useState } from "react";
 import { MiniText } from "@shared/ui/MiniText";
 import { faChevronRight, faMoneyBill } from "@fortawesome/free-solid-svg-icons";
 import { AboutCard } from "@entities/AboutCard";
+import { setComponentId } from "../../../../redux/idSlice";
+import { useDispatch, useSelector } from "react-redux";
+import ArrowAnimation from "@shared/ui/ArrowRight";
 import { ImageForm } from "@entities/ClientComponents/ImageForm";
 import { useFetchContent } from "@shared/lib/hooks/useFetchContent";
 import Button from "@shared/ui/Button";
 
 import best_sellers_pc from "@assets/webp/pc/best_sellers_pc.png";
-import ArrowAnimation from "@shared/ui/ArrowRight";
 
 import styles from "./styles.module.scss";
 
 export const BestSellers = () => {
-  const { content } = useFetchContent();
   const [imageFormVisible, setImageFormVisible] = useState<boolean>(false);
 
   const handleImageFormVisible = (e: React.SyntheticEvent) => {
     e.stopPropagation();
+    const id = e.currentTarget.id;
+    const componentId = id.split("_")[3];
+    dispatch(setComponentId(componentId));
     setImageFormVisible(!imageFormVisible);
   };
 
@@ -26,6 +30,7 @@ export const BestSellers = () => {
       {imageFormVisible && (
         <ImageForm
           onClick={(e: React.SyntheticEvent) => handleImageFormVisible(e)}
+          componentId={componentId}
         />
       )}
       <section className={styles.best_sellers} id="business">
@@ -64,6 +69,7 @@ export const BestSellers = () => {
             <div className="flex items-center gap-4">
               <AboutCard
                 id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_16"
+                secondId="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_17"
                 icon={faMoneyBill}
                 name={
                   content && content["15"]
@@ -77,7 +83,8 @@ export const BestSellers = () => {
                 }
               />
               <AboutCard
-                id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_17"
+                id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_18"
+                secondId="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_19"
                 icon={faMoneyBill}
                 name={
                   content && content["17"]
@@ -93,7 +100,8 @@ export const BestSellers = () => {
             </div>
             <div className="flex items-center gap-4 ">
               <AboutCard
-                id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_18"
+                id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_20"
+                secondId="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_21"
                 icon={faMoneyBill}
                 name={
                   content && content["19"]
@@ -107,7 +115,8 @@ export const BestSellers = () => {
                 }
               />
               <AboutCard
-                id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_19"
+                id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_22"
+                secondId="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_23"
                 icon={faMoneyBill}
                 name={
                   content && content["21"]
@@ -125,7 +134,7 @@ export const BestSellers = () => {
         </div>
         <img
           src={best_sellers_pc}
-          id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_20"
+          id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_24"
           alt="Best Sellers"
           onClick={handleImageFormVisible}
           className={styles.best_sellers__image}

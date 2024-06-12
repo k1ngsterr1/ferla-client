@@ -17,7 +17,6 @@ export const Reviews = () => {
         {content && content["47"] ? content["47"].value : "Content not found"}
       </p>
       <TrustIndexWidget />
-
       {/* <ReviewSwiper /> */}
     </section>
   );

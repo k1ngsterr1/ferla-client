@@ -14,7 +14,7 @@ export const Blog = () => {
       <div className={styles.blog__upper}>
         <h6
           className={styles.blog__upper__heading}
-          id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_48"
+          id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_50"
         >
           {content && content["49"] ? content["49"].value : "Content not found"}
         </h6>
