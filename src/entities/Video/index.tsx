@@ -10,16 +10,22 @@ interface IVideoProps {
   video_link: string;
   onClick?: () => void;
   id: string;
+  data: any;
 }
 
-export const Video: React.FC<IVideoProps> = ({ video_link, onClick, id }) => {
+export const Video: React.FC<IVideoProps> = ({
+  video_link,
+  onClick,
+  id,
+  data,
+}) => {
   return (
     <div className={styles.video} id={id}>
       <VideoButton
         onClick={() => window.open(video_link, "_blank", "noopener,noreferrer")}
       />
       <img
-        src={market_image}
+        src={data}
         onClick={onClick}
         className={styles.video__market}
         alt="Video Market"

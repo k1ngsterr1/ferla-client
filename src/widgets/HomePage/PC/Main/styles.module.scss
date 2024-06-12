@@ -167,35 +167,19 @@
     width: 50%;
     height: clamp(500px, 39.063vw, 2000px);
     position: absolute;
-    right: 0;
+    right: 0px;
     animation: fadeRevealRight 0.7s ease-out forwards;
 
     @include respond-to("3xl") {
       width: clamp(440px, 880 / 1680 * 100vw, 1760px);
       height: clamp(350px, 700 / 1680 * 100vw, 1400px);
+      right: 0px;
     }
 
     @include respond-to("4xl") {
       width: clamp(500px, 1000 / 1920 * 100vw, 2000px);
       height: clamp(375px, 750 / 1920 * 100vw, 1500px);
+      right: 0px;
     }
   }
-}
-
-@keyframes a-ltr-after {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(100%);
-  } // Move right to reveal text
-}
-
-@keyframes a-ltr-before {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-100%);
-  } // Move left to reveal text
 }
