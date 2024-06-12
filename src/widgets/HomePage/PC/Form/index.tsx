@@ -36,13 +36,13 @@ export const Form = () => {
           <div className="flex flex-col items-start">
             <h6
               className={styles.form_section__upper__heading}
-              id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_53"
+              id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_55"
             >
               Book A Meeting
             </h6>
             <p
               className={styles.form_section__upper__paragraph}
-              id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_54"
+              id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_56"
             >
               Lorem ipsum dolor sit amet, conse ctetur adi piscing elit, sed do
               eiusmod tempor incid idunt ut enem os..
@@ -50,14 +50,14 @@ export const Form = () => {
           </div>
           <img
             src={ferla_logo}
-            id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_55"
+            id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_57"
             alt="Ferla logotype"
             className={styles.form_section__upper__logo}
           />
         </div>
         <SubmitForm />
         <img
-          id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_56"
+          id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_58"
           src={form_image}
           onClick={handleImageFormVisible}
           alt="Ferla Bikes Form Image Alternative"

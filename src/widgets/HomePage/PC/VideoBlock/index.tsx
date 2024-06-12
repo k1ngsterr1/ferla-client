@@ -8,7 +8,7 @@ export const VideoBlock = () => {
     <section className={styles.video_block} id="video">
       <img
         src={red_logo}
-        id="ferla_editable_89d6700c-288d-46c6-b463-60aae8b1b830_47"
+        id="ferla_editable_89d6700c-288d-46c6-b463-60aae8b1b830_49"
         className={styles.video_block__logo}
         alt="Ferla Bikes Logo"
       />

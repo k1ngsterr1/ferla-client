@@ -38,14 +38,14 @@ export const BikesEverywhere = () => {
         <div className={styles.everywhere_block__upper}>
           <h4
             className={styles.everywhere_block__upper__heading}
-            id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_24"
+            id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_25"
           >
             Ferla Bikes <strong className="text-red">Everywhere</strong>
           </h4>
           <div className="flex flex-col items-end">
             <p
               className={styles.everywhere_block__upper__paragraph}
-              id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_25"
+              id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_26"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.. Lorem
               ipsum dolor sit amet, consectetur adipiscing elit.
@@ -61,27 +61,27 @@ export const BikesEverywhere = () => {
         <div className={styles.everywhere_block__photos}>
           <img
             src={bike01}
-            id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_26"
-            onClick={handleImageFormVisible}
-            className={styles.everywhere_block__photos__photo}
-            alt="Ferla Bike"
-          />
-          <img
             id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_27"
-            src={bike02}
             onClick={handleImageFormVisible}
             className={styles.everywhere_block__photos__photo}
             alt="Ferla Bike"
           />
           <img
             id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_28"
-            src={bike03}
+            src={bike02}
             onClick={handleImageFormVisible}
             className={styles.everywhere_block__photos__photo}
             alt="Ferla Bike"
           />
           <img
             id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_29"
+            src={bike03}
+            onClick={handleImageFormVisible}
+            className={styles.everywhere_block__photos__photo}
+            alt="Ferla Bike"
+          />
+          <img
+            id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_30"
             src={bike04}
             onClick={handleImageFormVisible}
             className={styles.everywhere_block__photos__photo}

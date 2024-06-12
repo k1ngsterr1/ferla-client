@@ -100,7 +100,7 @@ export const BestSellers = () => {
         </div>
         <img
           src={best_sellers_pc}
-          id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_20"
+          id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_24"
           alt="Best Sellers"
           onClick={handleImageFormVisible}
           className={styles.best_sellers__image}
