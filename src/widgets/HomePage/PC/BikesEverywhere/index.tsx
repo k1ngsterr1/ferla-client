@@ -13,6 +13,7 @@ export const BikesEverywhere = () => {
   const dispatch = useDispatch();
   const componentId = useSelector((state: any) => state.id.componentId);
   const [imageFormVisible, setImageFormVisible] = useState<boolean>(false);
+  const { content } = useFetchContent();
 
   const handleImageFormVisible = (e: React.SyntheticEvent) => {
     e.stopPropagation();

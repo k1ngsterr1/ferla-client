@@ -15,6 +15,9 @@ import best_sellers_pc from "@assets/webp/pc/best_sellers_pc.png";
 import styles from "./styles.module.scss";
 
 export const BestSellers = () => {
+  const { content } = useFetchContent();
+  const dispatch = useDispatch();
+  const componentId = useSelector((state: any) => state.id.componentId);
   const [imageFormVisible, setImageFormVisible] = useState<boolean>(false);
 
   const handleImageFormVisible = (e: React.SyntheticEvent) => {
