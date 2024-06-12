@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { ImageForm } from "@entities/ClientComponents/ImageForm";
 import { useDispatch, useSelector } from "react-redux";
 import { setComponentId } from "../../../../redux/idSlice";
@@ -14,7 +14,7 @@ export const MainScreen = () => {
   const componentId = useSelector((state: any) => state.id.componentId);
   const [imageFormVisible, setImageFormVisible] = useState<boolean>(false);
 
-  const handleImageFormVisible = (e: Reacat.MouseEvent<HTMLImageElement>) => {
+  const handleImageFormVisible = (e: React.MouseEvent<HTMLImageElement>) => {
     e.stopPropagation();
     const id = e.currentTarget.id;
     const componentId = id.split("_")[3];

@@ -5,15 +5,22 @@ import { MiniText } from "@shared/ui/MiniText";
 import { faChevronRight, faMoneyBill } from "@fortawesome/free-solid-svg-icons";
 import { Block } from "@entities/Block";
 import { Video } from "@entities/Video";
+import { useDispatch, useSelector } from "react-redux";
+import { setComponentId } from "../../../../redux/idSlice";
 import { ImageForm } from "@entities/ClientComponents/ImageForm";
 
 import styles from "./styles.module.scss";
 
 export const ManageScreen = () => {
+  const dispatch = useDispatch();
+  const componentId = useSelector((state: any) => state.id.componentId);
   const [imageFormVisible, setImageFormVisible] = useState<boolean>(false);
 
   const handleImageFormVisible = (e: React.SyntheticEvent) => {
     e.stopPropagation();
+    const id = e.currentTarget.id;
+    const componentId = id.split("_")[3];
+    dispatch(setComponentId(componentId));
     setImageFormVisible(!imageFormVisible);
   };
 
@@ -22,6 +29,7 @@ export const ManageScreen = () => {
       {imageFormVisible && (
         <ImageForm
           onClick={(e: React.SyntheticEvent) => handleImageFormVisible(e)}
+          componentId={componentId}
         />
       )}
       <section className={styles.manage_block} id="markets">
@@ -74,7 +82,6 @@ export const ManageScreen = () => {
               />
             </div>
             <Video
-              id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_44"
               video_link="https://www.youtube.com/channel/UCZa63PA8Ls17M4v3NebRqLQ"
               onClick={handleImageFormVisible}
             />

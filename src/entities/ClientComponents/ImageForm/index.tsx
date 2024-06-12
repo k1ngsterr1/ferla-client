@@ -61,8 +61,8 @@ export const ImageForm: React.FC<IImageForm> = ({ onClick, componentId }) => {
         const data = {
           editable_image: file,
           userId: userData!.id,
-          websiteId: "89d6700c-288d-46c6-b463-60aae8b1b830_5",
-          url: "https://localhost:4001/api/components/upload-image", // Assuming this URL is a placeholder
+          websiteId: "89d6700c-288d-46c6-b463-60aae8b1b830",
+          url: "https://ferla-backend-production.up.railway.app/api/components/upload-image", // Assuming this URL is a placeholder
           componentId: componentId,
         };
         console.log(userData);

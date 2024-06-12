@@ -3,19 +3,26 @@ import React, { useState } from "react";
 import { MiniText } from "@shared/ui/MiniText";
 import { faChevronRight, faMoneyBill } from "@fortawesome/free-solid-svg-icons";
 import { AboutCard } from "@entities/AboutCard";
+import { setComponentId } from "../../../../redux/idSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { ImageForm } from "@entities/ClientComponents/ImageForm";
+import ArrowAnimation from "@shared/ui/ArrowRight";
 import Button from "@shared/ui/Button";
 
 import best_sellers_pc from "@assets/webp/pc/best_sellers_pc.png";
-import ArrowAnimation from "@shared/ui/ArrowRight";
 
 import styles from "./styles.module.scss";
-import { ImageForm } from "@entities/ClientComponents/ImageForm";
 
 export const BestSellers = () => {
+  const dispatch = useDispatch();
+  const componentId = useSelector((state: any) => state.id.componentId);
   const [imageFormVisible, setImageFormVisible] = useState<boolean>(false);
 
   const handleImageFormVisible = (e: React.SyntheticEvent) => {
     e.stopPropagation();
+    const id = e.currentTarget.id;
+    const componentId = id.split("_")[3];
+    dispatch(setComponentId(componentId));
     setImageFormVisible(!imageFormVisible);
   };
 
@@ -24,6 +31,7 @@ export const BestSellers = () => {
       {imageFormVisible && (
         <ImageForm
           onClick={(e: React.SyntheticEvent) => handleImageFormVisible(e)}
+          componentId={componentId}
         />
       )}
       <section className={styles.best_sellers} id="business">
