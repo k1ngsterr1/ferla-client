@@ -52,10 +52,10 @@ export const Header = () => {
           ))}
         </nav>
         <LinkButton
-          text="Contact Us"
+          text="Login"
           buttonType="outline"
           zIndex="!z-[100000000]"
-          href="#form"
+          href="/ferla/login"
         />
       </div>
     </header>
