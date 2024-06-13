@@ -3,57 +3,56 @@
 @import "../../../../shared/styles/variables";
 
 .main_screen_mob {
-    height: 120dvh;
-    background-image: url(../../../../assets/webp/mob/phone_bg.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
+  height: 120dvh;
+  background-image: url(../../../../assets/webp/mob/web.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+  @include respond-to("xs") {
+    height: 90dvh;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: auto;
     overflow-x: hidden;
-    overflow-y: hidden;
-    
-    @include respond-to('xs') {
-        height: 90dvh;
+
+    &__heading {
+      color: #fff;
+      line-height: 150%;
+      letter-spacing: 2.5px;
+      text-transform: capitalize;
+      text-align: center;
+      width: 96%;
     }
 
-    &__content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 90%;
-        margin: auto;
-        overflow-x: hidden;
-
-
-        &__heading {
-            color: #FFF;
-            line-height: 150%; 
-            letter-spacing: 2.5px;
-            text-transform: capitalize; 
-            text-align: center;
-            width: 96%;
-        }
-
-        &__paragraph {
-            color: #FFF;
-            line-height: 138.6%;
-            text-align: center;
-            width: 93%;
-            @apply mt-8;
-        }
-
-        &__link {
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            transition: 0.3s all;
-            position: relative;
-            text-decoration: none;
-            color: #FFF;
-            font-size: clamp(8px,4.444vw,32px) ;
-            @apply mt-4;
-        
-            &:hover {
-            @apply text-red;
-            }
-        }
+    &__paragraph {
+      color: #fff;
+      line-height: 138.6%;
+      text-align: center;
+      width: 93%;
+      @apply mt-8;
     }
+
+    &__link {
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: 0.3s all;
+      position: relative;
+      text-decoration: none;
+      color: #fff;
+      font-size: clamp(8px, 4.444vw, 32px);
+      @apply mt-4;
+
+      &:hover {
+        @apply text-red;
+      }
+    }
+  }
 }
