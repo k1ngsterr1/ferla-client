@@ -10,8 +10,15 @@ interface IAdminTextAreaProps
 export const AdminTextArea: React.FC<IAdminTextAreaProps> = ({
   margin,
   placeholder,
+  ...rest
 }) => {
   const textArea = `${styles.admin_text_area} ${margin ? styles[margin] : ""}`;
 
-  return <textarea className={textArea} placeholder={placeholder}></textarea>;
+  return (
+    <textarea
+      className={textArea}
+      placeholder={placeholder}
+      {...rest}
+    ></textarea>
+  );
 };

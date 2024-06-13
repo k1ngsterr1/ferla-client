@@ -6,6 +6,7 @@ import { CalculatorPage } from "./CalculatorPage";
 import { Login } from "./Login";
 import ProtectedRoute from "@widgets/ProtectedRoute";
 import { ForbiddenPage } from "./Forbidden";
+import { AllCarts } from "./AllCarts";
 
 export const MyRoutes = () => {
   return (
@@ -18,6 +19,14 @@ export const MyRoutes = () => {
           element={
             <ProtectedRoute>
               <HomePage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path={ROUTE_CONSTANTS.ALL_CARTS}
+          element={
+            <ProtectedRoute>
+              <AllCarts />
             </ProtectedRoute>
           }
         />

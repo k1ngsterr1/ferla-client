@@ -175,6 +175,9 @@
   line-height: 150%;
   text-decoration: none;
   transition: 0.3s all;
+  background: transparent;
+  outline: none;
+  border: none;
   @apply text-red;
   @apply gap-2;
 

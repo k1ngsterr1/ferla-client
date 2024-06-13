@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import { useCartPopup } from "@shared/lib/context/PopupContext";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

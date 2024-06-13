@@ -1,12 +1,11 @@
-import { StaticImageData } from "next/image";
-
 import cart from "@assets/webp/cards/bike_card_pc.webp";
 
 export interface ICard {
   name: string;
+  id?: number;
   title: string;
   paragraph: string;
-  image: StaticImageData | string;
+  image: string;
   href: string;
 }
 

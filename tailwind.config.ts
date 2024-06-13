@@ -15,6 +15,7 @@ const config: Config = {
       colors: {
         red: "#E33A3A",
         orange: "#EB5A2E",
+        darkOrange: "#E65100",
         hover_red: "#D61F1F",
         white: "#fbfbfb",
         dark: "#232121",
