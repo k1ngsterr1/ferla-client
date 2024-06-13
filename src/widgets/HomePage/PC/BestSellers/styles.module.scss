@@ -100,8 +100,10 @@
       }
 
       @include respond-to("5xl") {
-        width: clamp(362.5px, 28.32vw, 1450px);
-        height: clamp(391.5px, 30.586vw, 1566px);
+        width: 50%;
+        height: 40%;
+        // width: clamp(362.5px, 28.32vw, 1450px);
+        // height: clamp(391.5px, 30.586vw, 1566px);
       }
     }
   }
