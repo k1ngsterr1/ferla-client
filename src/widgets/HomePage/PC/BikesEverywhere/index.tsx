@@ -35,23 +35,28 @@ export const BikesEverywhere = () => {
         <div className={styles.everywhere_block__upper}>
           <h4
             className={styles.everywhere_block__upper__heading}
-            id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_25"
+            id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_28"
           >
-            {content && content["24"]
-              ? content["24"].value
+            {content && content["27"]
+              ? content["27"].value
               : "Content Not Found"}
           </h4>
           <div className="flex flex-col items-end">
             <p
               className={styles.everywhere_block__upper__paragraph}
-              id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_26"
+              id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_29"
             >
-              {content && content["25"]
-                ? content["25"].value
+              {content && content["28"]
+                ? content["28"].value
                 : "Content Not Found"}
             </p>
             <Button
-              text="Start Selling"
+              text={
+                content && content["29"]
+                  ? content["29"].value
+                  : "Content Not Found"
+              }
+              id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_30"
               buttonType="transparent"
               margin="mt-4"
               icon={faChevronRight}
@@ -60,10 +65,10 @@ export const BikesEverywhere = () => {
         </div>
         <div className={styles.everywhere_block__photos}>
           <img
-            id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_27"
+            id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_31"
             src={
-              content && content["26"]
-                ? content["26"].value
+              content && content["30"]
+                ? content["30"].value
                 : "Content Not Found"
             }
             onClick={handleImageFormVisible}
@@ -71,10 +76,10 @@ export const BikesEverywhere = () => {
             alt="Ferla Bike"
           />
           <img
-            id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_28"
+            id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_32"
             src={
-              content && content["27"]
-                ? content["27"].value
+              content && content["31"]
+                ? content["31"].value
                 : "Content Not Found"
             }
             onClick={handleImageFormVisible}
@@ -82,10 +87,10 @@ export const BikesEverywhere = () => {
             alt="Ferla Bike"
           />
           <img
-            id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_29"
+            id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_33"
             src={
-              content && content["28"]
-                ? content["28"].value
+              content && content["32"]
+                ? content["32"].value
                 : "Content Not Found"
             }
             onClick={handleImageFormVisible}
@@ -93,10 +98,10 @@ export const BikesEverywhere = () => {
             alt="Ferla Bike"
           />
           <img
-            id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_30"
+            id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_34"
             src={
-              content && content["29"]
-                ? content["29"].value
+              content && content["33"]
+                ? content["33"].value
                 : "Content Not Found"
             }
             onClick={handleImageFormVisible}

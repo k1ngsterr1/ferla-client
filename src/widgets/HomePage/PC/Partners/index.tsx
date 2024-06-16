@@ -33,14 +33,14 @@ export const PartnersScreen = () => {
       <section className={styles.partners} id="partners">
         <div className={styles.partners__upper}>
           <img
-            id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_31"
+            id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_35"
             src={illustration}
             className={styles.partners__upper__image}
             alt="Illustration"
           />
           <h5
             className={styles.partners__upper__heading}
-            id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_32"
+            id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_36"
           >
             {/* Partnering with Industry Giants <br />
             <strong
@@ -51,8 +51,8 @@ export const PartnersScreen = () => {
             </strong>
             
             Trusted Collaborators */}
-            {content && content["31"]
-              ? content["31"].value
+            {content && content["35"]
+              ? content["35"].value
               : "Content Not Found"}
           </h5>
         </div>
@@ -60,12 +60,12 @@ export const PartnersScreen = () => {
           {clientContent.map((image, index) => (
             <img
               id={`editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_${
-                33 + index
+                37 + index
               }`}
               onClick={handleImageFormVisible}
               src={
-                content && content[`${32 + index}`]
-                  ? content[`${32 + index}`].value
+                content && content[`${36 + index}`]
+                  ? content[`${36 + index}`].value
                   : "Partnering with Industry Giants Ferla’s Trusted Collaborators"
               }
               alt={image.alt}

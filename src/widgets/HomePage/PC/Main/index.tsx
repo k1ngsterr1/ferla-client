@@ -50,24 +50,27 @@ export const MainScreen = () => {
           {content && content["2"] ? content["2"].value : "Content not found"}
         </p>
         <Button
-          text="Get A Free Consultation"
+          text={
+            content && content["3"] ? content["3"].value : "Content not found"
+          }
           animation="fade-reveal-left"
           buttonType="filled"
           targetId="form"
+          id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_4"
           margin="mt-8"
         />
         <a
           className={`${styles.main_screen__link} hoverable`}
           href="#video"
-          id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_4"
+          id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_5"
         >
-          {content && content["3"] ? content["3"].value : "Content not found"}
+          {content && content["4"] ? content["4"].value : "Content not found"}
         </a>
         <img
           src={
-            content && content["4"] ? content["4"].value : "Content not found"
+            content && content["5"] ? content["5"].value : "Content not found"
           }
-          id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_5"
+          id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_6"
           onClick={handleImageFormVisible}
           alt="Ferla Bikes Main Image"
           className={styles.main_screen__image}

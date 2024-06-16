@@ -4,6 +4,7 @@ import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { faStar } from "@fortawesome/free-regular-svg-icons";
 
 import styles from "./styles.module.scss";
+import { useFetchContent } from "@shared/lib/hooks/useFetchContent";
 
 interface ISolutionTab {
   name: string;
@@ -12,6 +13,8 @@ interface ISolutionTab {
 }
 
 export const SolutionTab: React.FC<ISolutionTab> = ({ name, href, id }) => {
+  const { content } = useFetchContent();
+
   return (
     <div className={`${styles.solution_tab} hoverable`}>
       <FontAwesomeIcon icon={faStar} className={styles.solution_tab__star} />
@@ -20,8 +23,14 @@ export const SolutionTab: React.FC<ISolutionTab> = ({ name, href, id }) => {
           {name}
         </span>
         <span className="flex items-center gap-2">
-          <a href={href} className={`${styles.solution_tab__link} hoverable`}>
-            Learn More
+          <a
+            href={href}
+            className={`${styles.solution_tab__link} hoverable`}
+            id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_14"
+          >
+            {content && content["13"]
+              ? content["13"].value
+              : "Content Not Found"}
           </a>
           <FontAwesomeIcon
             icon={faChevronRight}

@@ -9,12 +9,18 @@ export const Reviews = () => {
 
   return (
     <section className={styles.reviews} id="reviews">
-      <h6 className={styles.reviews__heading}>
+      <h6
+        className={styles.reviews__heading}
+        id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_51"
+      >
         {" "}
-        {content && content["46"] ? content["46"].value : "Content not found"}
+        {content && content["50"] ? content["50"].value : "Content not found"}
       </h6>
-      <p className={styles.reviews__paragraph}>
-        {content && content["47"] ? content["47"].value : "Content not found"}
+      <p
+        className={styles.reviews__paragraph}
+        id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_52"
+      >
+        {content && content["51"] ? content["51"].value : "Content not found"}
       </p>
       <TrustIndexWidget />
       {/* <ReviewSwiper /> */}

@@ -38,13 +38,17 @@ export const ManageScreen = () => {
         <div className="flex flex-col items-start w-full">
           <div className="flex flex-col items-start w-full">
             <MiniText
-              text="From Initial Concept to Market Leader"
-              id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_39"
+              text={
+                content && content["42"]
+                  ? content["42"].value
+                  : "Content not found"
+              }
+              id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_43"
             />
             <div className="w-full flex items-start justify-between">
               <h6
                 className={styles.manage_block__heading}
-                id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_40"
+                id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_44"
               >
                 {/* Redefining Mobile Business Solutions With {""}
                 <strong
@@ -53,8 +57,8 @@ export const ManageScreen = () => {
                 >
                   Ferla Bikes
                 </strong> */}
-                {content && content["39"]
-                  ? content["39"].value
+                {content && content["43"]
+                  ? content["43"].value
                   : "Content not found"}
               </h6>
               <Button
@@ -67,50 +71,54 @@ export const ManageScreen = () => {
           <div className="flex">
             <div className={styles.manage_block__list}>
               <Block
-                id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_41"
+                id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_45"
                 icon={faMoneyBill}
                 paragraph={
-                  content && content["41"]
-                    ? content["41"].value
+                  content && content["44"]
+                    ? content["44"].value
                     : "Content not found"
                 }
               />
               <hr className={styles.manage_block__list__separator} />
               <Block
-                id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_42"
+                id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_46"
                 icon={faMoneyBill}
                 margin="mt-8"
                 paragraph={
-                  content && content["42"]
-                    ? content["42"].value
+                  content && content["45"]
+                    ? content["45"].value
                     : "Content not found"
                 }
               />
               <hr className={styles.manage_block__list__separator} />
               <Block
-                id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_43"
+                id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_46"
                 icon={faMoneyBill}
                 margin="mt-8"
                 paragraph={
-                  content && content["43"]
-                    ? content["43"].value
+                  content && content["45"]
+                    ? content["45"].value
                     : "Content not found"
                 }
               />
               <hr className={styles.manage_block__list__separator} />
               <Block
-                id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_44"
+                id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_47"
                 icon={faMoneyBill}
                 margin="mt-8"
-                paragraph="Unlock the potential of mobile commerce with Ferla Bikes' premier range of innovative and eco-friendly commercial bikes and carts. Our specialty lies in enhancing the dynamic event industry with unparalleled solutions."
+                paragraph={
+                  content && content["46"]
+                    ? content["46"].value
+                    : "Content not found"
+                }
               />
             </div>
             <Video
               video_link="https://www.youtube.com/channel/UCZa63PA8Ls17M4v3NebRqLQ"
               onClick={handleImageFormVisible}
               data={
-                content && content["44"]
-                  ? content["44"].value
+                content && content["47"]
+                  ? content["47"].value
                   : "Content not found"
               }
             />

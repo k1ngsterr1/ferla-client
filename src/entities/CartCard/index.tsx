@@ -7,6 +7,7 @@ import { useCartPopup } from "@shared/lib/context/PopupContext";
 
 import styles from "./styles.module.scss";
 import { deleteResource } from "@shared/lib/hooks/useDeleteCart";
+import { useFetchContent } from "@shared/lib/hooks/useFetchContent";
 
 interface ICartCard {
   photo: string;
@@ -28,6 +29,7 @@ export const CartCard: React.FC<ICartCard> = ({
   title,
 }) => {
   const { toggleCartPopup } = useCartPopup();
+  const { content } = useFetchContent();
 
   const handleCardClick = () => {
     const cardData = {
@@ -50,8 +52,11 @@ export const CartCard: React.FC<ICartCard> = ({
         <span className={styles.cart_card__name}>{name}</span>
       </div>
       <div className="flex items-center justify-center gap-2 mt-4">
-        <span className={`${styles.link} hoverable`}>
-          Explore
+        <span
+          className={`${styles.link} hoverable`}
+          id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_50"
+        >
+          {content && content["49"] ? content["49"].value : "Content not found"}
           <FontAwesomeIcon
             icon={faChevronRight}
             className={styles.link__icon}

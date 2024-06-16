@@ -40,30 +40,32 @@ export const BestSellers = () => {
         <div className="flex flex-col items-start">
           <MiniText
             text={
-              content && content["12"] ? content["12"].value : "Best Sellers"
+              content && content["14"] ? content["14"].value : "Best Sellers"
             }
-            id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_13"
+            id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_15"
           />
           <h3
             className={styles.best_sellers__heading}
-            id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_14"
+            id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_16"
           >
-            {content && content["13"] ? content["13"].value : "Best Sellers"}
+            {content && content["15"] ? content["155"].value : "Best Sellers"}
           </h3>
           <div className="flex items-center gap-10 mt-4">
             <p
               className={styles.best_sellers__paragraph}
-              id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_15"
+              id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_17"
             >
-              {content && content["14"]
-                ? content["14"].value
+              {content && content["16"]
+                ? content["16"].value
                 : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.. Lorem ipsum dolor sit amet, consectetur adipiscing elit"}
             </p>
             <ArrowAnimation />
           </div>
           <Button
-            id="form"
-            text="Manage Your Business"
+            id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_18"
+            text={
+              content && content["17"] ? content["17"].value : "Best Sellers"
+            }
             buttonType="transparent"
             margin="mt-8"
             icon={faChevronRight}
@@ -71,64 +73,64 @@ export const BestSellers = () => {
           <div className="flex flex-col gap-4 mt-8">
             <div className="flex items-center gap-4">
               <AboutCard
-                id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_16"
-                secondId="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_17"
+                id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_19"
+                secondId="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_20"
                 icon={faMoneyBill}
                 name={
-                  content && content["15"]
-                    ? content["15"].value
+                  content && content["18"]
+                    ? content["18"].value
                     : "Coffee Bikes"
                 }
                 text={
-                  content && content["16"]
-                    ? content["16"].value
+                  content && content["19"]
+                    ? content["19"].value
                     : "Coffee Bikes"
                 }
               />
               <AboutCard
-                id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_18"
-                secondId="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_19"
+                id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_21"
+                secondId="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_22"
                 icon={faMoneyBill}
                 name={
-                  content && content["17"]
-                    ? content["17"].value
+                  content && content["20"]
+                    ? content["20"].value
                     : "Ice Cream Bikes"
                 }
                 text={
-                  content && content["18"]
-                    ? content["18"].value
+                  content && content["21"]
+                    ? content["21"].value
                     : "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
                 }
               />
             </div>
             <div className="flex items-center gap-4 ">
               <AboutCard
-                id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_20"
-                secondId="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_21"
+                id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_23"
+                secondId="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_24"
                 icon={faMoneyBill}
                 name={
-                  content && content["19"]
-                    ? content["19"].value
+                  content && content["22"]
+                    ? content["22"].value
                     : "Modern Bikes"
                 }
                 text={
-                  content && content["20"]
-                    ? content["20"].value
+                  content && content["23"]
+                    ? content["23"].value
                     : "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
                 }
               />
               <AboutCard
-                id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_22"
-                secondId="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_23"
+                id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_25"
+                secondId="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_26"
                 icon={faMoneyBill}
                 name={
-                  content && content["21"]
-                    ? content["21"].value
+                  content && content["24"]
+                    ? content["24"].value
                     : "Hot Dog Bikes"
                 }
                 text={
-                  content && content["22"]
-                    ? content["22"].value
+                  content && content["25"]
+                    ? content["25"].value
                     : "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
                 }
               />
@@ -137,9 +139,9 @@ export const BestSellers = () => {
         </div>
         <img
           src={
-            content && content["23"] ? content["23"].value : "Ice Cream Bikes"
+            content && content["26"] ? content["26"].value : "Ice Cream Bikes"
           }
-          id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_24"
+          id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_27"
           alt="Best Sellers"
           onClick={handleImageFormVisible}
           className={styles.best_sellers__image}

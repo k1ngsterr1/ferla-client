@@ -18,7 +18,7 @@ export const BusinessBlock = () => {
         <div className={styles.business_block__upper}>
           <h2
             className={styles.business_block__upper__heading}
-            id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_6"
+            id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_7"
           >
             {/* Perfect{" "}
             <strong
@@ -27,13 +27,13 @@ export const BusinessBlock = () => {
             >
               for Any Business
             </strong> */}
-            {content && content["5"] ? content["5"].value : "Content not found"}
+            {content && content["6"] ? content["6"].value : "Content not found"}
           </h2>
           <MiniText
             text={
-              content && content["6"] ? content["6"].value : "Content not found"
+              content && content["7"] ? content["7"].value : "Content not found"
             }
-            id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_7"
+            id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_8"
           />
         </div>
         <div className={styles.business_block__perfect}>
@@ -45,15 +45,19 @@ export const BusinessBlock = () => {
               <div className="flex flex-col items-start">
                 <p
                   className={styles.business_block__perfect__paragraph}
-                  id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_8"
+                  id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_9"
                 >
-                  {content && content["7"]
-                    ? content["7"].value
+                  {content && content["8"]
+                    ? content["8"].value
                     : "Content not found"}
                 </p>
                 <Button
-                  id="form"
-                  text="Get Started"
+                  id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_10"
+                  text={
+                    content && content["9"]
+                      ? content["9"].value
+                      : "Content not found"
+                  }
                   buttonType="transparent"
                   margin="mt-4"
                   icon={faChevronRight}
@@ -67,15 +71,6 @@ export const BusinessBlock = () => {
             >
               <SolutionTab
                 name={
-                  content && content["8"]
-                    ? content["8"].value
-                    : "Content not found"
-                }
-                href="AAA"
-                id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_9"
-              />
-              <SolutionTab
-                name={
                   content && content["9"]
                     ? content["9"].value
                     : "Content not found"
@@ -83,10 +78,6 @@ export const BusinessBlock = () => {
                 href="AAA"
                 id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_10"
               />
-            </div>
-            <div
-              className={`flex justify-center items-center gap-4 mt-4 ${styles.business_block__perfect__lower_tab}`}
-            >
               <SolutionTab
                 name={
                   content && content["10"]
@@ -96,6 +87,10 @@ export const BusinessBlock = () => {
                 href="AAA"
                 id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_11"
               />
+            </div>
+            <div
+              className={`flex justify-center items-center gap-4 mt-4 ${styles.business_block__perfect__lower_tab}`}
+            >
               <SolutionTab
                 name={
                   content && content["11"]
@@ -104,6 +99,15 @@ export const BusinessBlock = () => {
                 }
                 href="AAA"
                 id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_12"
+              />
+              <SolutionTab
+                name={
+                  content && content["12"]
+                    ? content["12"].value
+                    : "Content not found"
+                }
+                href="AAA"
+                id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_13"
               />
             </div>
           </div>
