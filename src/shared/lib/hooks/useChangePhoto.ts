@@ -33,8 +33,6 @@ export function useChangePhoto() {
           },
         }
       );
-
-      console.log(response.data);
     } catch (error: unknown | any) {
       setError(error.response?.data.message || error.message);
       console.log(error, data);
