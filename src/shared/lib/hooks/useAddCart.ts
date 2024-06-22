@@ -17,7 +17,10 @@ export async function useAddCart(
     const formData = new FormData();
 
     // Append each part of data to the FormData object
-    formData.append("code", data.code);
+    formData.append(
+      "code",
+      "SPARK-STUDIO-85209af2e07011fafd442671ef8ae84b647be17c7f517ea5942075dda6fbeeb7"
+    );
     formData.append(
       "url",
       "https://ferla-backend-production.up.railway.app/api/carts/add"
@@ -28,7 +31,7 @@ export async function useAddCart(
     formData.append("description", data.description);
 
     const response = await axios.post(
-      "https://spark-admin-production.up.railway.app/api/website/ferla-bikes/89d6700c-288d-46c6-b463-60aae8b1b830/add-cart",
+      "http://spark-admin-production.up.railway.app/api/website/ferla-bikes/89d6700c-288d-46c6-b463-60aae8b1b830/add-cart",
       formData,
       {
         headers: {
