@@ -38,24 +38,24 @@ export const Form = () => {
           <div className="flex flex-col items-start">
             <h6
               className={styles.form_section__upper__heading}
-              id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_60"
+              id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_65"
             >
-              {content && content["59"]
-                ? content["59"].value
+              {content && content["61"]
+                ? content["61"].value
                 : "Content Not Found"}
             </h6>
             <p
               className={styles.form_section__upper__paragraph}
-              id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_61"
+              id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_62"
             >
-              {content && content["60"]
-                ? content["60"].value
+              {content && content["58"]
+                ? content["58"].value
                 : "Content Not Found"}
             </p>
           </div>
           <img
             src={ferla_logo}
-            id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_62"
+            id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_63"
             alt="Ferla logotype"
             className={styles.form_section__upper__logo}
           />
@@ -63,9 +63,9 @@ export const Form = () => {
         <SubmitForm />
         <img
           src={
-            content && content["62"] ? content["62"].value : "Content Not Found"
+            content && content["60"] ? content["60"].value : "Content Not Found"
           }
-          id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_63"
+          id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_64"
           onClick={handleImageFormVisible}
           alt="Ferla Bikes Form Image Alternative"
           className={styles.form_section__image}

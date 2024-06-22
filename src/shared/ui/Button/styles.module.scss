@@ -8,6 +8,9 @@
   height: clamp(27.5px, 55 / 360 * 100vw, 110px);
   font-size: clamp(8px, 16 / 360 * 100vw, 32px);
   border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: 0.3s all;
   @apply font-medium;
   @apply rounded-full;

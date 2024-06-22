@@ -13,9 +13,9 @@ export const OurBikes = () => {
       <div className={styles.bikes__upper}>
         <h6
           className={styles.bikes__upper__heading}
-          id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_49"
+          id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_50"
         >
-          {content && content["48"] ? content["48"].value : "Content not found"}
+          {content && content["49"] ? content["49"].value : "Content not found"}
         </h6>
       </div>
       <div className={styles.bikes__cards}>

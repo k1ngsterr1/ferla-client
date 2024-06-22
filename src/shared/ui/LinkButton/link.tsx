@@ -9,7 +9,7 @@ interface IButtonLink {
   buttonType: "filled" | "outline";
 }
 
-const LinkButton: React.FC<IButtonLink> = ({
+const ActualLinkButton: React.FC<IButtonLink> = ({
   margin,
   text,
   href,
@@ -22,10 +22,10 @@ const LinkButton: React.FC<IButtonLink> = ({
   } ${margin || ""}`;
 
   return (
-    <span className={linkClass} {...rest}>
+    <a className={linkClass} {...rest} href={href}>
       {text}
-    </span>
+    </a>
   );
 };
 
-export default LinkButton;
+export default ActualLinkButton;

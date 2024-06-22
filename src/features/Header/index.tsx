@@ -10,6 +10,7 @@ import LinkButton from "@shared/ui/LinkButton";
 import useHeaderScroll from "@shared/lib/animations/headerAnimation";
 
 import styles from "./styles.module.scss";
+import ActualLinkButton from "@shared/ui/LinkButton/link";
 
 export const Header = () => {
   const headerRef = useRef<null>(null);
@@ -51,10 +52,9 @@ export const Header = () => {
             />
           ))}
         </nav>
-        <LinkButton
+        <ActualLinkButton
           text="Login"
           buttonType="outline"
-          zIndex="!z-[100000000]"
           href="/ferla/login"
         />
       </div>

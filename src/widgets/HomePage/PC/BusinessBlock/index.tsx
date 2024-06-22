@@ -71,15 +71,6 @@ export const BusinessBlock = () => {
             >
               <SolutionTab
                 name={
-                  content && content["9"]
-                    ? content["9"].value
-                    : "Content not found"
-                }
-                href="AAA"
-                id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_10"
-              />
-              <SolutionTab
-                name={
                   content && content["10"]
                     ? content["10"].value
                     : "Content not found"
@@ -87,10 +78,6 @@ export const BusinessBlock = () => {
                 href="AAA"
                 id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_11"
               />
-            </div>
-            <div
-              className={`flex justify-center items-center gap-4 mt-4 ${styles.business_block__perfect__lower_tab}`}
-            >
               <SolutionTab
                 name={
                   content && content["11"]
@@ -100,6 +87,10 @@ export const BusinessBlock = () => {
                 href="AAA"
                 id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_12"
               />
+            </div>
+            <div
+              className={`flex justify-center items-center gap-4 mt-4 ${styles.business_block__perfect__lower_tab}`}
+            >
               <SolutionTab
                 name={
                   content && content["12"]
@@ -108,6 +99,15 @@ export const BusinessBlock = () => {
                 }
                 href="AAA"
                 id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_13"
+              />
+              <SolutionTab
+                name={
+                  content && content["13"]
+                    ? content["13"].value
+                    : "Content not found"
+                }
+                href="AAA"
+                id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_14"
               />
             </div>
           </div>

@@ -14,7 +14,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   buttonType: "filled" | "outline" | "underline" | "transparent";
 }
 
-const Button: React.FC<ButtonProps> = ({
+const ActualButton: React.FC<ButtonProps> = ({
   margin,
   text,
   animation,
@@ -30,8 +30,7 @@ const Button: React.FC<ButtonProps> = ({
   const { handleScroll } = useHandleScroll();
 
   return (
-    <span
-      disabled
+    <button
       className={buttonClass}
       {...rest}
       onClick={() => handleScroll(targetId)}
@@ -44,8 +43,8 @@ const Button: React.FC<ButtonProps> = ({
           data-testid="icon"
         />
       )}
-    </span>
+    </button>
   );
 };
 
-export default Button;
+export default ActualButton;

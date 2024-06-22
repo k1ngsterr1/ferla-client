@@ -48,7 +48,7 @@ export const BestSellers = () => {
             className={styles.best_sellers__heading}
             id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_16"
           >
-            {content && content["15"] ? content["155"].value : "Best Sellers"}
+            {content && content["15"] ? content["15"].value : "Best Sellers"}
           </h3>
           <div className="flex items-center gap-10 mt-4">
             <p

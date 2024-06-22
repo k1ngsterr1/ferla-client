@@ -43,10 +43,7 @@ export const CartCard: React.FC<ICartCard> = ({
   };
 
   return (
-    <div
-      className="flex flex-col items-center hoverable"
-      onClick={handleCardClick}
-    >
+    <div className="flex flex-col items-center hoverable">
       <div className={`${styles.cart_card} hoverable`}>
         <img src={photo} alt={name} className={styles.cart_card__image} />
         <span className={styles.cart_card__name}>{name}</span>
@@ -54,9 +51,9 @@ export const CartCard: React.FC<ICartCard> = ({
       <div className="flex items-center justify-center gap-2 mt-4">
         <span
           className={`${styles.link} hoverable`}
-          id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_50"
+          id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_51"
         >
-          {content && content["49"] ? content["49"].value : "Content not found"}
+          {content && content["50"] ? content["50"].value : "Content not found"}
           <FontAwesomeIcon
             icon={faChevronRight}
             className={styles.link__icon}
@@ -65,6 +62,7 @@ export const CartCard: React.FC<ICartCard> = ({
       </div>
       {isDeletable && (
         <button
+          disabled
           className={`${styles.link} mt-4`}
           onClick={() => deleteResource(id, accessToken)}
         >

@@ -62,7 +62,12 @@ export const ManageScreen = () => {
                   : "Content not found"}
               </h6>
               <Button
-                text="Manage Your Business"
+                id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_45"
+                text={
+                  content && content["44"]
+                    ? content["44"].value
+                    : "Content not found"
+                }
                 buttonType="transparent"
                 icon={faChevronRight}
               />
@@ -71,30 +76,8 @@ export const ManageScreen = () => {
           <div className="flex">
             <div className={styles.manage_block__list}>
               <Block
-                id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_45"
-                icon={faMoneyBill}
-                paragraph={
-                  content && content["44"]
-                    ? content["44"].value
-                    : "Content not found"
-                }
-              />
-              <hr className={styles.manage_block__list__separator} />
-              <Block
                 id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_46"
                 icon={faMoneyBill}
-                margin="mt-8"
-                paragraph={
-                  content && content["45"]
-                    ? content["45"].value
-                    : "Content not found"
-                }
-              />
-              <hr className={styles.manage_block__list__separator} />
-              <Block
-                id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_46"
-                icon={faMoneyBill}
-                margin="mt-8"
                 paragraph={
                   content && content["45"]
                     ? content["45"].value
@@ -112,13 +95,24 @@ export const ManageScreen = () => {
                     : "Content not found"
                 }
               />
+              <hr className={styles.manage_block__list__separator} />
+              <Block
+                id="editable_ferla-bikes_89d6700c-288d-46c6-b463-60aae8b1b830_48"
+                icon={faMoneyBill}
+                margin="mt-8"
+                paragraph={
+                  content && content["47"]
+                    ? content["47"].value
+                    : "Content not found"
+                }
+              />
             </div>
             <Video
               video_link="https://www.youtube.com/channel/UCZa63PA8Ls17M4v3NebRqLQ"
               onClick={handleImageFormVisible}
               data={
-                content && content["47"]
-                  ? content["47"].value
+                content && content["48"]
+                  ? content["48"].value
                   : "Content not found"
               }
             />
