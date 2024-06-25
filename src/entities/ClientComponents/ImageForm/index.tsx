@@ -89,6 +89,7 @@ export const ImageForm: React.FC<IImageForm> = ({ onClick, componentId }) => {
         >
           <input
             type="file"
+            required
             onChange={handleFileChange} // Add the onChange event listener
             className="w-full h-full absolute "
             style={{ opacity: 0, position: "absolute", zIndex: 1000 }}
@@ -106,12 +107,15 @@ export const ImageForm: React.FC<IImageForm> = ({ onClick, componentId }) => {
               Upload your image here
             </span>
           )}
-          <Button
+          {/* <Button
             text="Save"
             type="submit"
             buttonType="filled"
             margin="mt-8 !z-[99999999]"
-          />
+          /> */}
+          <button type="submit" className="!z-[99999999]">
+            Submit
+          </button>
         </form>
       </div>
     </div>
