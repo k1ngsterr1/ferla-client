@@ -4,9 +4,13 @@ import { Popup } from "@entities/Popup";
 
 import styles from "./styles.module.scss";
 import { useFetchContent } from "@shared/lib/hooks/useFetchContent";
+import { useGetCarts } from "@shared/lib/hooks/useGetCarts";
 
 export const OurBikes = () => {
   const { content } = useFetchContent();
+  const { data } = useGetCarts();
+
+  console.log("data:", data);
 
   return (
     <section className={styles.bikes} id="bikes">
@@ -19,12 +23,13 @@ export const OurBikes = () => {
         </h6>
       </div>
       <div className={styles.bikes__cards}>
-        {cartsContent.map((card, index) => (
+        {data?.map((card, index) => (
           <CartCard
+            id={card.id}
             title={card.title}
             name={card.name}
             paragraph={card.paragraph}
-            photo={card.image}
+            photo={card.img_url}
             key={index}
           />
         ))}

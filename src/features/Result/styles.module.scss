@@ -3,21 +3,14 @@
 
 .result {
   width: 100%;
-  height: auto;
+  height: clamp(200px, 20.832vw, 800px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   @apply rounded-xl;
   @apply p-8;
-
   @apply mb-8;
-
-  &__heading {
-    font-family: "Poppins";
-    @apply text-4xl;
-    @apply text-white;
-  }
 
   &__money_back {
     text-align: center;

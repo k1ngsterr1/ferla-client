@@ -27,13 +27,13 @@ export const Result: React.FC<IResultProps> = ({
 
   return (
     <div className={styles.result}>
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-start justify-center">
         <span className={styles.result__money_back}>Make money back:</span>
         <span className={styles.result__money_back_amount}>
           {getMoneyBackText(moneyBack)}
         </span>
       </div>
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center justify-center mt-8">
         <span className={styles.result__money_back}>
           In 3 months estimated earnings:
         </span>

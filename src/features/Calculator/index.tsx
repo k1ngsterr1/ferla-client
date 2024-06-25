@@ -21,6 +21,15 @@ export const Calculator = () => {
 
   const handleSelectorChange = (value: string) => {
     setSelectedOption(value);
+
+    const selectedOption = options.find((option) => option.value === value);
+
+    console.log(selectedOption.price);
+
+    // If found, set the bikePrice to the price of the selected option
+    if (selectedOption) {
+      setBikePrice(selectedOption.price);
+    }
   };
 
   const handleSetBike = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -74,7 +83,8 @@ export const Calculator = () => {
     <>
       <div className={styles.calculator}>
         <div className={styles.calculator__container}>
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-start">
+            {/* <div className="flex flex-col items-center"> */}
             <div className="flex flex-col items-center">
               <span className={styles.calculator__counter_text}>
                 Average order price
@@ -85,7 +95,17 @@ export const Calculator = () => {
                 handleIncrement={handleIncrementAverageOrderPrice}
               />
             </div>
-            <div className="flex flex-col items-center mt-4">
+            <div className="flex flex-col items-start mt-4">
+              <span className={styles.calculator__counter_text}>
+                How many days per week
+              </span>
+              <DayCounter
+                daysPerWeek={daysPerWeek}
+                handleIncrementDayPerWeek={handleIncrementDaysPerWeek}
+                handleDecrementDayPerWeek={handleDecrementDaysPerWeek}
+              />
+            </div>
+            <div className="flex flex-col items-start mt-4">
               <span className={styles.calculator__counter_text}>
                 Approximate orders per day
               </span>
@@ -98,27 +118,26 @@ export const Calculator = () => {
                 }
               />
             </div>
-          </div>
-          <div className="flex flex-col items-center">
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-start mt-0">
               <span className={styles.calculator__counter_text}>
-                How many days per week
+                Choose your cart
               </span>
-              <DayCounter
-                daysPerWeek={daysPerWeek}
-                handleIncrementDayPerWeek={handleIncrementDaysPerWeek}
-                handleDecrementDayPerWeek={handleDecrementDaysPerWeek}
+              <Selector
+                margin="mt-4"
+                placeholder="Ferla X"
+                options={options}
+                value={selectedOption}
+                onChange={handleSelectorChange}
               />
             </div>
-            <div className="flex flex-col items-center mt-4">
-              <span className={styles.calculator__counter_text}>
-                Bike price
-              </span>
-              <CalculatorInput onChange={handleSetBike} bikePrice={bikePrice} />
-            </div>
           </div>
+          <Result
+            moneyBack={makeMoneyBack}
+            estimatedEarnings={estimatedEarnings}
+          />
+          {/* </div> */}
         </div>
-        <span className={styles.separator} />
+        {/* <span className={styles.separator} />
         <div className="flex items-center justify-center">
           <Selector
             margin="mt-4"
@@ -127,11 +146,7 @@ export const Calculator = () => {
             value={selectedOption}
             onChange={handleSelectorChange}
           />
-        </div>
-        <Result
-          moneyBack={makeMoneyBack}
-          estimatedEarnings={estimatedEarnings}
-        />
+        </div> */}
       </div>
     </>
   );

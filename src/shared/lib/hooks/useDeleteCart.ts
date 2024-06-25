@@ -16,7 +16,7 @@ export async function deleteResource(
       );
 
     const response = await axiosInstance.delete(
-      `http://localhost:4000/api/website/ferla-bikes/89d6700c-288d-46c6-b463-60aae8b1b830/delete-cart/${cartId}/${encodedUrl}`
+      `https://spark-admin-production.up.railway.app/api/website/ferla-bikes/89d6700c-288d-46c6-b463-60aae8b1b830/delete-cart/${cartId}/${encodedUrl}`
     );
 
     console.log("Resource deleted successfully:", response.data);
