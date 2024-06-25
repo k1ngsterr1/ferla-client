@@ -62,7 +62,6 @@ export const CartCard: React.FC<ICartCard> = ({
       </div>
       {isDeletable && (
         <button
-          disabled
           className={`${styles.link} mt-4`}
           onClick={() => deleteResource(id, accessToken)}
         >

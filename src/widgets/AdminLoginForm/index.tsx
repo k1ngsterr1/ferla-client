@@ -20,7 +20,12 @@ export const AdminLoginForm = () => {
   } = useSubmitLogin();
 
   return (
-    <form className={styles.admin_login_form} onSubmit={handleSubmit}>
+    <form
+      className={styles.admin_login_form}
+      onSubmit={(e) => {
+        handleSubmit(e);
+      }}
+    >
       <div className="w-full flex flex-col items-center justify-center">
         <img
           className={styles.admin_login_form__image}
@@ -51,7 +56,12 @@ export const AdminLoginForm = () => {
           onChange={(e) => setPassword(e.target.value)}
         />
         <ErrorDisplay message={passwordError} />
-        <AdminButton text="Login" buttonType="filled" margin="mt-4" />
+        <AdminButton
+          text="Login"
+          buttonType="filled"
+          type="submit"
+          margin="mt-4"
+        />
       </div>
     </form>
   );

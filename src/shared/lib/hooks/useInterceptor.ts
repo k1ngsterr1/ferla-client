@@ -14,7 +14,8 @@ axiosInstance.interceptors.request.use(
     if (isTokenExpired(accessToken)) {
       localStorage.removeItem("isAuthenticated");
       localStorage.removeItem("userData");
-      window.location.href = "/login"; // Redirect to login
+
+      // window.location.href = "/ferla/login"; // Redirect to login
       return Promise.reject(new Error("Token expired"));
     }
 
@@ -38,7 +39,8 @@ axiosInstance.interceptors.response.use(
     if (error.response && error.response.status === 401) {
       localStorage.removeItem("isAuthenticated");
       localStorage.removeItem("userData");
-      window.location.href = "/login"; // Redirect to login
+      // window.location.href = "/ferla/login"; // Redirect to login
+      console.log(error);
     }
     return Promise.reject(error);
   }

@@ -52,8 +52,8 @@ export const Header = () => {
             />
           ))}
         </nav>
-        <ActualLinkButton
-          text="Login"
+        <LinkButton
+          text="Contact Us"
           buttonType="outline"
           href="/ferla/login"
         />

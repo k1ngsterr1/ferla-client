@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { useUserData } from "./useUserData";
+import axiosInstance from "./useInterceptor";
 
 interface IUploadPhotoData {
   editable_image: File;
@@ -24,7 +25,7 @@ export function useChangePhoto() {
       formData.append("url", data.url.toString());
       formData.append("componentId", data.componentId.toString());
 
-      const response = await axios.post(
+      const response = await axiosInstance.post(
         "https://spark-admin-production.up.railway.app/api/site/upload/image",
         formData,
         {

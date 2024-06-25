@@ -1,0 +1,21 @@
+.spark_btn {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  transition: 0.3s all;
+  @apply rounded-full;
+  @apply left-8;
+  @apply bottom-8;
+  @apply p-4;
+
+  &__logo {
+    width: clamp(24px, 2.49984vw, 96px);
+    height: clamp(24px, 2.49984vw, 96px);
+  }
+
+  &:hover {
+    @apply shadow-xl;
+  }
+}

@@ -7,7 +7,6 @@ import { useUserData } from "@shared/lib/hooks/useUserData";
 
 import styles from "./styles.module.scss";
 import Button from "@shared/ui/Button";
-import ActualButton from "@shared/ui/Button/button";
 
 interface IImageForm {
   onClick: (e: React.SyntheticEvent) => void;
@@ -107,7 +106,7 @@ export const ImageForm: React.FC<IImageForm> = ({ onClick, componentId }) => {
               Upload your image here
             </span>
           )}
-          <ActualButton
+          <Button
             text="Save"
             type="submit"
             buttonType="filled"

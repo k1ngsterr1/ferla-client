@@ -1,0 +1,57 @@
+.menu {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 10000 !important;
+  @apply p-8;
+  @apply bg-white;
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__spark {
+      width: clamp(32px, 3.33312vw, 128px);
+      height: clamp(32px, 3.33312vw, 128px);
+    }
+
+    &__text {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+      @apply text-orange;
+      @apply text-5xl;
+    }
+
+    &__icon {
+      @apply text-orange;
+      @apply text-4xl;
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    &__links {
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      @apply gap-4;
+
+      &__link {
+        font-size: clamp(12px, 1.24992vw, 48px);
+        @apply text-orange;
+      }
+    }
+  }
+}

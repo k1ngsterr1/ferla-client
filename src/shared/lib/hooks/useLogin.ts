@@ -1,9 +1,9 @@
 // login.ts
-import axiosInstance from "./useInterceptor";
+import axios from "axios";
 
 export async function useLogin(data: any): Promise<string | void> {
   try {
-    const response = await axiosInstance.post(
+    const response = await axios.post(
       "https://spark-admin-production.up.railway.app/api/auth/login",
       data
     );
@@ -26,7 +26,7 @@ export async function useLogin(data: any): Promise<string | void> {
       window.location.href = "/ferla";
     } else {
       // Redirect to forbidden page if not verified
-      window.location.href = "/forbidden";
+      window.location.href = "/ferla/forbidden";
       return; // Stop further execution
     }
   } catch (error: unknown | any) {

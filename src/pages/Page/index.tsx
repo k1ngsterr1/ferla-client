@@ -1,5 +1,3 @@
-import React from "react";
-
 // PC
 import { Header } from "@features/Header";
 import { MainScreen } from "@widgets/HomePage/PC/Main";
@@ -28,9 +26,15 @@ import { PartnersScreenMobile } from "@widgets/HomePage/Mobile/PartnersScreenMob
 import { ManageScreenMobile } from "@widgets/HomePage/Mobile/ManageScreenMobile";
 import { OurBikesMobile } from "@widgets/HomePage/Mobile/OurBikesMobile";
 import { ReviewsMobile } from "@widgets/HomePage/Mobile/ReviewsScreenMobile";
+import { SparkMenu } from "@shared/ui/SparkMenu";
+import { Menu } from "@widgets/Menu";
+import { useOpenMenu } from "@shared/lib/hooks/useOpenMenu";
+
 import styles from "./styles.module.scss";
 
 export const HomePage = () => {
+  const { handleOpen, isOpen } = useOpenMenu();
+
   return (
     <>
       <div className="container">
@@ -39,6 +43,8 @@ export const HomePage = () => {
           <Header />
           <Cursor />
           <MainScreen />
+          <SparkMenu onClick={handleOpen} />
+          {isOpen && <Menu onClick={handleOpen} />}
           <BusinessBlock />
           <BestSellers />
           <BikesEverywhere />
