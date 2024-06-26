@@ -19,8 +19,6 @@ export function useChangePhoto() {
     try {
       const formData = new FormData();
 
-      console.log("ZHOPA");
-
       formData.append("editable-image", data.editable_image);
       formData.append("id", data!.userId);
       formData.append("websiteId", data.websiteId.toString());
@@ -28,7 +26,7 @@ export function useChangePhoto() {
       formData.append("componentId", data.componentId.toString());
 
       const response = await axiosInstance.post(
-        "http://localhost:4000/api/site/upload/image",
+        "https://spark-admin-production.up.railway.app/api/site/upload/image",
         formData,
         {
           headers: {
