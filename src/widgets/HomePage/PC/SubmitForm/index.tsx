@@ -50,10 +50,12 @@ export const SubmitForm = () => {
           {...register("email", { required: true, pattern: /^\S+@\S+\.\S+$/ })}
         />
         {errors.email && <p className={styles.error}>Invalid email address!</p>}
-        <DatePickerInput
-          placeholder="Pick a Date"
-          margin="mt-14"
-          {...register("date", { required: true })}
+        <Input
+          labelText="Write Your Message"
+          type="text"
+          name="date"
+          // margin="mt-14"
+          required
         />
         {errors.date && <p className={styles.error}>Date is required!</p>}
 

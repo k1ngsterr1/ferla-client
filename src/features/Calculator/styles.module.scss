@@ -6,6 +6,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   background-image: url("../../assets/webp/pc/ferla.webp");
   align-items: center;
   @apply mt-8;
@@ -13,6 +14,92 @@
   @apply bg-red;
   @apply p-8;
   @apply rounded-xl;
+
+  &__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    @include respond-to("xxs") {
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    @include respond-to("tablet_sm") {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @apply mt-8;
+    }
+
+    @include respond-to("lg") {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row;
+      width: 100%;
+      @apply mt-0;
+    }
+
+    @include respond-to("xl") {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 80%;
+    }
+
+    @include respond-to("3xl") {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 60%;
+    }
+
+    @include respond-to("4xl") {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 60%;
+    }
+
+    @include respond-to("5xl") {
+      width: 40%;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__counter_text {
+    width: 100%;
+    text-align: center;
+    @apply text-white;
+
+    @include respond-to("xxs") {
+      @apply text-lg;
+    }
+
+    @include respond-to("md") {
+      @apply text-xl;
+    }
+
+    @include respond-to("tablet") {
+      @apply text-base;
+    }
+
+    @include respond-to("lg") {
+      @apply text-base;
+    }
+
+    @include respond-to("5xl") {
+      text-align: center;
+    }
+  }
 
   @include respond-to("xxs") {
     width: 100%;
@@ -33,88 +120,6 @@
     background-repeat: no-repeat;
   }
 
-  &__container {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-
-    @include respond-to("xxs") {
-      width: 100%;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-    }
-
-    // @include respond-to("md") {
-    //   width: 40%;
-    // }
-
-    @include respond-to("tablet_sm") {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      @apply mt-8;
-    }
-
-    @include respond-to("lg") {
-      display: flex;
-      flex-direction: row;
-      align-items: start;
-      align-items: start;
-      justify-content: space-between;
-      flex-direction: row;
-      width: 100%;
-      @apply mt-0;
-    }
-
-    @include respond-to("xl") {
-      display: flex;
-      flex-direction: row;
-      align-items: start;
-      width: 100%;
-    }
-
-    @include respond-to("3xl") {
-      display: flex;
-      flex-direction: row;
-      align-items: start;
-      width: 100%;
-    }
-
-    @include respond-to("4xl") {
-      display: flex;
-      flex-direction: row;
-      align-items: start;
-      width: 50%;
-    }
-
-    @include respond-to("5xl") {
-      width: 100%;
-    }
-  }
-
-  &__counter_text {
-    width: 100%;
-    text-align: left;
-    @apply text-white;
-
-    @include respond-to("xxs") {
-      @apply text-lg;
-    }
-
-    @include respond-to("md") {
-      @apply text-xl;
-    }
-
-    @include respond-to("tablet") {
-      @apply text-base;
-    }
-
-    @include respond-to("lg") {
-      @apply text-base;
-    }
-  }
-
   @include respond-to("xl") {
     min-height: clamp(175px, 350 / 1360 * 100vw, 700px);
   }
@@ -132,7 +137,10 @@
   }
 
   @include respond-to("5xl") {
-    min-height: clamp(175px, 350 / 2560 * 100vw, 700px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @apply p-0;
   }
 }
 

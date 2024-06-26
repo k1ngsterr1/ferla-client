@@ -4,8 +4,6 @@
 
 .selector {
   position: relative;
-  width: clamp(125px, 250 / 1200 * 100vw, 500px);
-  height: clamp(32.5px, 65 / 1200 * 100vw, 130px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,29 +13,66 @@
   @apply rounded-md;
   @apply bg-white;
   @apply text-dark;
+  @apply mt-3;
+
+  @include respond-to("xxs") {
+    width: clamp(125px, 58.41vw, 500px);
+    height: clamp(32.5px, 15.186599999999999vw, 130px);
+  }
+
+  @include respond-to("xs") {
+    width: clamp(125px, 52.083vw, 500px);
+    height: clamp(32.5px, 13.542vw, 130px);
+  }
+
+  @include respond-to("fsf") {
+    width: clamp(125px, 43.478vw, 500px);
+    height: clamp(32.5px, 11.304vw, 130px);
+  }
+
+  @include respond-to("sm") {
+    width: clamp(125px, 34.722vw, 500px);
+    height: clamp(32.5px, 9.028vw, 130px);
+  }
+
+  @include respond-to("es") {
+    width: clamp(125px, 29.07vw, 500px);
+    height: clamp(32.5px, 7.558vw, 130px);
+  }
+
+  @include respond-to("md") {
+    width: clamp(125px, 250 / 992 * 100vw, 500px);
+    height: clamp(32.5px, 65 / 992 * 100vw, 130px);
+  }
+
+  @include respond-to("lg") {
+    width: clamp(110px, 220 / 1200 * 100vw, 440px);
+    height: clamp(32.5px, 65 / 1200 * 100vw, 130px);
+  }
 
   @include respond-to("xl") {
-    width: clamp(125px, 250 / 1360 * 100vw, 500px);
+    width: clamp(110px, 220 / 1360 * 100vw, 440px);
     height: clamp(32.5px, 65 / 1360 * 100vw, 130px);
   }
 
   @include respond-to("2xl") {
-    width: clamp(125px, 250 / 1520 * 100vw, 500px);
+    width: clamp(110px, 220 / 1520 * 100vw, 440px);
     height: clamp(32.5px, 65 / 1520 * 100vw, 130px);
   }
 
   @include respond-to("3xl") {
-    width: clamp(125px, 250 / 1680 * 100vw, 500px);
-    height: clamp(32.5px, 65 /1520 * 100vw, 130px);
+    width: clamp(110px, 220 / 1680 * 100vw, 440px);
+    height: clamp(32.5px, 65 /1680 * 100vw, 130px);
+    @apply text-xl;
   }
 
   @include respond-to("4xl") {
-    width: clamp(125px, 250 / 1920 * 100vw, 500px);
+    width: clamp(110px, 220 / 1920 * 100vw, 440px);
     height: clamp(32.5px, 65 / 1920 * 100vw, 130px);
   }
 
   @include respond-to("5xl") {
-    width: clamp(125px, 250 / 2560 * 100vw, 500px);
+    width: clamp(110px, 220 / 2560 * 100vw, 440px);
     height: clamp(32.5px, 65 / 2560 * 100vw, 130px);
   }
 }
@@ -57,6 +92,35 @@
   @apply top-16;
   @apply rounded-md;
   @apply bg-white;
+
+  @include respond-to("xxs") {
+    min-height: clamp(30px, 14.0184vw, 120px);
+    max-height: clamp(100px, 46.727999999999994vw, 400px);
+    width: clamp(125px, 58.41vw, 500px);
+  }
+  @include respond-to("xs") {
+    width: clamp(125px, 52.083vw, 500px);
+  }
+
+  @include respond-to("fsf") {
+    width: clamp(125px, 43.478vw, 500px);
+    max-height: clamp(100px, 34.783vw, 400px);
+  }
+
+  @include respond-to("sm") {
+    width: clamp(125px, 34.722vw, 500px);
+  }
+
+  @include respond-to("es") {
+    width: clamp(125px, 29.07vw, 500px);
+    max-height: clamp(100px, 23.256vw, 400px);
+  }
+
+  @include respond-to("md") {
+    min-height: clamp(30px, 60 / 992 * 100vw, 120px);
+    max-height: clamp(120px, 240 / 992 * 100vw, 480px);
+    width: clamp(125px, 250 / 992 * 100vw, 500px);
+  }
 
   @include respond-to("xl") {
     width: clamp(125px, 250 / 1360 * 100vw, 500px);
@@ -88,8 +152,8 @@
 
   @include respond-to("5xl") {
     width: clamp(125px, 250 / 2560 * 100vw, 500px);
-    min-height: clamp(30px, 60 / 2560 * 100vw, 120px);
-    max-height: clamp(50px, 100 / 2560 * 100vw, 200px);
+    min-height: clamp(100px, 200 / 2560 * 100vw, 500px);
+    max-height: clamp(100px, 200 / 2560 * 100vw, 500px);
     // height: clamp(25px, 50 / 2560 * 100vw, 100px);
   }
 }
@@ -103,6 +167,10 @@
   display: flex;
   align-items: center;
   @apply gap-4;
+
+  @include respond-to("xxs") {
+    @apply text-lg;
+  }
 }
 
 .listItem {
@@ -116,5 +184,12 @@
   @apply p-2;
   &:hover {
     @apply bg-gray-200;
+  }
+  @include respond-to("xxs") {
+    @apply text-lg;
+  }
+
+  @include respond-to("fsf") {
+    @apply mt-4;
   }
 }

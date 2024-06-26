@@ -24,8 +24,6 @@ export const Calculator = () => {
 
     const selectedOption = options.find((option) => option.value === value);
 
-    console.log(selectedOption.price);
-
     // If found, set the bikePrice to the price of the selected option
     if (selectedOption) {
       setBikePrice(selectedOption.price);
@@ -84,51 +82,54 @@ export const Calculator = () => {
       <div className={styles.calculator}>
         <div className={styles.calculator__container}>
           <div className="flex flex-col items-start">
-            {/* <div className="flex flex-col items-center"> */}
-            <div className="flex flex-col items-center">
-              <span className={styles.calculator__counter_text}>
-                Average order price
-              </span>
-              <Counter
-                averageOrderPrice={averageOrderPrice}
-                handleDecrement={handleDecrementAverageOrderPrice}
-                handleIncrement={handleIncrementAverageOrderPrice}
-              />
+            <div className="flex items-center gap-4 justify-center">
+              <div className="flex flex-col items-center">
+                <span className={styles.calculator__counter_text}>
+                  Average order price
+                </span>
+                <Counter
+                  averageOrderPrice={averageOrderPrice}
+                  handleDecrement={handleDecrementAverageOrderPrice}
+                  handleIncrement={handleIncrementAverageOrderPrice}
+                />
+              </div>
+              <div className="flex flex-col items-start mt-4">
+                <span className={styles.calculator__counter_text}>
+                  Approximate orders per day
+                </span>
+                <CalculatorRange
+                  ordersPerDay={ordersPerDay}
+                  handleOrdersDecrement={handleDecrementOrders}
+                  handleOrdersIncrement={handleIncrementOrders}
+                  onChange={(changeEvent) =>
+                    setOrdersPerDay(changeEvent.target.value)
+                  }
+                />
+              </div>
             </div>
-            <div className="flex flex-col items-start mt-4">
-              <span className={styles.calculator__counter_text}>
-                How many days per week
-              </span>
-              <DayCounter
-                daysPerWeek={daysPerWeek}
-                handleIncrementDayPerWeek={handleIncrementDaysPerWeek}
-                handleDecrementDayPerWeek={handleDecrementDaysPerWeek}
-              />
-            </div>
-            <div className="flex flex-col items-start mt-4">
-              <span className={styles.calculator__counter_text}>
-                Approximate orders per day
-              </span>
-              <CalculatorRange
-                ordersPerDay={ordersPerDay}
-                handleOrdersDecrement={handleDecrementOrders}
-                handleOrdersIncrement={handleIncrementOrders}
-                onChange={(changeEvent) =>
-                  setOrdersPerDay(changeEvent.target.value)
-                }
-              />
-            </div>
-            <div className="flex flex-col items-start mt-0">
-              <span className={styles.calculator__counter_text}>
-                Choose your cart
-              </span>
-              <Selector
-                margin="mt-4"
-                placeholder="Ferla X"
-                options={options}
-                value={selectedOption}
-                onChange={handleSelectorChange}
-              />
+            <div className="flex items-center gap-4 justify-center">
+              <div className="flex flex-col items-start mt-0">
+                <span className={styles.calculator__counter_text}>
+                  Working days per week
+                </span>
+                <DayCounter
+                  daysPerWeek={daysPerWeek}
+                  handleIncrementDayPerWeek={handleIncrementDaysPerWeek}
+                  handleDecrementDayPerWeek={handleDecrementDaysPerWeek}
+                />
+              </div>
+              <div className="flex flex-col items-start mt-0">
+                <span className={styles.calculator__counter_text}>
+                  Bike of choice
+                </span>
+                <Selector
+                  margin="mt-4"
+                  placeholder="Ferla X"
+                  options={options}
+                  value={selectedOption}
+                  onChange={handleSelectorChange}
+                />
+              </div>
             </div>
           </div>
           <Result

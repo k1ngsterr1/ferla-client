@@ -13,6 +13,7 @@
   @apply mb-8;
 
   &__money_back {
+    width: 100%;
     text-align: center;
     @apply text-lg;
     @apply text-white;
@@ -38,5 +39,33 @@
     @include respond-to("lg") {
       @apply text-4xl;
     }
+
+    @include respond-to("xl") {
+      @apply text-3xl;
+    }
+
+    @include respond-to("2xl") {
+      @apply text-4xl;
+    }
+  }
+
+  @include respond-to("lg") {
+    height: auto;
+  }
+
+  @include respond-to("xl") {
+    height: auto;
+  }
+
+  @include respond-to("2xl") {
+    height: auto;
+  }
+
+  @include respond-to("3xl") {
+    height: auto;
+  }
+
+  @include respond-to("5xl") {
+    height: auto;
   }
 }
