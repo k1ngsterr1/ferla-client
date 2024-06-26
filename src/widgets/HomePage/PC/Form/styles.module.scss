@@ -10,6 +10,7 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-repeat: center;
+  @apply pt-32;
   @apply mt-16;
 
   &__upper {
@@ -86,10 +87,6 @@
 
     @include respond-to("lg") {
       align-items: flex-start;
-    }
-
-    @include respond-to("xl") {
-      @apply mt-0;
     }
   }
 

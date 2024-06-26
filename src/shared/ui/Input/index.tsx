@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import { useCustomLabel } from "@shared/lib/animations/customLabelAnimation";
 
 import styles from "./styles.module.scss";
@@ -22,7 +22,7 @@ export const Input: React.FC<Input> = ({
 
   return (
     <div
-      className={`${styles.input_container} hoverable ${margin} hoverable`}
+      className={`${styles.input_container}  hoverable ${margin} hoverable`}
       {...rest}
     >
       <label
@@ -36,6 +36,7 @@ export const Input: React.FC<Input> = ({
         onFocus={onLabelFocus}
         onBlur={onLabelBlur}
         className={`${styles.input_container__input} hoverable`}
+        {...rest}
       />
     </div>
   );

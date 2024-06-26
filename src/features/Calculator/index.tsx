@@ -118,8 +118,8 @@ export const Calculator = () => {
                 }
               />
             </div>
-            <div className="flex flex-col items-start mt-0">
-              <span className={styles.calculator__counter_text}>
+            <div className="flex flex-col items-start mt-4">
+              <span className={`${styles.calculator__counter_text} mb-2`}>
                 Choose your cart
               </span>
               <Selector
