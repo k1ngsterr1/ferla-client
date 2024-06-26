@@ -62,7 +62,6 @@ export const SubmitForm = () => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-        {errors.email && <p className={styles.error}>Invalid email address!</p>}
         <Input
           labelText="Write Your Message"
           type="text"
@@ -70,8 +69,6 @@ export const SubmitForm = () => {
           // margin="mt-14"
           required
         />
-        {errors.date && <p className={styles.error}>Date is required!</p>}
-
         <Button
           text="Send Form"
           type="submit"
