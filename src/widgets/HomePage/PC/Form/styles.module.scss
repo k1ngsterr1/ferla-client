@@ -10,6 +10,7 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-repeat: center;
+  @apply pt-32;
   @apply mt-16;
 
   &__upper {
@@ -53,7 +54,7 @@
     }
 
     &__paragraph {
-      width: 50%;
+      width: 70%;
       text-align: left;
       @apply mt-4;
       @apply mb-8;
@@ -87,10 +88,6 @@
 
     @include respond-to("lg") {
       align-items: flex-start;
-    }
-
-    @include respond-to("xl") {
-      @apply mt-0;
     }
   }
 

@@ -3,7 +3,7 @@
 @import "../../../shared/styles/variables";
 
 .input_container {
-  width: clamp(150px, 15.624vw, 600px);
+  width: clamp(150px, 70.092vw, 600px);
   position: relative;
   display: flex;
   flex-direction: column;
@@ -12,12 +12,42 @@
   cursor: pointer;
   transition: 0.3s all;
 
+  @include respond-to("md") {
+    width: clamp(150px, 15.624vw, 600px);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-bottom: 1px solid;
+    cursor: pointer;
+    transition: 0.3s all;
+  }
+
+  @include respond-to("tablet_sm") {
+    width: clamp(125px, 250 / 1024 * 100vw, 500px);
+  }
+
+  @include respond-to("lg") {
+    width: clamp(110px, 220 / 1100 * 100vw, 440px);
+    @apply mt-2;
+    &:not(:first-child) {
+      @apply mt-12;
+    }
+  }
+
   @include respond-to("xl") {
-    @apply mt-8;
+    width: clamp(110px, 220 / 1360 * 100vw, 440px);
+    @apply mt-12;
+  }
+
+  @include respond-to("2xl") {
+    width: clamp(110px, 220 / 1360 * 100vw, 440px);
+    @apply mt-12;
   }
 
   @include respond-to("4xl") {
-    @apply mt-10;
+    width: clamp(150px, 300 / 1920 * 100vw, 600px);
+    @apply mt-12;
   }
 
   @include respond-to("5xl") {
@@ -31,21 +61,54 @@
 
   &__label {
     position: absolute;
-    font-size: clamp(9px, 0.93744vw, 36px);
     z-index: -1;
+    font-size: clamp(10px, 1.0416vw, 40px);
     @apply bottom-1;
     @apply left-2;
+
+    @include respond-to("md") {
+      font-size: clamp(10px, 1.0416vw, 40px);
+      @apply bottom-1;
+      @apply left-2;
+    }
+
+    @include respond-to("tablet_sm") {
+      font-size: clamp(10px, 1.0416vw, 40px);
+    }
+
+    @include respond-to("tablet") {
+      font-size: clamp(10px, 1.0416vw, 40px);
+    }
+
+    @include respond-to("xl") {
+      font-size: clamp(10px, 1.0416vw, 40px);
+    }
+
+    @include respond-to("4xl") {
+      font-size: clamp(10px, 1.0416vw, 40px);
+    }
+
+    @include respond-to("5xl") {
+      font-size: clamp(10px, 1.0416vw, 40px);
+    }
+
+    @include respond-to("6xl") {
+      font-size: clamp(10px, 1.0416vw, 40px);
+    }
   }
 
   &__input {
     width: 100%;
+    font-size: clamp(9px, 4.20552vw, 36px);
     background: transparent;
     border: none;
     outline: none;
-    font-size: clamp(9px, 0.93744vw, 36px);
-    z-index: 1;
-    @apply pl-2;
-    @apply pb-1;
     @apply text-dark;
+    @apply pl-2;
+    z-index: 1;
+
+    @include respond-to("md") {
+      font-size: clamp(9px, 0.93744vw, 36px);
+    }
   }
 }
