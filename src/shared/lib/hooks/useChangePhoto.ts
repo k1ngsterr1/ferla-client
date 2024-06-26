@@ -34,9 +34,6 @@ export function useChangePhoto() {
           },
         }
       );
-      console.log("zhopa");
-
-      console.log(response);
     } catch (error: unknown | any) {
       setError(error.response?.data.message || error.message);
       console.log(error, data);
