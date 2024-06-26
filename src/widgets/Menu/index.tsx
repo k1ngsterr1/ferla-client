@@ -25,6 +25,9 @@ export const Menu: React.FC<IMenu> = ({ onClick }) => {
           <a href="/ferla" className={styles.menu__content__links__link}>
             Home
           </a>
+          <a href="/ferla/login" className={styles.menu__content__links__link}>
+            Login
+          </a>
           <a
             href="/ferla/add-cart"
             className={styles.menu__content__links__link}
