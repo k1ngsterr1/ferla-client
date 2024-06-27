@@ -132,6 +132,8 @@
     @apply rounded-full;
     @apply bg-red;
     @apply mt-8;
+    z-index: 100000000000 !important;
+
     outline: none;
     border: none;
 
@@ -202,7 +204,7 @@
   height: clamp(27.5px, 55 / 360 * 100vw, 110px);
   font-size: clamp(8px, 16 / 360 * 100vw, 32px);
   border: none;
-  z-index: 100000000 !important;
+  z-index: 100000000000 !important;
   display: flex;
   align-items: center;
   justify-content: center;
