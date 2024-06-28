@@ -21,7 +21,7 @@ export const Blog = () => {
         </h6>
       </div>
       <div className={styles.blog__content}>
-        {blogData.map((card: any, index: number) => (
+        {blogData?.map((card: any, index: number) => (
           <BlogCard
             title={card.title}
             href={card.href}
