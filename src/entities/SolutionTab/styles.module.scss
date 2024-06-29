@@ -4,7 +4,7 @@
 @import "../../shared/styles/mixins";
 
 .solution_tab {
-  width: 100%;
+  width: 150%;
   height: clamp(75px, 150 / 360 * 100vw, 300px);
   position: relative;
   display: flex;
@@ -15,7 +15,6 @@
   transition: 0.3s all;
   animation: reveal 2s linear both;
   transition: 0.3s all;
-  // animation-timeline: view(40%);
   @apply rounded-2xl;
   @apply border-dark;
   @apply p-4;
@@ -29,11 +28,12 @@
   }
 
   @include respond-to("xxs") {
-    height: clamp(75px, 41.667vw, 300px);
+    width: 100%;
+    height: clamp(105px, 210 / 360 * 100vw, 420px);
   }
 
   @include respond-to("xs") {
-    height: clamp(75px, 150 / 480 * 100vw, 300px);
+    height: clamp(110px, 220 / 480 * 100vw, 440px);
   }
 
   @include respond-to("sm") {
@@ -42,11 +42,10 @@
   }
 
   @include respond-to("es") {
-    width: 150%;
+    width: 250%;
   }
 
   @include respond-to("md") {
-    width: 170%;
     height: clamp(80px, 160 / 992 * 100vw, 320px);
   }
 
@@ -62,11 +61,12 @@
 
   @include respond-to("lg") {
     height: clamp(75px, 150 / 1200 * 100vw, 300px);
+    animation-timeline: view(40%);
   }
 
   @include respond-to("xl") {
     width: 100%;
-    height: clamp(75px, 150 / 1360 * 100vw, 300px);
+    height: clamp(85px, 170 / 1360 * 100vw, 340px);
   }
 
   @include respond-to("2xl") {
@@ -74,12 +74,12 @@
   }
 
   @include respond-to("3xl") {
-    height: clamp(75px, 150 / 1680 * 100vw, 300px);
+    height: clamp(90px, 180 / 1680 * 100vw, 360px);
   }
 
   @include respond-to("4xl") {
     width: clamp(227.5px, 23.698vw, 910px);
-    height: clamp(75px, 150 / 1920 * 100vw, 300px);
+    height: clamp(90px, 180 / 1920 * 100vw, 360px);
   }
 
   @include respond-to("5xl") {
@@ -89,6 +89,10 @@
 
   &__text {
     @include respond-to("xxs") {
+      margin-top: clamp(35px, 70 / 360 * 100vw, 140px);
+    }
+
+    @include respond-to("xs") {
       @apply mt-16;
     }
 
@@ -181,15 +185,15 @@
     }
 
     @include respond-to("xs") {
-      font-size: clamp(12px, 24 / 480 * 100vw, 48px);
+      font-size: clamp(11px, 22 / 480 * 100vw, 44px);
     }
 
     @include respond-to("sm") {
-      font-size: clamp(12px, 24 / 768 * 100vw, 48px);
+      font-size: clamp(11px, 22 / 768 * 100vw, 44px);
     }
 
     @include respond-to("md") {
-      font-size: clamp(12px, 24 / 992 * 100vw, 48px);
+      font-size: clamp(11px, 22 / 992 * 100vw, 44px);
     }
 
     @include respond-to("tablet_sm") {
@@ -202,7 +206,7 @@
 
     @include respond-to("lg") {
       width: 100%;
-      font-size: clamp(8.5px, 17 / 1200 * 100vw, 34px);
+      font-size: clamp(8px, 16 / 1200 * 100vw, 32px);
     }
 
     @include respond-to("xl") {
@@ -218,11 +222,11 @@
     }
 
     @include respond-to("4xl") {
-      font-size: clamp(12px, 24 / 1920 * 100vw, 48px);
+      font-size: clamp(11px, 22 / 1920 * 100vw, 44px);
     }
 
     @include respond-to("5xl") {
-      font-size: clamp(12px, 24 / 2560 * 100vw, 48px);
+      font-size: clamp(11px, 22 / 2560 * 100vw, 44px);
     }
   }
 

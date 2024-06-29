@@ -2,7 +2,7 @@
 import { createContext, useState, useEffect, useContext } from "react";
 import { jwtDecode } from "jwt-decode";
 import { useUserData } from "@shared/lib/hooks/useUserData";
-import { redirect } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 interface AuthContextType {
   isAuthenticated: boolean;
@@ -13,6 +13,7 @@ const AuthContext = createContext<AuthContextType>({ isAuthenticated: false });
 export const useAuth = () => useContext(AuthContext);
 
 export const AuthProvider = ({ children }) => {
+  const navigate = useNavigate();
   const { userData, isLoading } = useUserData();
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
@@ -40,19 +41,19 @@ export const AuthProvider = ({ children }) => {
           const timeout = setTimeout(() => {
             localStorage.removeItem("accessToken"); // Remove expired token
             setIsAuthenticated(false); // Set authenticated to false on token expiration
-            redirect("/ferla/login"); // Redirect to login page
+            navigate("/ferla/login"); // Redirect to login page
           }, timeUntilExpiration);
 
           return () => clearTimeout(timeout);
         }
       } else {
         setIsAuthenticated(false); // No token or expired token
-        redirect("/ferla/login"); // Redirect to login page
+        navigate("/ferla/login"); // Redirect to login page
       }
     };
 
     verifyToken(); // Call async function to verify token
-  }, [userData?.accessToken, router, isLoading]);
+  }, [userData?.accessToken, isLoading]);
 
   return (
     <AuthContext.Provider value={{ isAuthenticated }}>
