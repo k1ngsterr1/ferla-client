@@ -68,8 +68,6 @@ export const SubmitForm = () => {
           name="date"
           // margin="mt-14"
           required
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
         />
         <Button
           text="Send Form"

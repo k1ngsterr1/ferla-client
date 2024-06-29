@@ -113,10 +113,7 @@ export const ImageForm: React.FC<IImageForm> = ({ onClick, componentId }) => {
             buttonType="filled"
             margin="mt-8 !z-[99999999]"
           /> */}
-          <button
-            type="submit"
-            className={`!z-[99999999] mt-4 ${styles.button}`}
-          >
+          <button type="submit" className={styles.image_container__button}>
             Submit
           </button>
         </form>

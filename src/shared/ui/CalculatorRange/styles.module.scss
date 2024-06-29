@@ -3,7 +3,6 @@
 @import "../../../shared/styles/variables";
 
 .calculator_range {
-  width: clamp(100px, 200 / 1200 * 100vw, 400px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,27 +12,51 @@
   @apply bg-white;
 
   &__icon {
-    @apply text-lg;
     @apply text-red;
+
+    @include respond-to("xxs") {
+      @apply text-xl;
+    }
+
+    @include respond-to("md") {
+      @apply text-lg;
+    }
+  }
+
+  @include respond-to("xxs") {
+    @apply mb-3.5;
+  }
+
+  @include respond-to("xs") {
+    width: 100%;
+  }
+
+  @include respond-to("lg") {
+    width: clamp(110px, 220 / 1200 * 100vw, 440px);
+    height: clamp(33px, 66 / 1200 * 100vw, 132px);
   }
 
   @include respond-to("xl") {
-    width: clamp(100px, 200 / 1360 * 100vw, 400px);
+    width: clamp(110px, 220 / 1360 * 100vw, 440px);
+    height: clamp(33px, 66 / 1360 * 100vw, 132px);
   }
 
   @include respond-to("2xl") {
-    width: clamp(100px, 200 / 1520 * 100vw, 400px);
+    width: clamp(110px, 220 / 1520 * 100vw, 440px);
   }
 
   @include respond-to("3xl") {
-    width: clamp(100px, 200 / 1680 * 100vw, 400px);
+    width: clamp(110px, 220 / 1680 * 100vw, 440px);
+    height: clamp(33px, 66 / 1680 * 100vw, 132px);
   }
 
   @include respond-to("4xl") {
-    width: clamp(100px, 200 / 1920 * 100vw, 400px);
+    width: clamp(110px, 220 / 1920 * 100vw, 440px);
+    height: clamp(45px, 90 / 2560 * 100vw, 180px);
   }
 
   @include respond-to("5xl") {
-    width: clamp(100px, 200 / 2560 * 100vw, 400px);
+    width: clamp(110px, 220 / 2560 * 100vw, 440px);
+    height: clamp(33px, 66 / 2560 * 100vw, 132px);
   }
 }
